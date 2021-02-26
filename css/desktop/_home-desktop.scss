@@ -1,0 +1,409 @@
+@import '../vars';
+
+.mosaic-cascade {
+  h1 {
+    font-weight: $font-weight-heavy;
+    font-size: $h2-size;
+    line-height: $h2-lineheight;
+    margin-bottom: 0 !important;
+    word-wrap: break-word;
+  }
+}
+
+.flex-hold-home-7 {
+  .flex-hold-child {
+    -webkit-box-flex: 1;
+    -ms-flex: 0 0 33.333333%;
+    flex: 0 0 33.333333%;
+    overflow: hidden;
+  }
+}
+
+.flex-hold-home-3,
+.flex-hold-home-4 {
+  .flex-hold-child:nth-child(1) {
+    -webkit-box-flex: 1;
+    -ms-flex: 0 0 66.666666%;
+    flex: 0 0 66.666666%;
+    overflow: hidden;
+  }
+
+  .flex-hold-child:nth-child(2) {
+    -webkit-box-flex: 1;
+    -ms-flex: 0 0 33.333333%;
+    flex: 0 0 33.333333%;
+    overflow: hidden;
+  }
+}
+
+.flex-hold-home-1 {
+  .flex-hold-child {
+    -webkit-box-flex: 1;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    overflow: hidden;
+  }
+}
+
+.flex-hold-child-inner-full {
+  width: 100%;
+  position: relative;
+  float: left;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: auto;
+    image-rendering: pixelated;
+  }
+}
+
+.flex-hold-child-inner-one {
+  width: 100%;
+  height: calc(85vh - 150px);
+  position: relative;
+  overflow: hidden;
+
+  .child-image-one {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+  }
+
+  .child-content-one {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    @include white-black-opacity;
+
+    .sidebar {
+      position: absolute;
+      z-index: 2;
+      right: 0;
+      top: 0;
+      width: 0;
+      height: 100%;
+      pointer-events: none;
+      @include transition-half;
+      background-color: $color-grigio-fondi;
+
+      &.onit {
+        width: 12px;
+      }
+    }
+  }
+}
+
+.flex-hold-child-inner-half {
+  width: 50%;
+  position: relative;
+  float: left;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: auto;
+    image-rendering: pixelated;
+  }
+}
+
+.child-content {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: $color-nero;
+}
+
+.noonit {
+  pointer-events: none !important;
+}
+
+.mosaic-1,
+.mosaic-2 {
+  .positioner-image {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: 50% 0;
+  }
+
+  .positioner {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 50%;
+    @include transition;
+
+    &.onit {
+      height: 100%;
+    }
+
+    h2,
+    h5 {
+      margin-bottom: 0 !important;
+    }
+
+    .cta-1 {
+      margin-bottom: 8px !important;
+    }
+
+    .cta-2 {
+      margin: 5px 0 0 0 !important;
+      padding: 0 !important;
+    }
+
+    p {
+      font-size: $cta1-size;
+      line-height: $cta1-lineheight;
+      margin-top: 8px !important;
+    }
+
+    .abstract {
+      display: none;
+      margin: 0;
+      padding: 0;
+
+      .btn-fill-hover {
+        margin-top: 24px;
+      }
+    }
+    @include white-black-opacity;
+
+    .texts {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      display: block;
+      width: 100%;
+
+      .padder {
+        padding: 0 16px 24px;
+      }
+    }
+  }
+}
+
+.sidebar {
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  top: 0;
+  display: block;
+  width: 0;
+  height: 100%;
+  pointer-events: none;
+  @include transition-half;
+  background-color: $color-grigio-fondi;
+
+  &.onit {
+    width: 12px;
+  }
+}
+
+.mosaic-3 {
+  position: relative;
+
+  .positioner-image {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 50%;
+    background-size: cover;
+    background-position: 50% 0;
+  }
+
+  .positioner {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    @include transition;
+
+    &.onit {
+      @include white-black-opacity-reverse;
+
+      .texts {
+        top: 15px;
+      }
+
+      .abstract {
+        opacity: 1;
+      }
+    }
+
+    h2,
+    h5 {
+      margin-bottom: 0 !important;
+    }
+
+    .cta-1 {
+      margin-bottom: 8px !important;
+    }
+
+    .cta-2 {
+      margin: 5px 0 0 0 !important;
+      padding: 0 !important;
+    }
+
+    p {
+      font-size: $cta1-size;
+      line-height: $cta1-lineheight;
+      margin-top: 8px !important;
+    }
+
+    .abstract {
+      opacity: 0;
+      padding: 0;
+      @include transition;
+
+      .btn-fill-hover {
+        margin-top: 24px;
+      }
+    }
+
+    .texts {
+      position: absolute;
+      left: 0;
+      top: calc(50% - 80px);
+      display: block;
+      width: 100%;
+      @include transition;
+
+      .padder {
+        padding: 0 16px;
+      }
+    }
+  }
+
+  .sidebar {
+    position: absolute;
+    z-index: 2;
+    right: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    pointer-events: none;
+    @include transition-half;
+    background-color: $color-grigio-fondi;
+
+    &.onit {
+      width: 12px;
+    }
+  }
+}
+
+.mosaic-3-b {
+  position: relative;
+
+  .positioner-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 50%;
+    background-size: cover;
+    background-position: 50% 0;
+  }
+
+  .positioner {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 50%;
+    display: block;
+    width: 100%;
+    height: 50%;
+    @include transition;
+
+    &.onit {
+      top: 0;
+      height: 100%;
+
+      .abstract {
+        opacity: 1;
+      }
+    }
+
+    h2,
+    h5 {
+      margin-bottom: 0 !important;
+    }
+
+    .cta-1 {
+      margin-bottom: 8px !important;
+    }
+
+    .cta-2 {
+      margin: 5px 0 0 0 !important;
+      padding: 0 !important;
+    }
+
+    p {
+      font-size: $cta1-size;
+      line-height: $cta1-lineheight;
+      margin-top: 8px !important;
+    }
+
+    .abstract {
+      opacity: 0;
+      margin: 0;
+      padding: 0;
+      @include transition;
+
+      .btn-fill-hover {
+        margin-top: 24px;
+      }
+    }
+
+    .texts {
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: block;
+      width: 100%;
+      @include white-black-opacity-3-6;
+
+      .padder {
+        padding: 32px 16px 0;
+      }
+    }
+  }
+
+  .sidebar {
+    position: absolute;
+    z-index: 2;
+    right: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    pointer-events: none;
+    @include transition-half;
+    background-color: $color-grigio-fondi;
+
+    &.onit {
+      width: 12px;
+    }
+  }
+}

@@ -1,0 +1,223 @@
+$h1-size: 48px;
+$h1-lineheight: 54px;
+$h1-marginbottom: 8px;
+
+$h2-size: 30px;
+$h2-lineheight: 120%;
+$h2-marginbottom: 8px;
+
+$h3-size: 30px;
+$h3-lineheight: 120%;
+$h3-marginbottom: 8px;
+
+$h4-size: 24px;
+$h4-lineheight: 26px;
+$h4-marginbottom: 8px;
+
+$h5-size: 18px;
+$h5-lineheight: 20px;
+$h5-marginbottom: 8px;
+
+$h6-size: 16px;
+$h6-lineheight: 21px;
+$h6-marginbottom: 8px;
+
+$paragraph-size: 16px;
+$paragraph-lineheight: 24px;
+$paragraph-marginbottom: 8px;
+
+$menu-size: 18px;
+$menu-lineheight: 120%;
+$menu-marginbottom: 0;
+
+$cta1-size: 14px;
+$cta1-lineheight: 16px;
+$cta1-marginbottom: 4px;
+
+$cta2-size: 14px;
+$cta2-lineheight: 18px;
+$cta2-marginbottom: 8px;
+
+$cta3-size: 18px;
+$cta3-lineheight: 22px;
+$cta3-marginbottom: 8px;
+
+$cta4-size: 12px;
+$cta4-lineheight: 12px;
+$cta4-marginbottom: 0;
+
+#PH_HeaderBackground-fixed {
+	height: 55px !important;
+	min-height: 55px !important;
+	max-height: 55px !important;
+}
+
+#group_Header-fixed {
+	padding-top: 5px !important;
+	.SearchBoxContainer {
+		display: none !important;
+	}
+}
+
+#group_Header {
+	position: relative !important;
+	top:  5px !important;
+}
+
+#group_Footer {
+	display: none !important;
+}
+
+h1, .pageSectionTitle, .productInfo .name {
+	position: relative;
+	top: 0 !important;
+	left: 0 !important;
+	font-weight: $font-weight-heavy !important;
+	font-size: $h1-size !important;
+	line-height: $h1-lineheight !important;
+	margin: 0 0 30px 0 !important;
+	padding: 0 !important;
+	word-wrap:break-word;
+	background-color: transparent !important;
+	border: none !important;
+	background-image: none !important;
+}
+
+h2, .orderTotalContainer span {
+	font-weight: $font-weight-heavy;
+	font-size: $h2-size !important;
+	line-height: $h2-lineheight !important;
+	margin-bottom: 30px !important;
+	padding: 0 !important;
+	word-wrap:break-word;
+}
+
+h3, .itemsDataContainer .small_text_d.name {
+	font-weight: $font-weight-heavy;
+	font-size: $h4-size !important;
+	line-height: $h4-lineheight;
+	margin: 0 0 8px 0 !important;
+	padding: 0 !important;
+	word-wrap:break-word;
+}
+
+h4 {
+	font-weight: $font-weight-heavy;
+	font-size: $h4-size !important;
+	line-height:$h4-lineheight;
+	margin: 0 0 8px 0 !important;
+	padding: 0 !important;
+	word-wrap:break-word;
+}
+
+h5 {
+	font-weight: $font-weight-heavy;
+	font-size: $h5-size !important;
+	line-height:$h5-lineheight;
+	margin: 0 0 8px 0 !important;
+	padding: 0 !important;
+	word-wrap:break-word;
+}
+
+.showDetails {
+	@include flex-wrap;
+	margin: 0 !important;
+	padding: 0 !important;
+	background-color: $color-bianco !important;
+}
+
+.showName {
+	position: relative !important;
+	height: auto !important;
+	margin: 30px 0 0 0 !important;
+	padding: 0 !important;
+	order: 1 !important;
+}
+
+#description, .genresContainer {
+	display: none !important;
+}
+
+.largeImageContainer {
+	order: 2 !important;
+	margin: 0 0 30px 0 !important;
+	padding: 0 !important;
+}
+
+#eventslist {
+	order: 3 !important;
+}
+
+.itemsDataContainer {
+	margin-bottom: 10px !important;
+	.small_text_d {
+		font-weight: $font-weight-heavy !important;
+		font-size: 18px !important;
+		line-height: 22px !important;
+		margin-bottom: 0 !important;
+		word-wrap:break-word !important;
+		color: $color-grigio-scuro !important;
+		text-transform: uppercase !important;
+
+	}
+}
+
+.dates {
+	//background-color: $color-grigio-fondi;
+	span {
+		background-color: $color-grigio-scuro !important;
+		color: $color-bianco !important;
+		font-weight: $font-weight-medium !important;
+		padding-left: 5px !important;
+		padding-right: 5px !important;
+	}
+}
+
+.eventStatus {
+	margin-bottom: 10px;
+}
+
+#PH_BasketWidget {
+	div {
+		-webkit-box-shadow: none !important;
+		-moz-box-shadow: none !important;
+		box-shadow: none !important;
+		background-image: none !important;
+	}
+	h2 {
+		padding: 20px  !important;
+		margin: 0 0 10px 0 !important;
+	}
+	.imageContainer {
+		display: none !important;
+	}
+	.name {
+		font-weight: $font-weight-heavy;
+		font-size: $h5-size !important;
+		line-height:$h5-lineheight;
+		margin: 0 0 8px 0 !important;
+		padding: 0 !important;
+		word-wrap:break-word;
+	}
+}
+
+
+
+.--seat {
+	position: relative;
+	&:after {
+		position: absolute;
+		z-index: 300;
+		top: 0;
+		left: 0;
+		content: "nnn";
+		width: 25px;
+		height: 25px;
+		background-color: $color-incontri-libri;
+		-webkit-border-radius: 25px;
+		-moz-border-radius: 25px;
+		border-radius: 25px;
+		overflow: hidden;
+	}
+
+}

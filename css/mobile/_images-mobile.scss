@@ -1,0 +1,37 @@
+@import '../vars';
+// images in content
+.wp-caption.alignnone,
+.wp-caption.aligncenter {
+	position: relative;
+	width: 100% !important;
+	display: block;
+	margin-top: 26px;
+	margin-bottom: 16px;
+}
+
+.wp-caption.alignleft,
+.wp-caption.alignright {
+	position: relative;
+	width: 100% !important;
+	display: block;
+	margin-top: 16px;
+	margin-bottom: 16px;
+}
+
+.wp-caption.alignnone img,
+.wp-caption.aligncenter img,
+.wp-caption.alignleft img,
+.wp-caption.alignright img {
+	width: 100% !important;
+	height: auto !important;
+	padding: 0;
+	margin: 0;
+}
+
+.wp-caption.alignnone .wp-caption-text,
+.wp-caption.aligncenter .wp-caption-text,
+.wp-caption.alignleft .wp-caption-text,
+.wp-caption.alignright .wp-caption-text {
+	padding: 10px 0 0 0;
+	color: $color-grigio-chiaro;
+}

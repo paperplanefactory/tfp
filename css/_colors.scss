@@ -1,0 +1,563 @@
+@import 'vars';
+@import 'mixin';
+// _colors.scss
+
+// text selection
+
+::selection {
+	background: $color-grigio-scuro;
+	color:  $color-bianco;
+}
+
+::-moz-selection {
+	background: $color-grigio-scuro;
+	color:  $color-bianco;
+}
+
+::-webkit-selection {
+	background: $color-grigio-scuro;
+	color:  $color-bianco;
+}
+
+::-webkit-input-placeholder {
+	color: $color-grigio-medio;
+}
+
+:-moz-placeholder {
+	color: $color-grigio-medio;
+}
+
+::-moz-placeholder  {
+	color: $color-grigio-medio;
+}
+
+// links
+
+a:link {
+	color: $color-grigio-scuro;
+}
+
+a:visited {
+	color: $color-grigio-scuro;
+}
+
+a:hover {
+	color: $color-grigio-medio;
+}
+
+p a:link, p a:visited {
+	color: $color-grigio-medio;
+	text-decoration: underline;
+}
+
+p a:hover {
+	color: $color-grigio-scuro;
+	text-decoration: underline;
+}
+
+.content-styled ul a:link, .content-styled ul a:visited, .content-styled ol a:link, .content-styled ol a:visited {
+	color: $color-grigio-medio;
+	text-decoration: underline;
+}
+
+.content-styled ul a:hover, .content-styled ol a:hover {
+	color: $color-grigio-scuro;
+	text-decoration: underline;
+}
+
+a.wh:link {
+	color: $color-bianco;
+}
+
+a.wh:visited {
+	color: $color-bianco;
+}
+
+a.wh:hover {
+	color: $color-grigio-chiaro;
+}
+
+.avvisi-importanti a:link, .avvisi-importanti a:visited, .avvisi-importanti a:hover {
+	color: $color-bianco;
+	text-decoration: underline;
+}
+
+.links-area a:link, .links-area a:visited {
+	color: $color-rosso-tfp;
+}
+
+.links-area a:hover {
+	color: $color-grigio-medio;
+}
+
+a.li-2-id:link, a.li-2-id:visited {
+	color: $color-rosso-tfp;
+}
+
+a.li-4-id:link, a.li-4-id:visited {
+	color: $color-incontri-libri;
+}
+
+a.li-6-id:link, a.li-6-id:visited {
+	color: $color-musica;
+}
+
+a.li-5-id:link, a.li-5-id:visited {
+	color: $color-cinema;
+}
+
+a.li-3-id:link, a.li-3-id:visited {
+	color: $color-piccoli-parenti;
+}
+
+a.li-8-id:link, a.li-8-id:visited {
+	color: $color-corsi-laboratori;
+}
+
+a.li-9-id:link, a.li-9-id:visited {
+	color: $color-bagni-misteriosi;
+}
+
+a.li-7-id:link, a.li-7-id:visited {
+	color: $color-eventi;
+}
+
+a.abbonamenti:link, a.abbonamenti:visited {
+	color: $color-abbonamenti;
+}
+
+a.li-87-id:link, a.li-87-id:visited {
+	color: $color-danza;
+}
+
+a.li-138-id:link, a.li-138-id:visited {
+	color: $color-poesia;
+}
+
+a.li-58-id:link, a.li-58-id:visited {
+	color: $color-grigio-chiaro;
+}
+
+.btn-fill-hover.red:link, .btn-fill-hover.red:visited, .btn-fill-hover.button-2-id:link, .btn-fill-hover.button-2-id:visited {
+  color: $color-rosso-tfp;
+  border: $color-rosso-tfp solid 1px;
+}
+
+.btn-fill-hover.red:hover, .btn-fill-hover.button-2-id:hover, .btn-fill-hover:hover {
+  color: $color-rosso-tfp !important;
+  border: $color-rosso-tfp solid 1px !important;
+}
+
+.btn-fill-hover.grey:link, .btn-fill-hover.grey:visited {
+  color: $color-grigio-chiaro;
+  border: $color-grigio-chiaro solid 1px;
+}
+
+.btn-fill-hover.grey:hover {
+	color: $color-grigio-medio !important;
+  border: $color-grigio-chiaro solid 1px !important;
+}
+
+.btn-fill-hover.reda:link, .btn-fill-hover.reda:visited {
+  color: $color-rosso-tfp;
+  border: $color-rosso-tfp solid 1px;
+}
+
+.btn-fill-hover.reda:hover {
+  color: $color-rosso-tfp;
+  background-color: rgba(117, 117, 117, 0.2);
+  border: $color-rosso-tfp solid 1px;
+}
+
+.btn-fill-hover.white:link, .btn-fill-hover.white:visited {
+  color: $color-bianco;
+  border: $color-bianco solid 1px;
+}
+
+.btn-fill-hover.white:hover {
+  color: $color-bianco !important;
+  border: $color-bianco solid 1px !important;
+}
+
+.btn-fill.red:link, .btn-fill.red:visited {
+  color: $color-bianco;
+  background-color: $color-rosso-tfp;
+  border: $color-rosso-tfp solid 1px;
+}
+
+.btn-fill.red:hover {
+  color: $color-bianco;
+  background-color: $color-rosso-tfp-dark;
+  border: $color-rosso-tfp-dark solid 1px;
+}
+
+.btn-fill-hover.button-4-id:link, .btn-fill-hover.button-4-id:visited {
+  color: $color-incontri-libri;
+  border: $color-incontri-libri solid 1px;
+}
+
+.btn-fill-hover.button-6-id:link, .btn-fill-hover.button-6-id:visited {
+  color: $color-musica;
+  border: $color-musica solid 1px;
+}
+
+.btn-fill-hover.button-5-id:link, .btn-fill-hover.button-5-id:visited {
+  color: $color-cinema;
+  border: $color-cinema solid 1px;
+}
+
+.btn-fill-hover.button-3-id:link, .btn-fill-hover.button-3-id:visited {
+  color: $color-piccoli-parenti;
+  border: $color-piccoli-parenti solid 1px;
+}
+
+.btn-fill-hover.button-8-id:link, .btn-fill-hover.button-8-id:visited {
+  color: $color-corsi-laboratori;
+  border: $color-corsi-laboratori solid 1px;
+}
+
+.btn-fill-hover.button-9-id:link, .btn-fill-hover.button-9-id:visited {
+  color: $color-bagni-misteriosi;
+  border: $color-bagni-misteriosi solid 1px;
+}
+
+
+.btn-fill-hover.button-7-id:link, .btn-fill-hover.button-7-id:visited {
+  color: $color-eventi;
+  border: $color-eventi solid 1px;
+}
+
+.btn-fill-hover.button-58-id:link, .btn-fill-hover.button-58-id:visited {
+  color: $color-grigio-chiaro;
+  border: $color-grigio-chiaro solid 1px;
+}
+
+.btn-fill-hover.abbonamenti:link, .btn-fill-hover.abbonamenti:visited {
+  color: $color-abbonamenti;
+  border: $color-abbonamenti solid 1px;
+}
+
+.btn-fill-hover.button-87-id:link, .btn-fill-hover.button-87-id:visited {
+  color: $color-danza;
+  border: $color-danza solid 1px;
+}
+
+.btn-fill-hover.button-138-id:link, .btn-fill-hover.button-138-id:visited {
+  color: $color-poesia;
+  border: $color-poesia solid 1px;
+}
+
+.calendar-period {
+	color: $color-grigio-chiaro;
+}
+
+.current-filter {
+	pointer-events: none;
+	color: $color-rosso-tfp;
+}
+
+.fake-hover {
+	&:hover {
+    color: $color-grigio-scuro;
+  }
+}
+
+// txt colors
+
+.txt-1-color, .txt-2-id {
+	color: $color-rosso-tfp;
+}
+
+.txt-2-color, .txt-2-color p {
+	color: $color-bianco;
+}
+
+.txt-3-color {
+	color: $color-grigio-scuro !important;
+}
+
+.txt-4-color {
+	color: $color-grigio-medio;
+}
+
+.txt-5-color, .txt-58-id {
+	color: $color-grigio-chiaro;
+}
+
+.txt-6-color {
+	color: $color-grigio-linee-grafica;
+}
+
+.txt-7-color {
+	color: $color-grigio-fondi;
+}
+
+.txt-8-color, .txt-4-id {
+	color: $color-incontri-libri;
+}
+
+.txt-9-color, .txt-6-id {
+	color: $color-musica;
+}
+
+.txt-10-color, .txt-5-id {
+	color: $color-cinema;
+}
+
+.txt-11-color, .txt-3-id {
+	color: $color-piccoli-parenti;
+}
+
+.txt-12-color, .txt-8-id {
+	color: $color-corsi-laboratori;
+}
+
+.txt-13-color, .txt-9-id {
+	color: $color-bagni-misteriosi;
+}
+
+.txt-14-color-color, .txt-7-id {
+	color: $color-eventi;
+}
+
+.txt-15-color, .txt-abbonamenti {
+	color: $color-abbonamenti;
+}
+
+.txt-16-color, .txt-87-id {
+	color: $color-danza;
+}
+
+.txt-138-color, .txt-138-id {
+	color: $color-poesia;
+}
+
+// bg colors
+
+.bg-1-color, .bg-2-id {
+	background-color: $color-rosso-tfp !important;
+}
+
+.bg-1-color-60, .bg-2-id-60 {
+	background-color: rgba(209, 0, 25, 0.5) !important;
+}
+
+.bg-2-color {
+	background-color: $color-bianco;
+}
+
+.bg-3-color {
+	background-color: $color-grigio-scuro;
+}
+
+.bg-4-color {
+	background-color: $color-grigio-medio;
+}
+
+.bg-5-color, .bg-58-id {
+	background-color: $color-grigio-chiaro;
+}
+
+.bg-5-color-60, .bg-58-id-60 {
+	background-color: rgba(117, 117, 117, 0.5);
+}
+
+.bg-6-color {
+	background-color: $color-grigio-linee-grafica;
+}
+
+.bg-7-color {
+	background-color: $color-grigio-fondi;
+}
+
+.bg-8-color, .bg-4-id {
+	background-color: $color-incontri-libri !important;
+}
+
+.bg-8-color-60, .bg-4-id-60 {
+	background-color: rgba(0, 132, 45, 0.5) !important;
+}
+
+.bg-9-color, .bg-6-id {
+	background-color: $color-musica !important;
+}
+
+.bg-9-color-60, .bg-6-id-60 {
+	background-color: rgba(0, 81, 147, 0.5) !important;
+}
+
+.bg-10-color, .bg-5-id {
+	background-color: $color-cinema !important;
+}
+
+.bg-10-color-60, .bg-5-id-60 {
+	background-color: rgba(238, 127, 0, 0.5) !important;
+}
+
+.bg-11-color, .bg-3-id {
+	background-color: $color-piccoli-parenti !important;
+}
+
+.bg-11-color-60, .bg-3-id-60 {
+	background-color: rgba(118, 68, 138, 0.5) !important;
+}
+
+.bg-12-color, .bg-8-id {
+	background-color: $color-corsi-laboratori !important;
+}
+
+.bg-12-color-60, .bg-8-id-60 {
+	background-color: rgba(255, 192, 16, 0.5) !important;
+}
+
+.bg-13-color, .bg-9-id {
+	background-color: $color-bagni-misteriosi !important;
+}
+
+.bg-13-color-60, .bg-9-id-60 {
+	background-color: rgba(60, 163, 188, 0.5) !important;
+}
+
+.bg-14-color, .bg-7-id {
+	background-color: $color-eventi !important;
+}
+
+.bg-14-color-60, .bg-7-id-60 {
+	background-color: rgba(0, 108, 122, 0.5) !important;
+}
+
+.bg-15-color, .bg-abbonamenti {
+	background-color: $color-abbonamenti !important;
+}
+
+.bg-15-color-60, .bg-abbonamenti-60 {
+	background-color: rgba(153, 7, 63, 0.5) !important;
+}
+
+.bg-16-color, .bg-87-id {
+	background-color: $color-danza !important;
+}
+
+.bg-16-color-60, .bg-87-id-60 {
+	background-color: rgba(153, 7, 63, 0.5) !important;
+}
+
+.bg-19-color, .bg-138-id {
+	background-color: $color-poesia !important;
+}
+
+.bg-19-color-60, .bg-87-138-60 {
+	background-color: rgba(40, 18, 175, 0.5) !important;
+}
+
+.bg-18-color {
+	background-color: $color-nero;
+}
+
+.gradient-4-id {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e5799+0,7db9e8+100 */
+background: $color-rosso-tfp; /* Old browsers */
+background: -moz-linear-gradient(left, $color-rosso-tfp 0%, $color-incontri-libri 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left, $color-rosso-tfp 0%,$color-incontri-libri 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right, $color-rosso-tfp 0%,$color-incontri-libri 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$color-rosso-tfp', endColorstr='$color-incontri-libri',GradientType=1 ); /* IE6-9 */
+}
+
+.gradient-6-id {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e5799+0,7db9e8+100 */
+background: $color-rosso-tfp; /* Old browsers */
+background: -moz-linear-gradient(left, $color-rosso-tfp 0%, $color-musica 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left, $color-rosso-tfp 0%,$color-musica 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right, $color-rosso-tfp 0%,$color-musica 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$color-rosso-tfp', endColorstr='$color-musica',GradientType=1 ); /* IE6-9 */
+}
+
+.gradient-5-id {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e5799+0,7db9e8+100 */
+background: $color-rosso-tfp; /* Old browsers */
+background: -moz-linear-gradient(left, $color-rosso-tfp 0%, $color-cinema 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left, $color-rosso-tfp 0%,$color-cinema 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right, $color-rosso-tfp 0%,$color-cinema 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$color-rosso-tfp', endColorstr='$color-cinema',GradientType=1 ); /* IE6-9 */
+}
+
+.gradient-3-id {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e5799+0,7db9e8+100 */
+background: $color-rosso-tfp; /* Old browsers */
+background: -moz-linear-gradient(left, $color-rosso-tfp 0%, $color-piccoli-parenti 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left, $color-rosso-tfp 0%,$color-piccoli-parenti 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right, $color-rosso-tfp 0%,$color-piccoli-parenti 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$color-rosso-tfp', endColorstr='$color-piccoli-parenti',GradientType=1 ); /* IE6-9 */
+}
+
+.gradient-8-id {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e5799+0,7db9e8+100 */
+background: $color-rosso-tfp; /* Old browsers */
+background: -moz-linear-gradient(left, $color-rosso-tfp 0%, $color-corsi-laboratori 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left, $color-rosso-tfp 0%,$color-corsi-laboratori 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right, $color-rosso-tfp 0%,$color-corsi-laboratori 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$color-rosso-tfp', endColorstr='$color-corsi-laboratori',GradientType=1 ); /* IE6-9 */
+}
+
+.gradient-9-id {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e5799+0,7db9e8+100 */
+background: $color-rosso-tfp; /* Old browsers */
+background: -moz-linear-gradient(left, $color-rosso-tfp 0%, $color-bagni-misteriosi 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left, $color-rosso-tfp 0%,$color-bagni-misteriosi 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right, $color-rosso-tfp 0%,$color-bagni-misteriosi 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$color-rosso-tfp', endColorstr='$color-bagni-misteriosi',GradientType=1 ); /* IE6-9 */
+}
+
+.gradient-7-id {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e5799+0,7db9e8+100 */
+background: $color-rosso-tfp; /* Old browsers */
+background: -moz-linear-gradient(left, $color-rosso-tfp 0%, $color-eventi 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left, $color-rosso-tfp 0%,$color-eventi 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right, $color-rosso-tfp 0%,$color-eventi 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$color-rosso-tfp', endColorstr='$color-eventi',GradientType=1 ); /* IE6-9 */
+}
+
+.gradient-abbonamenti {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e5799+0,7db9e8+100 */
+background: $color-rosso-tfp; /* Old browsers */
+background: -moz-linear-gradient(left, $color-rosso-tfp 0%, $color-abbonamenti 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left, $color-rosso-tfp 0%,$color-abbonamenti 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right, $color-rosso-tfp 0%,$color-abbonamenti 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$color-rosso-tfp', endColorstr='$color-abbonamenti',GradientType=1 ); /* IE6-9 */
+}
+
+.gradient-87-id {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e5799+0,7db9e8+100 */
+background: $color-rosso-tfp; /* Old browsers */
+background: -moz-linear-gradient(left, $color-rosso-tfp 0%, $color-danza 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left, $color-rosso-tfp 0%,$color-danza 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right, $color-rosso-tfp 0%,$color-danza 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$color-rosso-tfp', endColorstr='$color-danza',GradientType=1 ); /* IE6-9 */
+}
+
+.gradient-58-id {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e5799+0,7db9e8+100 */
+background: $color-rosso-tfp; /* Old browsers */
+background: -moz-linear-gradient(left, $color-rosso-tfp 0%, $color-grigio-chiaro 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left, $color-rosso-tfp 0%,$color-grigio-chiaro 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right, $color-rosso-tfp 0%,$color-grigio-chiaro 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$color-rosso-tfp', endColorstr='$color-grigio-chiaro',GradientType=1 ); /* IE6-9 */
+}
+
+.gradient-138-id {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e5799+0,7db9e8+100 */
+background: $color-rosso-tfp; /* Old browsers */
+background: -moz-linear-gradient(left, $color-rosso-tfp 0%, $color-poesia 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left, $color-rosso-tfp 0%,$color-poesia 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right, $color-rosso-tfp 0%,$color-poesia 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$color-rosso-tfp', endColorstr='$color-poesia',GradientType=1 ); /* IE6-9 */
+}
+
+.gradient-2-id {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e5799+0,7db9e8+100 */
+background: $color-rosso-tfp; /* Old browsers */
+background: -moz-linear-gradient(left, $color-rosso-tfp 0%, $color-rosso-tfp 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left, $color-rosso-tfp 0%,$color-rosso-tfp 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right, $color-rosso-tfp 0%,$color-rosso-tfp 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$color-rosso-tfp', endColorstr='$color-rosso-tfp',GradientType=1 ); /* IE6-9 */
+}

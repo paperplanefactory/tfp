@@ -1,0 +1,195 @@
+@import '../vars';
+#sticky-check {
+  position: relative;
+  display: block;
+  width: 100vw;
+  height: 1px;
+}
+
+#sticker {
+  width: 100%;
+}
+
+.sticky-checked {
+  min-height: $header-height !important;
+}
+
+.sticky-menu {
+  position: fixed !important;
+  left: 0;
+  z-index: 9000 !important;
+}
+
+.sticky-menu-social {
+  position: fixed !important;
+  left: 0;
+}
+
+.search-fields-archive {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin-top: 14px;
+  @include flex-wrap;
+  @include flex-verticalize;
+  .box-input {
+    -webkit-box-flex: 1;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    margin-bottom: 24px;
+  }
+  .search-fields-module-left {
+    -webkit-box-flex: 1;
+    -ms-flex: 0 0 90%;
+    flex: 0 0 90%;
+    input[type=checkbox] {
+      margin-right: 8px;
+    }
+    select {
+      width: 140px;
+    }
+  }
+  .search-fields-module-right {
+    -webkit-box-flex: 1;
+    -ms-flex: 0 0 10%;
+    flex: 0 0 10%;
+    text-align: right;
+  }
+  .box-output {
+    -webkit-box-flex: 1;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    margin-top: 24px;
+  }
+}
+
+.top-select {
+  position: relative;
+  display: inline-block;
+  margin: 0 10px 0 10px;
+  padding-right: 15px;
+  .text-shortener {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 20px;
+    overflow: hidden;
+    .text-shortened {
+      position: relative;
+      display: block;
+      width: 100%;
+      height: 20px;
+      text-align: left !important;
+    }
+  }
+  &:after {
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    top: 50%;
+    margin-top: -5px;
+    width: 10px;
+    height: 10px;
+    content: "";
+    background-image: url(images/drop-red.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 10px 10px;
+  }
+}
+
+.fake-select {
+  position: absolute;
+  z-index: 9999 !important;
+  top: 0;
+  right: 0;
+  width: 240px;
+  max-height: 240px;
+  overflow-y: scroll;
+  background-color: $color-bianco;
+  display: none;
+  .filter-voice {
+    font-weight: $font-weight-demi;
+  }
+  .eraser {
+    padding-right: 10px;
+    background-image: url(images/clear-filter.png);
+    background-repeat: no-repeat;
+    background-position: right 50%;
+    background-size: 24px 24px;
+  }
+  ul {
+    li {
+      padding: 10px;
+      &:hover {
+        background-color: $color-grigio-fondi;
+      }
+    }
+  }
+}
+
+.sub-opener {
+  opacity: 0;
+}
+
+.no-color-area {
+  text-align: left;
+  li {
+    position: relative;
+  }
+}
+
+.color-area {
+  text-align: left;
+  li {
+    position: relative;
+    border-left: solid 4px;
+    border-color: $color-grigio-chiaro;
+  }
+  li:first-child {
+    border-color: $color-bianco;
+  }
+  li.drop-2-bg {
+    border-color: $color-rosso-tfp;
+  }
+  li.drop-4-bg {
+    border-color: $color-incontri-libri;
+  }
+  li.drop-6-bg {
+    border-color: $color-musica;
+  }
+  li.drop-5-bg {
+    border-color: $color-cinema;
+  }
+  li.drop-3-bg {
+    border-color: $color-piccoli-parenti;
+  }
+  li.drop-8-bg {
+    border-color: $color-corsi-laboratori;
+  }
+  li.drop-9-bg {
+    border-color: $color-bagni-misteriosi;
+  }
+  li.drop-7-bg {
+    border-color: $color-eventi;
+  }
+  li.abbonamenti {
+    border-color: $color-abbonamenti;
+  }
+  li.drop-58-bg {
+      border-color: $color-grigio-chiaro;
+  }
+  li.drop-87-bg {
+      border-color: $color-danza;
+  }
+  li.drop-138-bg {
+      border-color: $color-poesia;
+  }
+}
+
+.no-click {
+  cursor: default;
+  &:hover {
+    background-color: transparent !important;
+  }
+}

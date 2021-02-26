@@ -1,0 +1,698 @@
+body {
+	font-family: $font-main !important;
+	color: $color-grigio-scuro !important;
+}
+
+.tabsWrapper {
+	.tab {
+		font-family: $font-main !important;
+	}
+}
+
+#PH_Calendar .ui-datepicker-header::before {
+	font-family: $font-main !important;
+}
+
+#leftPane {
+	border: none !important;
+}
+
+#eventPage.seated #leftPane, #eventPage.non-seated #leftPane {
+	background-image: none !important;
+}
+
+.expandable#selectedAreaInfo .selected {
+	border: none !important;
+}
+
+.seat_plan_body_css.seatingplan-control {
+	background-color: $color-bianco !important;
+	border: none !important;
+}
+
+.seatingPlanContainer {
+	background-color: $color-bianco !important;
+	border: none !important;
+}
+
+#ticketsPane {
+	background-image: none !important;
+	.icon {
+		display: none !important;
+	}
+	.selectTickets.mode-SelectedSeats {
+		background-color: $color-bianco !important;
+		border: none !important;
+		background-image: none !important;
+	}
+}
+
+
+.tabsWrapper {
+	.left, .center, .right {
+		background-image: none !important;
+		background-color: $color-bianco !important;
+	}
+}
+
+.list_record.eventName {
+	text-transform: none !important;
+	text-align: left !important;
+}
+
+.small_text_a.dates.itemsDateRange {
+	margin-right: 5px !important;
+}
+
+.dataItem.item_background.item_data_background .itemsDataContainer {
+	padding-top: 10px !important;
+}
+
+#eventPage #availableOperations .operationTypeContainer LABEL {
+	font-family: $font-main !important;
+	-webkit-border-radius: 0px !important;
+	-moz-border-radius: 0px !important;
+	border-radius: 0px !important;
+	padding: 4px !important;
+}
+
+.hallSeatingLegend.seat {
+	margin-right: 5px !important;
+}
+
+#PH_HeaderBackground {
+	background-image: none !important;
+}
+
+#eventslist {
+	background-color: $color-bianco !important;
+}
+
+.list_calendar_container {
+	display: none !important;
+}
+
+.general_tab_item.prev, .general_tab_item.next {
+	font-size: 0 !important;
+	padding-bottom: 5px !important;
+}
+
+.dataItem {
+	.item_image {
+		display: none !important;
+	}
+}
+
+.event.ng-scope {
+	border: none !important;
+	border-left: $color-grigio-linee-grafica solid 1px !important;
+}
+
+.SearchBoxContainer {
+	border: none !important;
+	height: 37px !important;
+	input[type=text],
+	input[type=email],
+	input[type=number] {
+		font-family: $font-main !important;
+		color: $color-grigio-scuro !important;
+		background-color: $color-grigio-fondi !important;
+		padding: 0 5px !important;
+		height: 37px !important;
+	}
+}
+
+h1, h2, h3, h4, h5, h6, p, a, span, .eventDetails, input[type="button"], #eventsList, .name, .description-text, .seriesInGroup {
+	font-family: $font-main !important;
+	color: $color-grigio-scuro !important;
+}
+
+
+.small_text_d {
+	text-transform: none !important;
+}
+
+.siteMenuContainer {
+	input[type="button"], a, #navMenu_Float_login_item, .flm_login, .float_menu_item {
+		//display: none !important;
+		&:after, &:before {
+			background-image: none !important;
+			content: "";
+		}
+	}
+}
+
+.currentTimeRangeEventsCtrl {
+	background-image: none !important;
+	background-color: #FFFFFF;
+}
+
+.currentTimeRangeEventsCtrl .currentTimeRangeEvents, .currentTimeRangeEventsCtrl .currentTimeRangeEvents:active {
+	background-image: none !important;
+	background-color: #FFFFFF;
+	-webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0) !important;
+	-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0) !important;
+	box-shadow: 10px 10px 5px 0px rgba(0,0,0,0) !important;
+}
+
+.ShowEventsitemsList .dataItem {
+	padding-left: 20px !important;
+}
+
+.dataItem.item_background.item_data_background {
+	background-color: transparent !important;
+	border: $color-grigio-linee-grafica solid 1px !important;
+	.item_image_container {
+		display: none !important;
+	}
+	.itemsDataContainer {
+		position: relative !important;
+		width: 100% !important;
+		height: auto !important;
+		padding-top: 10px !important;
+		background-color: $color-bianco;
+		.small_text_d.name {
+			text-align: left !important;
+
+		}
+		.small_text_a.description {
+			display: none !important;
+		}
+	}
+	.small_text_a.dates.itemsDateRange {
+		position: relative !important;
+		top: 0 !important;
+		height: auto !important;
+		margin: 20px 0 0 0 !important;
+		padding: 0 !important;
+		color: $color-grigio-scuro !important;
+		&:after {
+			display: none !important;
+		}
+	}
+	.itemsButtonsContainer {
+		position: relative !important;
+		top: 0 !important;
+		margin: 20px 0 0 0 !important;
+		padding: 0 !important;
+	}
+}
+
+
+
+.small_text_a.dates {
+	font-weight: $font-weight-heavy !important;
+	text-transform: uppercase !important;
+	padding-right: 5px !important;
+	height: 85% !important;
+	&:after {
+		content: "";
+		position: absolute !important;
+		right: 5px;
+		top: 0;
+		display: block;
+		width: 1px;
+		height: 100%;
+		background-color: $color-grigio-linee-grafica !important;
+	}
+	span {
+		background-color: transparent !important;
+		font-weight: $font-weight-heavy !important;
+		color: $color-grigio-scuro !important;
+		text-align: left !important;
+		margin: 0 !important;
+		padding: 0 !important;
+	}
+}
+
+#PH_Calendar_search_results, #eventScheduleByShowApp, .searchHeader, .itemsList {
+	background-color: $color-bianco !important;
+}
+
+.pageSectionContainer {
+	border: none !important;
+	background-image: none !important;
+}
+
+.pageSectionTitle {
+	&:after {
+		display: none !important;
+	}
+}
+
+.timerMessage {
+	padding: 3px !important;
+	background-color: $color-rosso-tfp-aplpha !important;
+}
+
+
+.operationTypeContainer.selected label {
+	background-color: $color-rosso-tfp !important;
+}
+
+.availSeats {
+	padding: 0 !important;
+	span {
+		padding: 0 !important;
+		margin: 0 !important;
+	}
+}
+
+.areaAvail {
+	position: relative !important;
+	overflow: hidden !important;
+	background-image: none !important;
+	width: 25px !important;
+	height: 25px !important;
+	-webkit-border-radius: 25px !important;
+	-moz-border-radius: 25px !important;
+	border-radius: 25px !important;
+	overflow: hidden !important;
+	&.yellow {
+		background-color: $color-cinema !important;
+	}
+}
+
+.occupancy {
+	position: relative !important;
+	overflow: hidden !important;
+	background-image: none !important;
+	padding: 5px 0 5px 30px !important;
+	&:after {
+		position: absolute !important;
+		z-index: 2 !important;
+		top: 5px;
+		left: 0;
+		content: "";
+		width: 25px;
+		height: 25px;
+		-webkit-border-radius: 25px;
+		-moz-border-radius: 25px;
+		border-radius: 25px;
+		overflow: hidden;
+	}
+}
+
+.LowSeatsOccupation {
+	&:after {
+		background-color: $color-incontri-libri;
+	}
+}
+
+.MediumSeatsOccupancy {
+	&:after {
+		background-color: $color-cinema;
+	}
+}
+
+.SoldOut {
+	&:after {
+		background-color: $color-rosso-tfp;
+	}
+}
+
+.roundUpDonationSection {
+	h1, h2, h3, h4, h5, h6, p, .containerTitle {
+		background: none !important;
+	}
+}
+
+.containerTitle, .couponLabel {
+	background: none !important;
+}
+
+.clientRequiredText {
+	font-family: $font-main !important;
+	color: $color-grigio-scuro !important;
+	background-color: $color-grigio-fondi !important;
+	border: $color-grigio-linee-grafica solid 1px !important;
+}
+
+.itemsButtonsContainer {
+	height: auto !important;
+	min-height: 30px !important;
+}
+
+.small_button_a {
+	font-family: $font-main !important;
+	text-transform: uppercase !important;
+	a:link, a:visited {
+		display: inline-block !important;
+		width: auto !important;
+	  padding: 10px !important;
+	  margin-right: 8px !important;
+		font-family: $font-main !important;
+		text-align: center !important;
+		text-decoration: none !important;
+		font-weight: $font-weight-heavy !important;
+		font-size: 12px !important;
+		line-height: 12px !important;
+		margin-bottom: 0 !important;
+		word-wrap:break-word !important;
+		color: $color-bianco !important;
+		background-color: $color-rosso-tfp !important;
+		text-transform: uppercase !important;
+		background-image: none !important;
+		background-image: none !important;
+		&:after, &:before {
+			display: none !important;
+		}
+	}
+	a:hover {
+		background-color: $color-rosso-tfp-dark !important;
+		background-image: none !important;
+	}
+}
+
+.button-moreAreas, .btnAddToBasket, #btnOrder, .currentTimeRangeEvents {
+	display: inline-block !important;
+	width: auto !important;
+	padding: 10px !important;
+	margin-right: 8px !important;
+	font-family: $font-main !important;
+	text-align: center !important;
+	text-decoration: none !important;
+	font-weight: $font-weight-heavy !important;
+	font-size: 12px !important;
+	line-height: 12px !important;
+	margin-bottom: 0 !important;
+	word-wrap:break-word !important;
+	color: $color-bianco !important;
+	background-color: $color-rosso-tfp !important;
+	text-transform: uppercase !important;
+	background-image: none !important;
+	background-image: none !important;
+	-webkit-border-radius: 0 !important;
+	-moz-border-radius: 0 !important;
+	border-radius: 0 !important;
+	.icon {
+		display: none !important;
+	}
+	&:after, &:before {
+		display: none !important;
+	}
+	&:hover {
+		background-color: $color-rosso-tfp-dark !important;
+		background-image: none !important;
+	}
+	&.disabled {
+		opacity: 0.5;
+	}
+}
+
+.small_button_c.home {
+	background-color: transparent !important;
+	border: none !important;
+}
+
+.qtip-content {
+	background-color: transparent !important;
+	border: none !important;
+}
+
+#btnContinue {
+	display: inline-block !important;
+	width: auto !important;
+	padding: 10px !important;
+	margin-right: 8px !important;
+	font-family: $font-main !important;
+	text-align: center !important;
+	text-decoration: none !important;
+	font-weight: $font-weight-heavy !important;
+	font-size: 12px !important;
+	line-height: 12px !important;
+	margin-bottom: 0 !important;
+	word-wrap:break-word !important;
+	color: $color-rosso-tfp !important;
+	border: $color-rosso-tfp solid 1px !important;
+	text-transform: uppercase !important;
+	background-image: none !important;
+	background-image: none !important;
+	-webkit-border-radius: 0 !important;
+	-moz-border-radius: 0 !important;
+	border-radius: 0 !important;
+	.icon {
+		display: none !important;
+	}
+	&:after, &:before {
+		display: none !important;
+	}
+	&:hover {
+		background-color: $color-rosso-tfp-dark !important;
+		background-image: none !important;
+		color: $color-bianco !important;
+	}
+	&.disabled {
+		opacity: 0.5;
+	}
+}
+
+#filtersOptions {
+	#filters {
+
+	}
+}
+
+.general_tab_item, .general_tab_item_hover {
+	display: inline-block !important;
+	width: auto !important;
+	padding: 10px !important;
+	margin-right: 8px !important;
+	font-family: $font-main !important;
+	text-align: center !important;
+	text-decoration: none !important;
+	font-weight: $font-weight-heavy !important;
+	font-size: 12px !important;
+	line-height: 12px !important;
+	margin-bottom: 0 !important;
+	word-wrap:break-word !important;
+	color: $color-rosso-tfp !important;
+	background-color: $color-bianco !important;
+	text-transform: uppercase !important;
+	background-image: none !important;
+	background-image: none !important;
+	-webkit-border-radius: 0 !important;
+	-moz-border-radius: 0 !important;
+	border-radius: 0 !important;
+	border: solid 2px $color-rosso-tfp !important;
+	&:hover {
+		background-color: $color-rosso-tfp-dark !important;
+		color: $color-bianco !important;
+	}
+	&.disabled {
+		opacity: 0.5;
+	}
+}
+
+.general_tab_item_selected, .general_tab_item_selected_hover {
+	display: inline-block !important;
+	width: auto !important;
+	padding: 10px !important;
+	margin-right: 8px !important;
+	font-family: $font-main !important;
+	text-align: center !important;
+	text-decoration: none !important;
+	font-weight: $font-weight-heavy !important;
+	font-size: 12px !important;
+	line-height: 12px !important;
+	margin-bottom: 0 !important;
+	word-wrap:break-word !important;
+	color: $color-bianco !important;
+	background-color: $color-rosso-tfp !important;
+	border: solid 2px $color-rosso-tfp !important;
+	text-transform: uppercase !important;
+	background-image: none !important;
+	background-image: none !important;
+	-webkit-border-radius: 0 !important;
+	-moz-border-radius: 0 !important;
+	border-radius: 0 !important;
+	-moz-box-shadow: none !important;
+	-webkit-box-shadow: none !important;
+	box-shadow: none !important;
+	.icon {
+		display: none !important;
+	}
+	&:after, &:before {
+		display: none !important;
+	}
+	&:hover {
+		background-color: $color-rosso-tfp-dark !important;
+		background-image: none !important;
+	}
+	&.disabled {
+		opacity: 0.5;
+	}
+}
+
+.general_tab_item.nextBackBar, .general_tab_item.nextBackBar:hover {
+	background-color: $color-bianco !important;
+	border: solid 0 $color-bianco !important;
+	padding: 0 0 0 0!important;
+	margin: 0 0 0 0!important;
+}
+
+.path {
+	z-index: 1;
+	.innerpath {
+		background-color: $color-rosso-tfp !important;
+		background-image: none !important;
+	}
+}
+
+.part.selected {
+	.step {
+		background-color: $color-rosso-tfp !important;
+		color: $color-bianco !important;
+	}
+}
+
+.part {
+	.step {
+		background-color: $color-grigio-fondi !important;
+		color: $color-grigio-scuro !important;
+	}
+}
+
+.step {
+	z-index: 2;
+	width: 50px;
+	height: 50px;
+	-webkit-border-radius: 50px;
+	-moz-border-radius: 50px;
+	border-radius: 50px;
+	overflow: hidden;
+	font-weight: $font-weight-heavy;
+}
+
+.flm_Join {
+	display: inline-block !important;
+	width: auto !important;
+	padding: 10px !important;
+	margin-right: 8px !important;
+	font-family: $font-main !important;
+	text-align: center !important;
+	text-decoration: none !important;
+	font-weight: $font-weight-heavy !important;
+	font-size: 12px !important;
+	line-height: 12px !important;
+	margin-bottom: 0 !important;
+	word-wrap:break-word !important;
+	color: $color-bianco !important;
+	background-color: $color-rosso-tfp !important;
+	text-transform: uppercase !important;
+	background-image: none !important;
+	-webkit-border-radius: 0 !important;
+	-moz-border-radius: 0 !important;
+	border-radius: 0 !important;
+	background-image: none !important;
+	span {
+		color: $color-bianco !important;
+		&:after {
+			background-image: none !important;
+		}
+	}
+	&:hover, &:hover span {
+		background-color: $color-rosso-tfp-dark !important;
+	}
+}
+
+.disabled {
+	a {
+		opacity: 0.5 !important;
+		display: inline-block !important;
+		width: auto !important;
+		padding: 10px !important;
+		margin-right: 8px !important;
+		font-family: $font-main !important;
+		text-align: center !important;
+		text-decoration: none !important;
+		font-weight: $font-weight-heavy !important;
+		font-size: 12px !important;
+		line-height: 12px !important;
+		margin-bottom: 0 !important;
+		word-wrap:break-word !important;
+		color: $color-bianco !important;
+		background-color: $color-rosso-tfp !important;
+		text-transform: uppercase !important;
+		background-image: none !important;
+		background-image: none !important;
+	}
+
+}
+
+.flm_login {
+	display: inline-block !important;
+	width: auto !important;
+	padding: 10px !important;
+	margin-right: 8px !important;
+	text-align: center !important;
+	text-decoration: none !important;
+	font-weight: $font-weight-heavy !important;
+	font-size: 12px !important;
+	line-height: 12px !important;
+	margin-bottom: 0 !important;
+	word-wrap:break-word !important;
+	color: $color-grigio-scuro !important;
+	border: $color-rosso-tfp solid 1px !important;
+	text-transform: uppercase !important;
+	background-image: none !important;
+	-webkit-border-radius: 0 !important;
+	-moz-border-radius: 0 !important;
+	border-radius: 0 !important;
+	background-image: none !important;
+	span {
+		color: $color-grigio-scuro !important;
+		&:after, &:before {
+			background-image: none !important;
+		}
+	}
+	&:hover, &:hover span {
+
+	}
+}
+
+.recommendedShows {
+	display: none !important;
+}
+
+#PH_Facebook {
+	display: none !important;
+}
+
+// datepicker
+
+#ui-datepicker-calendar {
+	tbody {
+		td {
+			border: $color-grigio-linee-grafica solid 1px !important;
+			a {
+				border: $color-grigio-linee-grafica solid 1px !important;
+			}
+		}
+	}
+}
+
+.ui-state-disabled {
+	opacity: 0.5 !important;
+	span {
+		opacity: 0.5 !important;
+	}
+}
+
+.hasEvents {
+	background-color: $color-grigio-fondi !important;
+	a {
+		background-color: $color-grigio-fondi !important;
+		color: $color-grigio-scuro !important;
+		border: $color-grigio-linee-grafica solid 1px !important;
+	}
+}
+
+.ui-datepicker-today {
+	background-color: $color-rosso-tfp !important;
+	a {
+		background-color: $color-rosso-tfp !important;
+		color: $color-bianco !important;
+		border: $color-grigio-linee-grafica solid 1px !important;
+	}
+}

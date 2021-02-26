@@ -1,0 +1,15 @@
+// imports
+@import '../vars';
+@import '../colors';
+@import '../mixin';
+@import 'partials/commons';
+
+@media screen and (min-width: 1px) and  (max-width: 1023px) {
+  //@import 'css/mobile';
+}
+
+// imports desktop
+@media screen and (min-width: 1024px) {
+  @import 'partials/desktop';
+
+}
