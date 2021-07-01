@@ -72,7 +72,7 @@ function namespace_login_headerurl( $url ) {
     return $url;
 }
 
-add_filter( 'login_headertitle', 'namespace_login_headertitle' );
+//add_filter( 'login_headertitle', 'namespace_login_headertitle' );
 /**
  * Replaces the login header logo title
  *

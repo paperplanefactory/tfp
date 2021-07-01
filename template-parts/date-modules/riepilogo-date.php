@@ -4,6 +4,8 @@ $data_custom_selector = get_field( 'data_custom_selector' );
   <?php the_field( 'data_custom'); ?>
 <?php else : ?>
   <?php
+  global $post;
+  $p_id = $post->ID;
   // recupero le date di inizio e fine per ogni periodo cartellone
   $repeater_first = get_field('program_periods', $p_id);
   if ( $repeater_first != '' ) {

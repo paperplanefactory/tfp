@@ -1,7 +1,5 @@
 <?php
-/**
- * The Header for our theme.
- */
+// Paperplane _blankTheme - template per header.
 ?>
 <!DOCTYPE html>
 <!--[if IE 7]>
@@ -38,6 +36,10 @@ $today = date('d/m/Y');
 $today_as_acf = date('Ymd');
 $todaystamp = strtotime(str_replace("/", "-", $today));
 ?>
+<!--
+<html xmlns:esro=http://toptix.com>
+<script src="https://tickets.teatrofrancoparenti.it/iframe/esrojsapi.js" type="text/javascript"></script>
+-->
 <link rel="apple-touch-icon" sizes="57x57" href="<?php bloginfo('stylesheet_directory'); ?>/images/favicon/apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="<?php bloginfo('stylesheet_directory'); ?>/images/favicon/apple-icon-60x60.png">
 <link rel="apple-touch-icon" sizes="72x72" href="<?php bloginfo('stylesheet_directory'); ?>/images/favicon/apple-icon-72x72.png">
@@ -92,8 +94,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             </div>
             <div class="sub-navi">
               <a href="#" class="search-icon search-activator" title="Apri / chiudi pannello di ricerca"></a>
+              <!--
               <a href="<?php the_field("url_calendario", "option"); ?>" class="btn-fill-hover red cta-4 allupper"><?php the_field("cta_calendario", "option"); ?></a>
-              <a href="<?php the_field("link_biglietti_online", "option"); ?>" target="_blank" class="btn-fill red cta-4 allupper last" onClick="_gaq.push(['_trackEvent', 'tickets_header_button', 'click', '<?php the_title(); ?>', '0']);"><?php the_field("cta_biglietti_online", "option"); ?></a>
+            -->
+              <a href="<?php the_field("link_biglietti_online", "option"); ?>" target="_self" class="btn-fill red cta-4 allupper last ticketed" onClick="_gaq.push(['_trackEvent', 'tickets_header_button', 'click', '<?php the_title(); ?>', '0']);"><?php the_field("cta_biglietti_online", "option"); ?></a>
               <a href="<?php the_field("carrello_sro", "option"); ?>" target="_blank" class="basket-selector basket-icon btn-fill red last" onClick="_gaq.push(['_trackEvent', 'direct_tickets_header_button', 'click', '<?php the_title(); ?>', '0']);"></a>
             </div>
             <div class="menu-main">
@@ -124,14 +128,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               <?php wp_nav_menu( array( 'theme_location' => 'header-compact-menu' ) ); ?>
             </div>
             <div class="navi-icons">
+              <!--
               <a href="<?php the_field("url_calendario", "option"); ?>" class="icon-button calendar"></a>
-              <a href="<?php the_field("link_biglietti_online", "option"); ?>" target="_blank" class="icon-button tickets"  onClick="_gaq.push(['_trackEvent', 'tickets_header_button_mobile', 'click', '<?php the_title(); ?>', '0']);"></a>
+            -->
+              <a href="<?php the_field("link_biglietti_online", "option"); ?>" target="_self" class="icon-button tickets"  onClick="_gaq.push(['_trackEvent', 'tickets_header_button_mobile', 'click', '<?php the_title(); ?>', '0']);"></a>
               <a href="tel:<?php the_field("numero_telefono_diretto", "option"); ?>" class="icon-button phone"></a>
             </div>
             <div class="sub-navi">
               <a href="javascript:void(0);" class="search-icon search-activator" title="Apri / chiudi pannello di ricerca"></a>
+              <!--
               <a href="<?php the_field("url_calendario", "option"); ?>" class="btn-fill-hover red cta-4 allupper"><?php the_field("cta_calendario", "option"); ?></a>
-              <a href="<?php the_field("link_biglietti_online", "option"); ?>" target="_blank" class="btn-fill red cta-4 allupper last" onClick="_gaq.push(['_trackEvent', 'tickets_header_button', 'click', '<?php the_title(); ?>', '0']);"><?php the_field("cta_biglietti_online", "option"); ?></a>
+              -->
+              <a href="<?php the_field("link_biglietti_online", "option"); ?>" target="_self" class="btn-fill red cta-4 allupper last ticketed" onClick="_gaq.push(['_trackEvent', 'tickets_header_button', 'click', '<?php the_title(); ?>', '0']);"><?php the_field("cta_biglietti_online", "option"); ?></a>
               <a href="<?php the_field("carrello_sro", "option"); ?>" target="_blank" class="basket-selector basket-icon btn-fill red last" onClick="_gaq.push(['_trackEvent', 'direct_tickets_header_button', 'click', '<?php the_title(); ?>', '0']);"></a>
             </div>
           </div>
@@ -158,13 +166,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               </div>
               <div class="navi-icons">
                 <a href="<?php the_field("url_calendario", "option"); ?>" class="icon-button calendar"></a>
-                <a href="<?php the_field("link_biglietti_online", "option"); ?>" target="_blank" class="icon-button tickets"></a>
+                <a href="<?php the_field("link_biglietti_online", "option"); ?>" target="_self" class="icon-button tickets"></a>
                 <a href="tel:<?php the_field("numero_telefono_diretto", "option"); ?>" class="icon-button phone"></a>
               </div>
               <div class="sub-navi">
                 <a href="javascript:void(0);" class="search-icon search-activator" title="Apri / chiudi pannello di ricerca"></a>
                 <a href="<?php the_field("url_calendario", "option"); ?>" class="btn-fill-hover red cta-4 allupper"><?php the_field("cta_calendario", "option"); ?></a>
-                <a href="<?php the_field("link_biglietti_online", "option"); ?>" target="_blank" class="btn-fill red cta-4 allupper last"><?php the_field("cta_biglietti_online", "option"); ?></a>
+                <a href="<?php the_field("link_biglietti_online", "option"); ?>" target="_self" class="btn-fill red cta-4 allupper last"><?php the_field("cta_biglietti_online", "option"); ?></a>
               </div>
             </div>
           </div>

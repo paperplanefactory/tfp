@@ -1,57 +1,53 @@
-@import '../vars';
-// structure mobile
+@import '../vars'; // structure mobile
 $header-height: 100px;
-$logo-width: 100px;
-
-// wrappers
+$logo-width: 100px; // wrappers
 
 .only-desktop {
   display: none;
 }
 
 .wrapper {
-  position:relative;
-  width:100%;
-	margin:0 auto;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .wrapper-padded {
-  position:relative;
+  position: relative;
   width: 92%;
-  margin:0 auto;
-  padding: 0 2% 0  2%;
+  margin: 0 auto;
+  padding: 0 2%;
 }
 
 .wrapper-padded-more {
-  position:relative;
-  width:88%;
-  margin:0 auto;
-  padding: 0 6% 0  6%;
+  position: relative;
+  width: 88%;
+  margin: 0 auto;
+  padding: 0 6%;
 }
 
 .wrapper-padded-more-spettacolo {
-  position:relative;
-  width:100%;
-	margin:0 auto;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .wrapper-padded-more-content {
-  position:relative;
-  width:100%;
-	max-width: 640px;
-	margin:0 auto;
+  position: relative;
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
 }
 
 .blocky {
   display: block;
 }
-
 // flex boxes
 
 .flex-hold {
-	position: relative;
-	width: 100%;
-	height: 100%;
+  position: relative;
+  width: 100%;
+  height: 100%;
   @include flex-wrap;
 }
 
@@ -68,36 +64,35 @@ $logo-width: 100px;
   display: block;
   width: 100%;
   height: 100%;
-
 }
 
 .flex-hold-2 {
   .flex-hold-child {
     -webkit-box-flex: 1;
-        -ms-flex: 0 0 100%;
-            flex: 0 0 100%;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
   }
 }
 
 .flex-hold-2-bis {
   .flex-hold-child-l {
     -webkit-box-flex: 1;
-        -ms-flex: 0 0 100%;
-            flex: 0 0 100%;
-            margin-bottom: 24px;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    margin-bottom: 24px;
   }
+
   .flex-hold-child-r {
     text-align: left !important;
     -webkit-box-flex: 1;
-        -ms-flex: 0 0 100%;
-            flex: 0 0 100%;
-            h5 {
-              line-height: 15px !important;
-            }
-          }
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+
+    h5 {
+      line-height: 15px !important;
+    }
+  }
 }
-
-
 // overlay tickets
 
 .list-dates-holder {
@@ -139,6 +134,7 @@ $logo-width: 100px;
   display: block;
   width: 100%;
   height: 57px;
+
   a {
     position: absolute;
     top: 10px;
@@ -147,7 +143,7 @@ $logo-width: 100px;
 }
 
 .overlay-message-padding {
-  padding: 10px 0 5px 0;
+  padding: 10px 0 5px;
 }
 
 .overlay-lisiting-padding {
@@ -159,7 +155,7 @@ $logo-width: 100px;
 }
 
 .overlay-events-list {
-  margin: 10px 0 0 0;
+  margin: 10px 0 0;
   padding: 0;
   border-top: $color-grigio-linee-grafica solid 1px;
 }
@@ -167,31 +163,181 @@ $logo-width: 100px;
 .overlay-event-details {
   padding: 15px 0;
   border-bottom: $color-grigio-linee-grafica solid 1px;
+
   .detail:nth-child(1) {
     position: relative;
     -webkit-box-flex: 1;
     width: calc(100% - 140px);
+
     h5 {
       margin: 0;
       padding: 0;
     }
   }
+
   .detail:nth-child(2) {
     position: relative;
     -webkit-box-flex: 1;
     width: 110px;
-    padding: 0 15px 0 15px;
+    padding: 0 15px;
     text-align: center;
+
     p {
       margin: 0;
       padding: 0;
     }
   }
+
   .detail:nth-child(3) {
     position: relative;
     -webkit-box-flex: 1;
     width: 100%;
     text-align: left;
-    padding: 10px 0 0 0;
+    padding: 10px 0 0;
+  }
+}
+
+.mosaic-slider-wrapper {
+  position: relative;
+  width: 96%;
+  margin: 0 auto;
+  padding: 35px 0 0 4%;
+}
+
+.mosaic-slider {
+  position: relative;
+  width: 100%;
+  margin: 20px 0 50px;
+
+  &.fulled {
+    li {
+      position: relative;
+      width: 92vw !important;
+      height: 115vw;
+      margin: 0;
+    }
+  }
+
+  li {
+    position: relative;
+    width: 72vw !important;
+    height: 115vw;
+    margin: 0 30px 0 0;
+
+    .mosaic-slider-contents {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+
+      .sidebar {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 5px;
+        height: 100%;
+      }
+
+      .positioner {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: calc(100% - 30px);
+        padding: 70px 15px 0;
+        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+56&0+0,1+56 */
+        background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 56%);
+        /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 56%);
+        /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 56%);
+        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      }
+    }
+  }
+}
+
+.home-cartellone-mobile {
+  position: relative;
+  left: -4%;
+  width: 108%;
+  padding: 28vw 0;
+  text-align: center;
+  margin: 0 0 55px;
+  background-size: cover;
+  background-position: 50% 50%;
+
+  .layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.16);
+  }
+
+  h1 {
+    margin-bottom: 0;
+  }
+}
+
+.mobile-cats-blocks-hold {
+  margin: 0 0 35px;
+}
+
+.mobile-cats-block {
+  position: relative;
+  display: inline-block;
+  width: 34.5vw;
+  height: 34.5vw;
+  background-size: cover;
+  background-position: 50% 50%;
+  margin: 0 3.5vw 3.5vw;
+
+  .layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.16);
+  }
+
+  .texter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100% - 10px);
+    padding: 0 10px;
+    height: 100%;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: justify;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .sidebar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+  }
+
+  h2 {
+    margin-bottom: 0;
   }
 }

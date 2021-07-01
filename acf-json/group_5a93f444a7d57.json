@@ -1,0 +1,182 @@
+{
+    "key": "group_5a93f444a7d57",
+    "title": "[EVO] Gestione banner interno",
+    "fields": [
+        {
+            "key": "field_5a93f444b0906",
+            "label": "URL di destinazione",
+            "name": "url_di_destinazione",
+            "type": "url",
+            "instructions": "Inserire l'URL di destinazione completa di \"http:\/\/\"",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_5a93f45cbaac1",
+            "label": "Target",
+            "name": "target",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "_self": "Stessa finestra",
+                "_blank": "Nuova finestra"
+            },
+            "default_value": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
+        },
+        {
+            "key": "field_5a93f444b097f",
+            "label": "A quale spettacolo \/ pagina vuoi associare questo banner?",
+            "name": "banner_spettacolo",
+            "type": "relationship",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "page",
+                "spettacolo",
+                "spettacolo_archivio"
+            ],
+            "taxonomy": "",
+            "filters": [
+                "search",
+                "post_type"
+            ],
+            "elements": "",
+            "min": "",
+            "max": "",
+            "return_format": "object"
+        },
+        {
+            "key": "field_5a93f444b11bc",
+            "label": "Immagine banner desktop \/ tablet",
+            "name": "immagine_banner_desktop_tablet_interno",
+            "type": "image",
+            "instructions": "Dimensioni consigliate: 250x250",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5a93f45cbaac1",
+                        "operator": "==",
+                        "value": "_self"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5a93f444b1259",
+            "label": "Immagine banner mobile",
+            "name": "immagine_banner_mobile_interno",
+            "type": "image",
+            "instructions": "Dimensioni consigliate: 300x50",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5a93f45cbaac1",
+                        "operator": "==",
+                        "value": "_self"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_60ddd981f0115",
+            "label": "Mostrare su mobile?",
+            "name": "visualizza_mobile",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "si": "Sì",
+                "no": "No"
+            },
+            "default_value": false,
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "banner_interno"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1625151902
+}

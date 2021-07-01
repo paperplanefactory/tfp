@@ -109,92 +109,233 @@ $args_mosaic_7 = array(
  );
 $my_tiles_7 = get_posts( $args_mosaic_7 );
 ?>
+<div class="only-desktop">
+  <div class="wrapper bg-18-color mosaic-cascade">
+    <?php if ( $mosiaco_size === 'hold-home-7' ) : ?>
+      <div class="flex-hold flex-hold-home-7">
+        <div class="flex-hold-child">
+          <div class="flex-hold-child-inner-full">
+            <?php include( locate_template ( 'template-parts/homepage/home-7-1.php' ) ); ?>
+          </div>
+        </div>
 
-<div class="wrapper bg-18-color mosaic-cascade">
-  <?php if ( $mosiaco_size === 'hold-home-7' ) : ?>
-    <div class="flex-hold flex-hold-home-7">
-      <div class="flex-hold-child">
-        <div class="flex-hold-child-inner-full">
-          <?php include( locate_template ( 'template-parts/homepage/home-7-1.php' ) ); ?>
+        <div class="flex-hold-child">
+          <div class="flex-hold-child-inner flex-hold-child-inner-half">
+              <?php include( locate_template ( 'template-parts/homepage/home-7-2.php' ) ); ?>
+          </div>
+
+          <div class="flex-hold-child-inner flex-hold-child-inner-half">
+            <?php include( locate_template ( 'template-parts/homepage/home-7-3.php' ) ); ?>
+          </div>
+
+          <div class="flex-hold-child-inner flex-hold-child-inner-full">
+            <?php include( locate_template ( 'template-parts/homepage/home-7-4.php' ) ); ?>
+          </div>
+        </div>
+
+        <div class="flex-hold-child flex-hold-child-tableted">
+          <div class="flex-hold-child-inner flex-hold-child-inner-full flex-hold-child-inner-full-tableted">
+            <?php include( locate_template ( 'template-parts/homepage/home-7-5.php' ) ); ?>
+          </div>
+
+          <div class="flex-hold-child-inner flex-hold-child-inner-half flex-hold-child-inner-half-tableted">
+            <?php include( locate_template ( 'template-parts/homepage/home-7-6.php' ) ); ?>
+          </div>
+
+          <div class="flex-hold-child-inner flex-hold-child-inner-half flex-hold-child-inner-half-tableted">
+              <?php include( locate_template ( 'template-parts/homepage/home-7-7.php' ) ); ?>
+          </div>
         </div>
       </div>
-
-      <div class="flex-hold-child">
-        <div class="flex-hold-child-inner flex-hold-child-inner-half">
-            <?php include( locate_template ( 'template-parts/homepage/home-7-2.php' ) ); ?>
+    <?php elseif ( $mosiaco_size === 'hold-home-4' ) : ?>
+      <div class="flex-hold flex-hold-home-4">
+        <div class="flex-hold-child">
+          <div class="flex-hold-child-inner-full">
+            <?php include( locate_template ( 'template-parts/homepage/home-4-1.php' ) ); ?>
+          </div>
         </div>
 
-        <div class="flex-hold-child-inner flex-hold-child-inner-half">
-          <?php include( locate_template ( 'template-parts/homepage/home-7-3.php' ) ); ?>
-        </div>
+        <div class="flex-hold-child">
+          <div class="flex-hold-child-inner flex-hold-child-inner-full">
+              <?php include( locate_template ( 'template-parts/homepage/home-4-2.php' ) ); ?>
+          </div>
 
-        <div class="flex-hold-child-inner flex-hold-child-inner-full">
-          <?php include( locate_template ( 'template-parts/homepage/home-7-4.php' ) ); ?>
-        </div>
-      </div>
+          <div class="flex-hold-child-inner flex-hold-child-inner-half">
+            <?php include( locate_template ( 'template-parts/homepage/home-4-3.php' ) ); ?>
+          </div>
 
-      <div class="flex-hold-child flex-hold-child-tableted">
-        <div class="flex-hold-child-inner flex-hold-child-inner-full flex-hold-child-inner-full-tableted">
-          <?php include( locate_template ( 'template-parts/homepage/home-7-5.php' ) ); ?>
-        </div>
-
-        <div class="flex-hold-child-inner flex-hold-child-inner-half flex-hold-child-inner-half-tableted">
-          <?php include( locate_template ( 'template-parts/homepage/home-7-6.php' ) ); ?>
-        </div>
-
-        <div class="flex-hold-child-inner flex-hold-child-inner-half flex-hold-child-inner-half-tableted">
-            <?php include( locate_template ( 'template-parts/homepage/home-7-7.php' ) ); ?>
+          <div class="flex-hold-child-inner flex-hold-child-inner-half">
+            <?php include( locate_template ( 'template-parts/homepage/home-4-4.php' ) ); ?>
+          </div>
         </div>
       </div>
+    <?php elseif ( $mosiaco_size === 'hold-home-3' ) : ?>
+      <div class="flex-hold flex-hold-home-3">
+        <div class="flex-hold-child flex-hold-child-tableted">
+          <div class="flex-hold-child-inner-full">
+            <?php include( locate_template ( 'template-parts/homepage/home-3-1.php' ) ); ?>
+          </div>
+        </div>
+
+        <div class="flex-hold-child flex-hold-child-tableted">
+          <div class="flex-hold-child-inner flex-hold-child-inner-full flex-hold-child-inner-full-tableted">
+              <?php include( locate_template ( 'template-parts/homepage/home-3-2.php' ) ); ?>
+          </div>
+
+          <div class="flex-hold-child-inner flex-hold-child-inner-full flex-hold-child-inner-full-tableted">
+            <?php include( locate_template ( 'template-parts/homepage/home-3-3.php' ) ); ?>
+          </div>
+        </div>
+      </div>
+    <?php elseif ( $mosiaco_size === 'hold-home-1' ) : ?>
+      <div class="flex-hold flex-hold-home-1">
+        <div class="flex-hold-child">
+          <div class="flex-hold-child-inner-one">
+            <?php include( locate_template ( 'template-parts/homepage/home-1-1.php' ) ); ?>
+          </div>
+        </div>
+      </div>
+    <?php endif; ?>
+  </div>
+</div>
+
+
+
+<?php
+if ( $mosiaco_size === 'hold-home-1' ) {
+  $mosaic_additional_cvlass = 'fulled';
+}
+else {
+  $mosaic_additional_cvlass = '';
+}
+ ?>
+
+
+
+
+<div class="only-mobile">
+  <div class="wrapper bg-18-color">
+    <div class="mosaic-slider-wrapper">
+      <h1 class="txt-2-color">In evidenza</h1>
+      <ul class="mosaic-slider <?php echo $mosaic_additional_cvlass; ?> mosaic-slider-js">
+        <?php
+        if ( $mosiaco_size === 'hold-home-7' ) {
+          $my_tiles_1 = get_posts( $args_mosaic_1 );
+          if ( !empty ( $my_tiles_1 ) ) {
+            foreach( $my_tiles_1 as $post ) : setup_postdata( $post );
+            include( locate_template ( 'template-parts/homepage/home-mosaic-slide.php' ) );
+            endforeach; wp_reset_query();
+          }
+
+          $my_tiles_2 = get_posts( $args_mosaic_2 );
+          if ( !empty ( $my_tiles_2 ) ) {
+            foreach( $my_tiles_2 as $post ) : setup_postdata( $post );
+            include( locate_template ( 'template-parts/homepage/home-mosaic-slide.php' ) );
+            endforeach; wp_reset_query();
+          }
+
+          $my_tiles_3 = get_posts( $args_mosaic_3 );
+          if ( !empty ( $my_tiles_3 ) ) {
+            foreach( $my_tiles_3 as $post ) : setup_postdata( $post );
+            include( locate_template ( 'template-parts/homepage/home-mosaic-slide.php' ) );
+            endforeach; wp_reset_query();
+          }
+
+          $my_tiles_4 = get_posts( $args_mosaic_4 );
+          if ( !empty ( $my_tiles_4 ) ) {
+            foreach( $my_tiles_4 as $post ) : setup_postdata( $post );
+            include( locate_template ( 'template-parts/homepage/home-mosaic-slide.php' ) );
+            endforeach; wp_reset_query();
+          }
+
+          $my_tiles_5 = get_posts( $args_mosaic_5 );
+          if ( !empty ( $my_tiles_5 ) ) {
+            foreach( $my_tiles_5 as $post ) : setup_postdata( $post );
+            include( locate_template ( 'template-parts/homepage/home-mosaic-slide.php' ) );
+            endforeach; wp_reset_query();
+          }
+
+          $my_tiles_6 = get_posts( $args_mosaic_6 );
+          if ( !empty ( $my_tiles_6 ) ) {
+            foreach( $my_tiles_6 as $post ) : setup_postdata( $post );
+            include( locate_template ( 'template-parts/homepage/home-mosaic-slide.php' ) );
+            endforeach; wp_reset_query();
+          }
+
+          $my_tiles_7 = get_posts( $args_mosaic_7 );
+          if ( !empty ( $my_tiles_7 ) ) {
+            foreach( $my_tiles_7 as $post ) : setup_postdata( $post );
+            include( locate_template ( 'template-parts/homepage/home-mosaic-slide.php' ) );
+            endforeach; wp_reset_query();
+          }
+        }
+        elseif ( $mosiaco_size === 'hold-home-4' ) {
+          $my_tiles_1 = get_posts( $args_mosaic_1 );
+          if ( !empty ( $my_tiles_1 ) ) {
+            foreach( $my_tiles_1 as $post ) : setup_postdata( $post );
+            include( locate_template ( 'template-parts/homepage/home-mosaic-slide.php' ) );
+            endforeach; wp_reset_query();
+          }
+
+          $my_tiles_2 = get_posts( $args_mosaic_2 );
+          if ( !empty ( $my_tiles_2 ) ) {
+            foreach( $my_tiles_2 as $post ) : setup_postdata( $post );
+            include( locate_template ( 'template-parts/homepage/home-mosaic-slide.php' ) );
+            endforeach; wp_reset_query();
+          }
+
+          $my_tiles_3 = get_posts( $args_mosaic_3 );
+          if ( !empty ( $my_tiles_3 ) ) {
+            foreach( $my_tiles_3 as $post ) : setup_postdata( $post );
+            include( locate_template ( 'template-parts/homepage/home-mosaic-slide.php' ) );
+            endforeach; wp_reset_query();
+          }
+
+          $my_tiles_4 = get_posts( $args_mosaic_4 );
+          if ( !empty ( $my_tiles_4 ) ) {
+            foreach( $my_tiles_4 as $post ) : setup_postdata( $post );
+            include( locate_template ( 'template-parts/homepage/home-mosaic-slide.php' ) );
+            endforeach; wp_reset_query();
+          }
+
+        }
+        elseif ( $mosiaco_size === 'hold-home-3' ) {
+          $my_tiles_1 = get_posts( $args_mosaic_1 );
+          if ( !empty ( $my_tiles_1 ) ) {
+            foreach( $my_tiles_1 as $post ) : setup_postdata( $post );
+            include( locate_template ( 'template-parts/homepage/home-mosaic-slide.php' ) );
+            endforeach; wp_reset_query();
+          }
+
+          $my_tiles_2 = get_posts( $args_mosaic_2 );
+          if ( !empty ( $my_tiles_2 ) ) {
+            foreach( $my_tiles_2 as $post ) : setup_postdata( $post );
+            include( locate_template ( 'template-parts/homepage/home-mosaic-slide.php' ) );
+            endforeach; wp_reset_query();
+          }
+
+          $my_tiles_3 = get_posts( $args_mosaic_3 );
+          if ( !empty ( $my_tiles_3 ) ) {
+            foreach( $my_tiles_3 as $post ) : setup_postdata( $post );
+            include( locate_template ( 'template-parts/homepage/home-mosaic-slide.php' ) );
+            endforeach; wp_reset_query();
+          }
+
+        }
+        elseif ( $mosiaco_size === 'hold-home-1' ) {
+          $my_tiles_1 = get_posts( $args_mosaic_1 );
+          if ( !empty ( $my_tiles_1 ) ) {
+            foreach( $my_tiles_1 as $post ) : setup_postdata( $post );
+            include( locate_template ( 'template-parts/homepage/home-mosaic-slide.php' ) );
+            endforeach; wp_reset_query();
+          }
+        }
+         ?>
+
+
+      </ul>
     </div>
-  <?php elseif ( $mosiaco_size === 'hold-home-4' ) : ?>
-    <div class="flex-hold flex-hold-home-4">
-      <div class="flex-hold-child">
-        <div class="flex-hold-child-inner-full">
-          <?php include( locate_template ( 'template-parts/homepage/home-4-1.php' ) ); ?>
-        </div>
-      </div>
 
-      <div class="flex-hold-child">
-        <div class="flex-hold-child-inner flex-hold-child-inner-full">
-            <?php include( locate_template ( 'template-parts/homepage/home-4-2.php' ) ); ?>
-        </div>
-
-        <div class="flex-hold-child-inner flex-hold-child-inner-half">
-          <?php include( locate_template ( 'template-parts/homepage/home-4-3.php' ) ); ?>
-        </div>
-
-        <div class="flex-hold-child-inner flex-hold-child-inner-half">
-          <?php include( locate_template ( 'template-parts/homepage/home-4-4.php' ) ); ?>
-        </div>
-      </div>
-    </div>
-  <?php elseif ( $mosiaco_size === 'hold-home-3' ) : ?>
-    <div class="flex-hold flex-hold-home-3">
-      <div class="flex-hold-child flex-hold-child-tableted">
-        <div class="flex-hold-child-inner-full">
-          <?php include( locate_template ( 'template-parts/homepage/home-3-1.php' ) ); ?>
-        </div>
-      </div>
-
-      <div class="flex-hold-child flex-hold-child-tableted">
-        <div class="flex-hold-child-inner flex-hold-child-inner-full flex-hold-child-inner-full-tableted">
-            <?php include( locate_template ( 'template-parts/homepage/home-3-2.php' ) ); ?>
-        </div>
-
-        <div class="flex-hold-child-inner flex-hold-child-inner-full flex-hold-child-inner-full-tableted">
-          <?php include( locate_template ( 'template-parts/homepage/home-3-3.php' ) ); ?>
-        </div>
-      </div>
-    </div>
-  <?php elseif ( $mosiaco_size === 'hold-home-1' ) : ?>
-    <div class="flex-hold flex-hold-home-1">
-      <div class="flex-hold-child">
-        <div class="flex-hold-child-inner-one">
-          <?php include( locate_template ( 'template-parts/homepage/home-1-1.php' ) ); ?>
-        </div>
-      </div>
-    </div>
-  <?php endif; ?>
+  </div>
 
 </div>

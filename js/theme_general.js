@@ -147,25 +147,38 @@ $(document).ready(function() {
       return false;
     }
   });
-
-
-
-
-
-
-
-
-
 });
 
+
+/////////////////////////////////////////////
+// slick slideshow
+/////////////////////////////////////////////
+if ($('.mosaic-slider-js')[0]) {
+  $('.mosaic-slider-js').slick({
+    dots: false,
+    arrows: false,
+    focusOnSelect: true,
+    draggable: true,
+    infinite: true,
+    accessibility: true,
+    slidesToScroll: 1,
+    adaptiveHeight: true,
+    variableWidth: true
+  });
+}
+
+
 if (typeof $esro !== 'undefined') {
+
   window.onload = function() {
     $esro.getCurrentTransaction('checkBasket');
   }
+  console.log($esro.getSessionState());
 
   function checkBasket(response) {
     console.log(response.Result.basket);
     if (response.Result.basket != null && response.Result.basket.Tickets.length > 0) {
+      //console.log('cacca');
       $('.basket-selector').addClass('basket-active');
     } else {
       $('.basket-selector').removeClass('basket-active');
@@ -175,7 +188,7 @@ if (typeof $esro !== 'undefined') {
 
 
   function onCustomerLogout() {
-    console.log('log-out');
+    //console.log('log-out');
 
   }
 

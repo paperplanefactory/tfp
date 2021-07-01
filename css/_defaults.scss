@@ -582,3 +582,12 @@ a.italybtn:visited {
 .avviso-cartellone {
 	padding: 15px;
 }
+
+a.ticketed:link,
+a.ticketed:visited {
+	background-image: url("images/tickets-white.png");
+	background-repeat: no-repeat;
+	background-position: right 5px top 6px;
+	background-size: 20px 20px;
+	padding-right: 26px !important;
+}

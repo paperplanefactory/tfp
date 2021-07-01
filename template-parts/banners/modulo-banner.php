@@ -32,8 +32,16 @@
       $immagine_banner = get_field('immagine_banner_desktop_tablet_interno');
       $immagine_banner_URL = $immagine_banner['sizes']['banner_300_free'];
     }
+    $visualizza_mobile = get_field( 'visualizza_mobile' );
+    if ( $visualizza_mobile === 'no' ) {
+      $hide_mobile_class = 'only-desktop';
+    }
+    else {
+      $hide_mobile_class = '';
+    }
+
     ?>
-    <div class="banner-img">
+    <div class="banner-img <?php echo $hide_mobile_class; ?>">
       <a href="<?php the_field('url_di_destinazione'); ?>" target="_blank">
         <img src="<?php echo $immagine_banner_URL; ?>" />
       </a>
@@ -75,8 +83,15 @@
       $immagine_banner = get_field('immagine_banner_desktop_tablet_interno');
       $immagine_banner_URL = $immagine_banner['sizes']['banner_300_free'];
     }
+    $visualizza_mobile = get_field( 'visualizza_mobile' );
+    if ( $visualizza_mobile === 'no' ) {
+      $hide_mobile_class = 'only-desktop';
+    }
+    else {
+      $hide_mobile_class = '';
+    }
     ?>
-    <div class="banner-img">
+    <div class="banner-img <?php echo $hide_mobile_class; ?>">
       <a href="<?php the_field('url_di_destinazione'); ?>" target="_blank">
         <img src="<?php echo $immagine_banner_URL; ?>" />
       </a>
@@ -118,8 +133,15 @@
       $immagine_banner = get_field('immagine_banner_desktop_tablet_interno');
       $immagine_banner_URL = $immagine_banner['sizes']['banner_300_free'];
     }
+    $visualizza_mobile = get_field( 'visualizza_mobile' );
+    if ( $visualizza_mobile === 'no' ) {
+      $hide_mobile_class = 'only-desktop';
+    }
+    else {
+      $hide_mobile_class = '';
+    }
     ?>
-    <div class="banner-img">
+    <div class="banner-img <?php echo $hide_mobile_class; ?>">
       <a href="<?php the_field('url_di_destinazione'); ?>" target="_blank">
         <img src="<?php echo $immagine_banner_URL; ?>" />
       </a>
@@ -161,8 +183,15 @@
       $immagine_banner = get_field('immagine_banner_desktop_tablet_interno');
       $immagine_banner_URL = $immagine_banner['sizes']['banner_300_free'];
     }
+    $visualizza_mobile = get_field( 'visualizza_mobile' );
+    if ( $visualizza_mobile === 'no' ) {
+      $hide_mobile_class = 'only-desktop';
+    }
+    else {
+      $hide_mobile_class = '';
+    }
     ?>
-    <div class="banner-img">
+    <div class="banner-img <?php echo $hide_mobile_class; ?>">
       <a href="<?php the_field('url_di_destinazione'); ?>" target="_blank">
         <img src="<?php echo $immagine_banner_URL; ?>" />
       </a>

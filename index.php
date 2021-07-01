@@ -58,7 +58,7 @@ if ( isset ( $wp_query->query_vars['filtro'] ) ) {
 
 <?php
 if ( $isMobile == 1 ) {
-  include( locate_template ( 'template-parts/menus-and-utilities/search-box-calendar-home-mobile.php' ) );
+  //include( locate_template ( 'template-parts/menus-and-utilities/search-box-calendar-home-mobile.php' ) );
 }
 if ( $isDesktop == 1 || $isTablet == 1 ) {
   include( locate_template ( 'template-parts/menus-and-utilities/search-box-calendar-home.php' ) );
@@ -68,13 +68,15 @@ if ( $isDesktop == 1 || $isTablet == 1 ) {
 
 
 
-
-
-
-<div class="wrapper pad-bottom-1 min-small-height-box no-overflow">
-  <div id="loading"></div>
-  <div id="result"></div>
+<div class="only-desktop">
+  <div class="wrapper pad-bottom-1 min-small-height-box no-overflow">
+    <div id="loading"></div>
+    <div id="result"></div>
+  </div>
 </div>
+
+
+
 
 <script type="text/javascript">
 term_name = '';
@@ -89,6 +91,7 @@ here = 'home';
 // richiamo gli editoriali
 include( locate_template ( 'template-parts/homepage/editorial-hold.php' ) );
 if ( $opening_layout === 'box-singolo' && get_field( 'box_half_page_text', 'option' ) ) : ?>
+<!--
 <div class="wrapper">
   <div class="wrapper-padded">
     <div class="wrapper-padded-more">
@@ -104,15 +107,19 @@ if ( $opening_layout === 'box-singolo' && get_field( 'box_half_page_text', 'opti
     </div>
   </div>
 </div>
+-->
 <?php endif; ?>
+<?php  ?>
 <?php
 // richiamo le news o le pagine
 $home_news_or_pages = get_field("home_news_or_pages", "option");
 if ( $home_news_or_pages === 'news' ) : ?>
 <?php include( locate_template ( 'template-parts/homepage/news-hold.php' ) ); ?>
+
 <?php elseif ( $home_news_or_pages === 'pagine-banner' ) : ?>
   <?php include( locate_template ( 'template-parts/homepage/page-banner-hold.php' ) ); ?>
 <?php elseif ( $home_news_or_pages === 'pagine' ) : ?>
     <?php include( locate_template ( 'template-parts/homepage/page-hold.php' ) ); ?>
 <?php endif; ?>
+
 <?php get_footer(); ?>

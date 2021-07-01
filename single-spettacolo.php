@@ -8,9 +8,12 @@ get_header();
 <?php while ( have_posts() ) : the_post();
 if (class_exists('ESROWP_Helper')) {
   $check_id = ESROWP_Helper::getShow();
-  $check_id = json_encode($check_id, true);
-  $check_id = json_decode($check_id, true);
-  $find_id = $check_id['ShowId'];
+  if ( $check_id != '' ) {
+    $check_id = json_encode($check_id, true);
+    $check_id = json_decode($check_id, true);
+    $find_id = $check_id['ShowId'];
+  }
+
 }
 
 
@@ -96,7 +99,27 @@ $stagione = get_term_by('id', $stagione_corrente, 'stagione');
 $stagione_name = $stagione->name;
 $mostrare_date_spettacolo_figlio = get_field( 'mostrare_date_spettacolo_figlio' );
 $titolo_date_figlio = get_field('titolo_date_figlio');
+if ( isset($_GET["tickets"]) ) {
+  $overlay_param = $_GET["tickets"];
+}
+else {
+  $overlay_param = '';
+}
+
 ?>
+<?php if ( $overlay_param === 'open' ) : ?>
+<script type="text/javascript">
+$(document).ready(function() {
+  function inPageOpenOverlay() {
+    $('#tickets-overlay').fadeIn(150, "linear");
+    $('.overlay-effect').delay(300).removeClass('overlay-effect-initial');
+    $('html').css('overflowY', 'hidden');
+    $('body').addClass('occupy-scrollbar');
+  }
+  inPageOpenOverlay();
+});
+</script>
+<?php endif; ?>
 <!--
 <div id="sub-header" class="<?php echo $class_overlay; ?>">
   <div class="wrapper-padded">
@@ -616,4 +639,6 @@ $titolo_date_figlio = get_field('titolo_date_figlio');
     <?php endif; ?>
   <?php endif; ?>
 <?php endif; ?>
+
+
 <?php get_footer(); ?>

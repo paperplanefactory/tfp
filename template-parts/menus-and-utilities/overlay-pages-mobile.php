@@ -53,7 +53,7 @@
             <div class="">
               <div class="space">
                 <a href="<?php the_field("url_calendario", "option"); ?>" class="btn-fill-hover red cta-4 allupper"><?php the_field("cta_calendario", "option"); ?></a>
-                <a href="<?php the_field("link_biglietti_online", "option"); ?>" target="_blank" class="btn-fill red cta-4 allupper last"><?php the_field("cta_biglietti_online", "option"); ?></a>
+                <a href="<?php the_field("link_biglietti_online", "option"); ?>" target="_self" class="btn-fill red cta-4 allupper last ticketed"><?php the_field("cta_biglietti_online", "option"); ?></a>
                 <a href="<?php the_field("carrello_sro", "option"); ?>" target="_blank" class="basket-selector basket-icon btn-fill red" onClick="_gaq.push(['_trackEvent', 'direct_tickets_header_button', 'click', '<?php the_title(); ?>', '0']);"></a>
               </div>
               <div class="search-hold">

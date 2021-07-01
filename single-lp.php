@@ -18,7 +18,8 @@ if ( $isTablet == 1 ) {
 if ( $isDesktop == 1 ) {
   $thumb_url = wp_get_attachment_image_src($thumb_id,'full_desk', true);
 }
-?>
+
+if ( $thumb_id != 534 ) : ?>
 <div class="landing-opening lazy" data-original="<?php echo $thumb_url[0]; ?>">
   <div class="landing-logo-stripe"></div>
   <div class="landing-logo"><a href="<?php echo home_url(); ?>" rel="bookmark" title="Teatro Franco Parenti - Homepage" class="absl"></a></div>
@@ -29,7 +30,20 @@ if ( $isDesktop == 1 ) {
     <?php endif; ?>
   </div>
 </div>
-
+<?php else : ?>
+  <div class="wrapper">
+    <div class="wrapper-padded">
+      <div class="wrapper-padded-more-spettacolo">
+        <div class="landing-title-no-image">
+          <h1><?php the_title(); ?></h1>
+          <?php if( get_field('subtitle') ) : ?>
+            <h2><?php the_field('subtitle'); ?></h2>
+          <?php endif; ?>
+        </div>
+      </div>
+    </div>
+  </div>
+<?php endif; ?>
 
 
 

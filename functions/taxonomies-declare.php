@@ -104,6 +104,7 @@ function call_all_area_attivita_primary() {
 
 
 function call_all_area_attivita() {
+  global $post;
   $archive_prefix = '/cartellone/';
   $terms_activity = get_the_terms( $post->ID , 'area_attivita' );
   // Loop over each item since it's an array
@@ -135,6 +136,7 @@ function call_all_catgories() {
 }
 
 function call_all_percorsi() {
+  global $post;
   $archive_prefix = '/cartellone/';
   $terms_percorsi = get_the_terms( $post->ID , 'percorsi' );
   // Loop over each item since it's an array
@@ -149,6 +151,7 @@ function call_all_percorsi() {
 }
 
 function call_all_percorsi_single() {
+  global $post;
   $archive_prefix = '/cartellone/';
   $terms_percorsi = get_the_terms( $post->ID , 'percorsi' );
   // Loop over each item since it's an array

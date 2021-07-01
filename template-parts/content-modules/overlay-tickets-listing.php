@@ -40,6 +40,7 @@
 																<div class="overlay-title-padding">
 																	<h2><?php the_title(); ?></h2>
 																	<h5><?php include( locate_template ( 'template-parts/date-modules/riepilogo-date-top.php' ) ); ?></h5>
+																	
 																</div>
 															</div>
 															<div class="tariffe-info">
@@ -60,18 +61,6 @@
 																?>
 															<?php elseif ( $cta_biglietti === 'Overlay link interni' ) : ?>
 																<?php
-																$args = array(
-																	'post_parent' => get_the_ID(),
-																  'post_type' => array( 'spettacolo', 'spettacolo_archivio' ),
-																  'numberposts' => 1
-
-																);
-																$children = get_children( $args );
-																if ( !empty($children) ) {
-																	$count_periods = 0;
-																	foreach($children as $post) : setup_postdata($post);
-																	endforeach;
-																}
 																if( have_rows('program_periods') ) : while ( have_rows('program_periods') ) : the_row();
 																if( have_rows('dates') ) : while ( have_rows('dates') ) : the_row();
 																$dateString = get_sub_field('date');
@@ -82,11 +71,6 @@
 																 ?>
 																	<div class="flex-hold overlay-event-details">
 																		<div class="detail">
-																			<?php if ( !empty($children) ) : ?>
-																				<h4><?php the_title(); ?></h4>
-																			<?php else : ?>
-																				<h4><?php the_sub_field('title'); ?></h4>
-																			<?php endif; ?>
 																			<h5><?php echo $a_date_string; ?></h5>
 																		</div>
 																		<div class="detail txt-5-color">
@@ -98,7 +82,7 @@
 																			<?php if ( get_sub_field( 'link_biglietteria_custom_overlay' ) ) : ?>
 																				<a href="<?php the_sub_field( 'link_biglietteria_custom_overlay' ); ?>" class="btn-fill red cta-4 allupper" target="_blank" onClick="_gaq.push(['_trackEvent', 'tickets_overlay_button', 'click', '<?php the_title(); ?>', '0']);">
 																					<?php if ( get_sub_field( 'prezzo_listing_overlay' ) ) : ?>
-																						<?php the_sub_field( 'prezzo_listing_overlay' ); ?>
+																						<?php the_sub_field( 'prezzo_listing_overlay' ); ?> €
 																					<?php else : ?>
 																						Acquista
 																					<?php endif; ?>
@@ -111,7 +95,7 @@
 
 																<?php foreach ($events as $eventId => $event) :
 																	$comparsion = strtotime($event["ActualEventDate"]);
-																	$today_sro = strtotime(date('Y-m-dH:i'));
+																	$today_sro = strtotime(date('Y-d-m-H'));
 																	$fendere = $event["ActualEventDate"];
 																	$timestamp = strtotime(str_replace("/", "-", $fendere));
 																	$a_date_string = date_i18n("l j F Y",$timestamp);
@@ -148,7 +132,7 @@
 																			</a>
 																		</div>
 																	</div>
-																<?php endif; ?> <?php endforeach; ?>
+																<?php endif; endforeach; ?>
 															<?php endif; ?>
 
 
@@ -175,3 +159,14 @@
 		</div>
 	</div>
 </div>
+<script type="text/javascript">
+$(document).ready(function() {
+  function inPageOpenOverlay() {
+    $('#tickets-overlay').fadeIn(150, "linear");
+    $('.overlay-effect').delay(300).removeClass('overlay-effect-initial');
+    $('html').css('overflowY', 'hidden');
+    $('body').addClass('occupy-scrollbar');
+  }
+  inPageOpenOverlay();
+});
+</script>

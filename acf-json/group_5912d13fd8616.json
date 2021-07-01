@@ -1,0 +1,381 @@
+{
+    "key": "group_5912d13fd8616",
+    "title": "Spettacolo Cartellone\/Evento Esterno",
+    "fields": [
+        {
+            "key": "field_593f98a350498",
+            "label": "Tipo Spettacolo x",
+            "name": "type_show",
+            "type": "radio",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "standard": "Standard",
+                "cyclic": "A Cicli"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "standard",
+            "layout": "vertical",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_5912d16c75fb2",
+            "label": "Periodi",
+            "name": "program_periods",
+            "type": "repeater",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 1,
+            "max": 0,
+            "layout": "block",
+            "button_label": "Aggiungi Periodo",
+            "sub_fields": [
+                {
+                    "key": "field_595e0fc981247",
+                    "label": "Da",
+                    "name": "from",
+                    "type": "date_picker",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "25",
+                        "class": "",
+                        "id": ""
+                    },
+                    "display_format": "l, d\/m\/Y",
+                    "return_format": "d\/m\/Y",
+                    "first_day": 1
+                },
+                {
+                    "key": "field_595e104d81248",
+                    "label": "A",
+                    "name": "to",
+                    "type": "date_picker",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "25",
+                        "class": "",
+                        "id": ""
+                    },
+                    "display_format": "l, d\/m\/Y",
+                    "return_format": "d\/m\/Y",
+                    "first_day": 1
+                },
+                {
+                    "key": "field_5913274569808",
+                    "label": "Date",
+                    "name": "dates",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "collapsed": "",
+                    "min": 1,
+                    "max": 0,
+                    "layout": "block",
+                    "button_label": "Aggiungi Data",
+                    "sub_fields": [
+                        {
+                            "key": "field_5912dd1353bf9",
+                            "label": "Data",
+                            "name": "date",
+                            "type": "date_picker",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "35",
+                                "class": "",
+                                "id": ""
+                            },
+                            "display_format": "l, d\/m\/Y",
+                            "return_format": "d\/m\/Y",
+                            "first_day": 1
+                        },
+                        {
+                            "key": "field_591418160396e",
+                            "label": "Ora",
+                            "name": "time",
+                            "type": "time_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "35",
+                                "class": "",
+                                "id": ""
+                            },
+                            "display_format": "H:i",
+                            "return_format": "H:i"
+                        },
+                        {
+                            "key": "field_5b2b88cf0f858",
+                            "label": "Ora fine spettacolo",
+                            "name": "time_end",
+                            "type": "time_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "35",
+                                "class": "",
+                                "id": ""
+                            },
+                            "display_format": "H:i",
+                            "return_format": "H:i"
+                        },
+                        {
+                            "key": "field_595b525c02b4c",
+                            "label": "Data da definire",
+                            "name": "date_not_defined",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "20",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0,
+                            "ui": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
+                        },
+                        {
+                            "key": "field_591c57ce4ab55",
+                            "label": "Copertina",
+                            "name": "thumb",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_593f98a350498",
+                                        "operator": "==",
+                                        "value": "cyclic"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "25",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "preview_size": "thumbnail",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        },
+                        {
+                            "key": "field_591c57fd4ab56",
+                            "label": "Titolo",
+                            "name": "title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_593f98a350498",
+                                        "operator": "==",
+                                        "value": "cyclic"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "75",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5b2b88ef0f859",
+                            "label": "Titolo per anteprima calendario",
+                            "name": "titolo_anteprima_calendario",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_593f98a350498",
+                                        "operator": "==",
+                                        "value": "cyclic"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "75",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_591c58124ab57",
+                            "label": "Testo",
+                            "name": "text",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_593f98a350498",
+                                        "operator": "==",
+                                        "value": "cyclic"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 0,
+                            "delay": 0
+                        },
+                        {
+                            "key": "field_5de4ec78a1ad0",
+                            "label": "Prezzo \/ CTA",
+                            "name": "prezzo_listing_overlay",
+                            "type": "text",
+                            "instructions": "Usato solo nel listing in overlay. Se si inserisce il prezzo ricordarsi di aggiungere €.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5de4ec85a1ad1",
+                            "label": "Link biglietteria custom",
+                            "name": "link_biglietteria_custom_overlay",
+                            "type": "url",
+                            "instructions": "Usato solo nel listing in overlay.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": ""
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "spettacolo"
+            },
+            {
+                "param": "post_taxonomy",
+                "operator": "==",
+                "value": "tipo_spettacolo:cartellone"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "spettacolo_archivio"
+            },
+            {
+                "param": "post_taxonomy",
+                "operator": "==",
+                "value": "tipo_spettacolo:cartellone"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "spettacolo"
+            },
+            {
+                "param": "post_taxonomy",
+                "operator": "==",
+                "value": "tipo_spettacolo:eventi-esterni"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "spettacolo_archivio"
+            },
+            {
+                "param": "post_taxonomy",
+                "operator": "==",
+                "value": "tipo_spettacolo:eventi-esterni"
+            }
+        ]
+    ],
+    "menu_order": 1,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1621261580
+}

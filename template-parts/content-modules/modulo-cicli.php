@@ -70,7 +70,7 @@ foreach($children as $post) : setup_postdata($post);
 										else {
 											echo $a_date_string;
 											if ( $orario != '' ) {
-												echo ' h.' . $orario;
+												echo ' h ' . $orario;
 											}
 											if ( $orario_fine != '' ) {
 												echo ' - ' . $orario_fine;
@@ -78,8 +78,13 @@ foreach($children as $post) : setup_postdata($post);
 										}
 									?>
 									</div>
-									<?php if( get_sub_field('cta_incontro') ) : ?>
-										<a href="<?php echo $incontro_url; ?>" target="<?php echo $target; ?>" class="btn-fill red cta-4 allupper last"><?php the_sub_field('cta_incontro'); ?></a>
+									<?php if( get_sub_field('prezzo_listing_overlay') ) : ?>
+										<div class="cta-2 txt-5-color">
+											<?php the_sub_field('prezzo_listing_overlay'); ?>
+										</div>
+									<?php endif; ?>
+									<?php if( get_sub_field('link_biglietteria_custom_overlay') ) : ?>
+										<a href="<?php the_sub_field('link_biglietteria_custom_overlay'); ?>" target="_blank" class="btn-fill red cta-4 allupper last">Acquista</a>
 									<?php endif; ?>
 								</div>
 							</div>
@@ -117,7 +122,7 @@ foreach($children as $post) : setup_postdata($post);
 										else {
 											echo $a_date_string;
 											if ( $orario != '' ) {
-												echo ' h.' . $orario;
+												echo ' h ' . $orario;
 											}
 											if ( $orario_fine != '' ) {
 												echo ' - ' . $orario_fine;
@@ -125,8 +130,13 @@ foreach($children as $post) : setup_postdata($post);
 										}
 									?>
 									</div>
-									<?php if( get_sub_field('cta_incontro') ) : ?>
-										<a href="<?php echo $incontro_url; ?>" target="<?php echo $target; ?>" class="btn-fill red cta-4 allupper last"><?php the_sub_field('cta_incontro'); ?></a>
+									<?php if( get_sub_field('prezzo_listing_overlay') ) : ?>
+										<div class="cta-2 txt-5-color">
+											<?php the_sub_field('prezzo_listing_overlay'); ?>
+										</div>
+									<?php endif; ?>
+									<?php if( get_sub_field('link_biglietteria_custom_overlay') ) : ?>
+										<a href="<?php the_sub_field('link_biglietteria_custom_overlay'); ?>" target="_blank" class="btn-fill red cta-4 allupper last">Acquista</a>
 									<?php endif; ?>
 								</div>
 							</div>
@@ -173,7 +183,7 @@ foreach($children as $post) : setup_postdata($post);
 											else {
 												echo $a_date_string;
 												if ( $orario != '' ) {
-													echo ' h.' . $orario;
+													echo ' h ' . $orario;
 												}
 												if ( $orario_fine != '' ) {
 													echo ' - ' . $orario_fine;
@@ -181,8 +191,13 @@ foreach($children as $post) : setup_postdata($post);
 											}
 										?>
 										</div>
-										<?php if( get_sub_field('cta_incontro') ) : ?>
-											<a href="<?php echo $incontro_url; ?>" target="<?php echo $target; ?>" class="btn-fill red cta-4 allupper last"><?php the_sub_field('cta_incontro'); ?></a>
+										<?php if( get_sub_field('prezzo_listing_overlay') ) : ?>
+											<div class="cta-2 txt-5-color">
+												<?php the_sub_field('prezzo_listing_overlay'); ?>
+											</div>
+                    <?php endif; ?>
+										<?php if( get_sub_field('link_biglietteria_custom_overlay') ) : ?>
+											<a href="<?php the_sub_field('link_biglietteria_custom_overlay'); ?>" target="_blank" class="btn-fill red cta-4 allupper last">Acquista</a>
 										<?php endif; ?>
 									</div>
 								</div>
@@ -278,7 +293,7 @@ foreach($children as $post) : setup_postdata($post);
 											else {
 												echo $a_date_string;
 												if ( $orario != '' ) {
-													echo ' h.' . $orario;
+													echo ' h ' . $orario;
 												}
 												if ( $orario_fine != '' ) {
 													echo ' - ' . $orario_fine;
@@ -286,8 +301,13 @@ foreach($children as $post) : setup_postdata($post);
 											}
 										?>
                     </div>
-                    <?php if( get_sub_field('cta_incontro') ) : ?>
-                      <a href="<?php echo $incontro_url; ?>" target="<?php echo $target; ?>" class="btn-fill red cta-4 allupper last"><?php the_sub_field('cta_incontro'); ?></a>
+										<?php if( get_sub_field('prezzo_listing_overlay') ) : ?>
+											<div class="cta-2 txt-5-color">
+												<?php the_sub_field('prezzo_listing_overlay'); ?>
+											</div>
+                    <?php endif; ?>
+                    <?php if( get_sub_field('link_biglietteria_custom_overlay') ) : ?>
+                      <a href="<?php the_sub_field('link_biglietteria_custom_overlay'); ?>" target="_blank" class="btn-fill red cta-4 allupper last">Acquista</a>
                     <?php endif; ?>
                   </div>
                 </div>
@@ -325,7 +345,7 @@ foreach($children as $post) : setup_postdata($post);
 											else {
 												echo $a_date_string;
 												if ( $orario != '' ) {
-													echo ' h.' . $orario;
+													echo ' h ' . $orario;
 												}
 												if ( $orario_fine != '' ) {
 													echo ' - ' . $orario_fine;
@@ -333,8 +353,13 @@ foreach($children as $post) : setup_postdata($post);
 											}
 										?>
                     </div>
-                    <?php if( get_sub_field('cta_incontro') ) : ?>
-                      <a href="<?php echo $incontro_url; ?>" target="<?php echo $target; ?>" class="btn-fill red cta-4 allupper last"><?php the_sub_field('cta_incontro'); ?></a>
+										<?php if( get_sub_field('prezzo_listing_overlay') ) : ?>
+											<div class="cta-2 txt-5-color">
+												<?php the_sub_field('prezzo_listing_overlay'); ?>
+											</div>
+                    <?php endif; ?>
+                    <?php if( get_sub_field('link_biglietteria_custom_overlay') ) : ?>
+                      <a href="<?php the_sub_field('link_biglietteria_custom_overlay'); ?>" target="_blank" class="btn-fill red cta-4 allupper last">Acquista</a>
                     <?php endif; ?>
                   </div>
                 </div>
@@ -381,7 +406,7 @@ foreach($children as $post) : setup_postdata($post);
 												else {
 													echo $a_date_string;
 													if ( $orario != '' ) {
-														echo ' h.' . $orario;
+														echo ' h ' . $orario;
 													}
 													if ( $orario_fine != '' ) {
 														echo ' - ' . $orario_fine;
@@ -389,8 +414,13 @@ foreach($children as $post) : setup_postdata($post);
 												}
 											?>
                       </div>
-                      <?php if( get_sub_field('cta_incontro') ) : ?>
-                        <a href="<?php echo $incontro_url; ?>" target="<?php echo $target; ?>" class="btn-fill red cta-4 allupper last"><?php the_sub_field('cta_incontro'); ?></a>
+											<?php if( get_sub_field('prezzo_listing_overlay') ) : ?>
+												<div class="cta-2 txt-5-color">
+													<?php the_sub_field('prezzo_listing_overlay'); ?>
+												</div>
+	                    <?php endif; ?>
+                      <?php if( get_sub_field('link_biglietteria_custom_overlay') ) : ?>
+                        <a href="<?php the_sub_field('link_biglietteria_custom_overlay'); ?>" target="_blank" class="btn-fill red cta-4 allupper last">Acquista</a>
                       <?php endif; ?>
                     </div>
                   </div>

@@ -1,7 +1,7 @@
 <?php
 // imposto la versione del tema
 global $theme_version;
-$theme_version = 7.0;
+$theme_version = 7.5;
 // gestione caricamento css
 include_once "functions/theme_stylesloader.php";
 // gestione caricamento script
@@ -26,6 +26,7 @@ include_once "functions/theme_filter_term_clauses.php";
 include_once "functions/rewrites.php";
 // taxonomies declare
 include_once "functions/taxonomies-declare.php";
+
 // pre_get_posts archive
 //include_once "functions/pre_get_posts_archive.php";
 
@@ -56,5 +57,6 @@ add_action('acf/save_post', 'my_acf_save_post', 20);
 function my_acf_save_post( $post_id ){
 
     $value = "12345";
+    $new_tax = '';
     update_field('final_date', $new_tax, $post_id);
 }

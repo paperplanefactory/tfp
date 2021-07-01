@@ -19,6 +19,7 @@ if ( $ab_test === 'si' ) {
 }
 else {
   $rand_ab = 1;
+  $ab_trace = '';
 }
 $tipo_di_spettacolo = get_field( 'tipo_di_spettacolo_' . $rand_ab );
 $term_slug = 'area_attivita';

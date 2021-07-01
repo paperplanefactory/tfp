@@ -32,6 +32,6 @@ switch ( $status ) {
          <a href="<?php the_field('url_di_collegamento_banner'); ?>" class="btn-fill-hover white cta-4 allupper" target="<?php the_field('link_banner_finestra'); ?>"><?php the_field('cta_banner'); ?></a>
         <?php endif; ?>
      </div>
-       <img class="lazy" data-original="<?php echo $immagine_banner_URL; ?>" title="<?php the_title(); ?>" alt="<?php echo get_post_meta($thumb_id, '_wp_attachment_image_alt', true); ?>" />
+       <img class="lazy" data-original="<?php echo $immagine_banner_URL; ?>" title="<?php the_title(); ?>" alt="<?php the_title(); ?>" />
    </div>
  </div>

@@ -199,9 +199,14 @@ $my_editorial_6 = get_posts( $args_editorial_6 );
         <div class="righty">
           <div class="def-grid-righty">
             <div class="righty-item">
-              <?php dynamic_sidebar( 'sidebar-home' ); ?>
+              <div class="only-desktop">
+                <?php dynamic_sidebar( 'sidebar-home' ); ?>
+              </div>
+
             </div>
+
             <div class="righty-item">
+              <?php include( locate_template ( 'template-parts/homepage/cartellone-cats-mobile.php' ) ); ?>
               <?php include( locate_template ( 'template-parts/banners/modulo-banner-home.php' ) ); ?>
             </div>
           </div>

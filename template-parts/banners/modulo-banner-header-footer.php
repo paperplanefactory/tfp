@@ -17,6 +17,9 @@
       $immagine_banner = get_field('immagine_banner_desktop_tablet_home');
       $immagine_banner_URL = $immagine_banner['sizes']['banner_300_free'];
     }
+    if ( !isset( $logo_class ) ) {
+      $logo_class = '';
+    }
     ?>
     <div class="banner-img">
       <a href="<?php the_field('url_di_destinazione'); ?>" target="_blank">

@@ -25,7 +25,15 @@ add_action('init', 'custom_rewrite_rule', 10, 0);
 add_action( 'parse_query', 'wtnerd_global_vars');
 
 function wtnerd_global_vars() {
-  if (is_page( 'cartellone' ) ) {
+  global $post;
+  if ( isset( $post->post_name ) ) {
+    $post_name = $post->post_name;
+  }
+  else {
+    $post_name = '';
+  }
+
+  if ( $post_name === 'cartellone' ) {
     global $wp_query;
     if ( isset ( $wp_query->query_vars['filtro'] ) ) {
     	global $filtro;
@@ -59,11 +67,12 @@ function sweety_page_title($title){
     $taxonomies = get_taxonomies();
     foreach ( $taxonomies as $tax_type_key => $taxonomy ) {
       if ( $term_object = get_term_by( 'slug', $term_slug , $taxonomy ) ) {
+        $term_object_name = $term_object->name;
         break;
       }
     }
-    if ( $term_object->name != '' ) {
-      $title = $term_object->name . ' - Teatro Franco Parenti';
+    if (  isset( $term_object_name ) ) {
+      $title = $term_object_name . ' - Teatro Franco Parenti';
     }
     else {
       $title = 'Cartellone - Teatro Franco Parenti';
@@ -86,8 +95,11 @@ function my_gv_wpseo_metadesc( $desc ) {
             break;
         }
     }
-    $desc = strip_tags( $term_object->description );
-    return $desc;
+    if ( isset( $term_object->description ) ) {
+      $desc = strip_tags( $term_object->description );
+      return $desc;
+    }
+
   }
   return $desc;
 }
