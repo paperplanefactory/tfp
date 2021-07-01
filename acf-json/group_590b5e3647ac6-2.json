@@ -1,0 +1,778 @@
+{
+    "key": "group_590b5e3647ac6-2",
+    "title": "Dati mosaico",
+    "fields": [
+        {
+            "key": "field_590c308fb86e9",
+            "label": "Informazioni per il mosaico",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Ogni elemento del mosaico deve avere una posizione (box a destra \"Ordinamento mosaico home\").\r\nOgni elemento può essere impostato con A\/B test: in caso scegliete di usare l' A\/B test ogni campo dovrà essere compilato in 2 versioni.\r\n Il mosaico può avere una griglia a 7,4,3 post. Per cambiare la griglia: scegliere la voce \"Impostazioni sito\" -> \"Mosaico\" dal menu a sinistra e cambiare le impostazioni.\r\nGuardando la homepage del sito dopo aver effettuato l'accesso il titolo di ogni scheda sarà preceduto da:\r\n[P] = pubblicato\r\n[F] = futuro\r\n[B] = bozza\r\nSarà sempre possibile visitare la homepage del sito in una finestra di navigazione anonima per visualizzare la pagina come viene vista degli utenti senza dover fare log-out.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_590c2ed2eb45e",
+            "label": "A\/B test?",
+            "name": "ab_test",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "no": "No",
+                "si": "Sì"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "",
+            "layout": "vertical",
+            "return_format": "value"
+        },
+        {
+            "key": "field_59397bd3393b1",
+            "label": "Tipo di spettacolo 1",
+            "name": "tipo_di_spettacolo_1",
+            "type": "taxonomy",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "taxonomy": "area_attivita",
+            "field_type": "select",
+            "allow_null": 0,
+            "add_term": 0,
+            "save_terms": 0,
+            "load_terms": 0,
+            "return_format": "id",
+            "multiple": 0
+        },
+        {
+            "key": "field_590b5f7fd121f",
+            "label": "Titolo 1",
+            "name": "titolo_1",
+            "type": "text",
+            "instructions": "Nei post 2,3,6,7 non superare le due righe di titolo.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_590b5f9ed1221",
+            "label": "Sottotitolo 1",
+            "name": "sottotitolo_1",
+            "type": "text",
+            "instructions": "Valido solo per posizione 1.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5de0ea96a0fe5",
+            "label": "Sottotitolo mobile 1",
+            "name": "sottotitolo_mobile_1",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_590b5ff70a1da",
+            "label": "CTA 1",
+            "name": "cta_1",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_590b600a0a1dc",
+            "label": "Categoria 1",
+            "name": "categoria_1",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_590c3d1942984",
+            "label": "Label 1",
+            "name": "label_1",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_590c3d2b42985",
+            "label": "Abstract 1",
+            "name": "abstract_1",
+            "type": "textarea",
+            "instructions": "Posizione 1,4,5 - massimo 150 caratteri spazi inclusi. Posizione 2,3,6,7 - massimo 60 caratteri spazi inclusi.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": 150,
+            "rows": 3,
+            "new_lines": "wpautop"
+        },
+        {
+            "key": "field_590b6022082d9",
+            "label": "Immagine 1",
+            "name": "immagine_1",
+            "type": "image",
+            "instructions": "caricare immagini minimo delle seguenti dimensioni:<br \/>\r\nGRIGLIA A 7 - posizione 1: 640x802 - posizione 2,7: 321x440px<br \/>\r\nGRIGLIA A 4 - posizione 1: 1280x802 - posizione 2: 321x440px<br \/>\r\nTutte le dimensioni non specificate sono in 16:9",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_609a7f7e185a9",
+            "label": "Immagine mobile",
+            "name": "immagine_mobile",
+            "type": "image",
+            "instructions": "Le immagini per lo slideshow mobile devono avere un taglio verticale es. 500x797.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_590b604770cc6",
+            "label": "Link di destinazione 1",
+            "name": "link_di_destinazione_1",
+            "type": "radio",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "interno": "Scelta URL tra le pagine",
+                "esterno": "Compilazione URL manuale"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "",
+            "layout": "vertical",
+            "return_format": "value"
+        },
+        {
+            "key": "field_5a1edf82a90d0",
+            "label": "Target 1",
+            "name": "target_1",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "_self": "Nella stessa finestra",
+                "_blank": "In una nuova finestra"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "",
+            "layout": "vertical",
+            "return_format": "value"
+        },
+        {
+            "key": "field_590b60a470cc7",
+            "label": "Destinazione interna 1",
+            "name": "destinazione_interna_1",
+            "type": "page_link",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_590b604770cc6",
+                        "operator": "==",
+                        "value": "interno"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "post",
+                "page",
+                "spettacolo",
+                "spettacolo_archivio"
+            ],
+            "taxonomy": [],
+            "allow_null": 0,
+            "allow_archives": 1,
+            "multiple": 0
+        },
+        {
+            "key": "field_590b60df78fb9",
+            "label": "Destinazione esterna 1",
+            "name": "destinazione_esterna_1",
+            "type": "url",
+            "instructions": "Inserire l'URL completa del sito di destinazione es.: http:\/\/www.paperplanefactory.com\/",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_590b604770cc6",
+                        "operator": "==",
+                        "value": "esterno"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_590c3041b26d4",
+            "label": "Compilazione contenuti per A\/B test",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_590c2ed2eb45e",
+                        "operator": "==",
+                        "value": "si"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Di seguito i campi per il contenuto alternativo.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_593a6fc84455c",
+            "label": "Tipo di spettacolo 2",
+            "name": "tipo_di_spettacolo_2",
+            "type": "taxonomy",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_590c2ed2eb45e",
+                        "operator": "==",
+                        "value": "si"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "taxonomy": "area_attivita",
+            "field_type": "select",
+            "allow_null": 0,
+            "add_term": 0,
+            "save_terms": 0,
+            "load_terms": 0,
+            "return_format": "id",
+            "multiple": 0
+        },
+        {
+            "key": "field_590c2f47b5df5",
+            "label": "Titolo 2",
+            "name": "titolo_2",
+            "type": "text",
+            "instructions": "Nei post 2,3,6,7 non superare le due righe di titolo.",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_590c2ed2eb45e",
+                        "operator": "==",
+                        "value": "si"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_590c2f71effe7",
+            "label": "Sottotitolo 2",
+            "name": "sottotitolo_2",
+            "type": "text",
+            "instructions": "Valido solo per posizione 1.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_590c2ed2eb45e",
+                        "operator": "==",
+                        "value": "si"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5de0eaa7a0fe6",
+            "label": "Sottotitolo mobile 2",
+            "name": "sottotitolo_mobile_2",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_590c2ed2eb45e",
+                        "operator": "==",
+                        "value": "si"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_590c2f8bc6d6e",
+            "label": "CTA 2",
+            "name": "cta_2",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_590c2ed2eb45e",
+                        "operator": "==",
+                        "value": "si"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_590c2fa0c6d6f",
+            "label": "Categoria 2",
+            "name": "categoria_2",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_590c2ed2eb45e",
+                        "operator": "==",
+                        "value": "si"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_590c3d5042986",
+            "label": "Label 2",
+            "name": "label_2",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_590c2ed2eb45e",
+                        "operator": "==",
+                        "value": "si"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_590c3d6b42987",
+            "label": "Abstract 2",
+            "name": "abstract_2",
+            "type": "textarea",
+            "instructions": "Posizione 1,4,5 - massimo 150 caratteri spazi inclusi. Posizione 2,3,6,7 - massimo 60 caratteri spazi inclusi.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_590c2ed2eb45e",
+                        "operator": "==",
+                        "value": "si"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": 150,
+            "rows": 3,
+            "new_lines": "wpautop"
+        },
+        {
+            "key": "field_590c2fb4c6d70",
+            "label": "Immagine 2",
+            "name": "immagine_2",
+            "type": "image",
+            "instructions": "caricare immagini minimo delle seguenti dimensioni:<br \/>\r\nGRIGLIA A 7 - posizione 1: 640x802 - posizione 2,7: 321x440px<br \/>\r\nGRIGLIA A 4 - posizione 1: 1280x802 - posizione 2: 321x440px<br \/>\r\nTutte le dimensioni non specificate sono in 16:9",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_590c2ed2eb45e",
+                        "operator": "==",
+                        "value": "si"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_590c2fd0c6d71",
+            "label": "Link di destinazione 2",
+            "name": "link_di_destinazione_2",
+            "type": "radio",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_590c2ed2eb45e",
+                        "operator": "==",
+                        "value": "si"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "interno": "Scelta URL tra le pagine",
+                "esterno": "Compilazione URL manuale"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "",
+            "layout": "vertical",
+            "return_format": "value"
+        },
+        {
+            "key": "field_5a1edf99a90d1",
+            "label": "Target 2",
+            "name": "target_2",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_590c2ed2eb45e",
+                        "operator": "==",
+                        "value": "si"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "_self": "Nella stessa finestra",
+                "_blank": "In una nuova finestra"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "",
+            "layout": "vertical",
+            "return_format": "value"
+        },
+        {
+            "key": "field_593ab721b2909",
+            "label": "Destinazione interna 2",
+            "name": "destinazione_interna_2",
+            "type": "page_link",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_590c2ed2eb45e",
+                        "operator": "==",
+                        "value": "si"
+                    },
+                    {
+                        "field": "field_590c2fd0c6d71",
+                        "operator": "==",
+                        "value": "interno"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "post",
+                "spettacolo",
+                "spettacolo_archivio",
+                "page"
+            ],
+            "taxonomy": [],
+            "allow_null": 0,
+            "allow_archives": 1,
+            "multiple": 0
+        },
+        {
+            "key": "field_590c301bc6d73",
+            "label": "Destinazione esterna 2",
+            "name": "destinazione_esterna_2",
+            "type": "url",
+            "instructions": "Inserire l'URL completa del sito di destinazione es.: http:\/\/www.paperplanefactory.com\/",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_590c2ed2eb45e",
+                        "operator": "==",
+                        "value": "si"
+                    },
+                    {
+                        "field": "field_590c2fd0c6d71",
+                        "operator": "==",
+                        "value": "esterno"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "home_mosaico"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1620738094
+}
