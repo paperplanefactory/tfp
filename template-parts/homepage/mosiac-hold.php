@@ -335,7 +335,6 @@ else {
 
       </ul>
     </div>
-
+    <a href="<?php the_field( 'url_cartellone', 'options' ); ?>" class="home-cartellone-cta"><?php the_field( 'cta_cartellone_home_solo_mobile', 'options' ); ?></a>
   </div>
-
 </div>

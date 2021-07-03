@@ -306,3 +306,17 @@
     }
   }
 }
+
+a.home-cartellone-cta:link,
+a.home-cartellone-cta:visited {
+  display: block;
+  width: calc(100% - 30px);
+  padding: 15px;
+  font-size: $h5-size;
+  line-height: $h5-size;
+  font-weight: $font-weight-demi;
+  text-align: center;
+  background-color: $color-rosso-tfp;
+  color: $color-bianco !important;
+  text-transform: uppercase !important;
+}

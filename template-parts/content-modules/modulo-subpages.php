@@ -25,45 +25,46 @@
            <div class="split">
              <div class="padder_r content-styled">
                <h4><a href="<?php the_sub_field('scegli_pagina'); ?>"><?php the_sub_field('page_title'); ?></a></h4>
-               <div class="no-mobile no-tablet">
+               <div class="only-desktop">
                  <?php the_sub_field('page_abstract'); ?>
+                 <a href="<?php the_sub_field('scegli_pagina'); ?>" class="btn-fill red cta-4 allupper"><?php the_sub_field('page_cta'); ?></a>
+                 <?php if( get_sub_field('page_cta_2') ) : ?>
+                   <?php
+                   if ( get_sub_field('cta_2_file') ) {
+                     $cta2_link = get_sub_field('cta_2_file');
+                     $cta2_target = "_blank";
+                   }
+                   else {
+                     $cta2_link = get_sub_field('cta_2_url');
+                     $cta2_target = "_self";
+                   }
+                    ?>
+                   <a href="<?php echo $cta2_link; ?>" target="<?php echo $cta2_target; ?>" class="btn-fill-hover grey cta-4 allupper last"><?php the_sub_field('page_cta_2'); ?></a>
+                 <?php endif; ?>
                </div>
-               <a href="<?php the_sub_field('scegli_pagina'); ?>" class="btn-fill red cta-4 allupper"><?php the_sub_field('page_cta'); ?></a>
-               <?php if( get_sub_field('page_cta_2') ) : ?>
-                 <?php
-                 if ( get_sub_field('cta_2_file') ) {
-                   $cta2_link = get_sub_field('cta_2_file');
-                   $cta2_target = "_blank";
-                 }
-                 else {
-                   $cta2_link = get_sub_field('cta_2_url');
-                   $cta2_target = "_self";
-                 }
-                  ?>
-                 <a href="<?php echo $cta2_link; ?>" target="<?php echo $cta2_target; ?>" class="btn-fill-hover grey cta-4 allupper last"><?php the_sub_field('page_cta_2'); ?></a>
-               <?php endif; ?>
+
              </div>
          <?php else : ?>
            <div class="split-full">
              <div class="padder_r content-styled">
                <h4><a href="<?php the_sub_field('scegli_pagina'); ?>"><?php the_sub_field('page_title'); ?></a></h4>
-               <div class="no-mobile no-tablet">
+               <div class="only-desktop">
                  <?php the_sub_field('page_abstract'); ?>
+                 <a href="<?php the_sub_field('scegli_pagina'); ?>" class="btn-fill red cta-4 allupper"><?php the_sub_field('page_cta'); ?></a>
+                 <?php if( get_sub_field('page_cta_2') ) : ?>
+                   <?php
+                   if ( get_sub_field('cta_2_file') ) {
+                     $cta2_link = get_sub_field('cta_2_file');
+                     $cta2_target = "_blank";
+                   }
+                   else {
+                     $cta2_link = get_sub_field('cta_2_url');
+                     $cta2_target = "_self";
+                   }
+                    ?>
+                   <a href="<?php echo $cta2_link; ?>" target="<?php echo $cta2_target; ?>" class="btn-fill-hover grey cta-4 allupper last"><?php the_sub_field('page_cta_2'); ?></a>
+                 <?php endif; ?>
                </div>
-               <a href="<?php the_sub_field('scegli_pagina'); ?>" class="btn-fill red cta-4 allupper"><?php the_sub_field('page_cta'); ?></a>
-               <?php if( get_sub_field('page_cta_2') ) : ?>
-                 <?php
-                 if ( get_sub_field('cta_2_file') ) {
-                   $cta2_link = get_sub_field('cta_2_file');
-                   $cta2_target = "_blank";
-                 }
-                 else {
-                   $cta2_link = get_sub_field('cta_2_url');
-                   $cta2_target = "_self";
-                 }
-                  ?>
-                 <a href="<?php echo $cta2_link; ?>" target="<?php echo $cta2_target; ?>" class="btn-fill-hover grey cta-4 allupper last"><?php the_sub_field('page_cta_2'); ?></a>
-               <?php endif; ?>
              </div>
          <?php endif; ?>
 
@@ -75,23 +76,23 @@
            <div class="split">
              <div class="padder_l content-styled">
                <h4><a href="<?php the_sub_field('scegli_pagina'); ?>"><?php the_sub_field('page_title'); ?></a></h4>
-               <div class="no-mobile no-tablet">
+               <div class="only-desktop">
                  <?php the_sub_field('page_abstract'); ?>
+                 <a href="<?php the_sub_field('scegli_pagina'); ?>" class="btn-fill red cta-4 allupper"><?php the_sub_field('page_cta'); ?></a>
+                 <?php if( get_sub_field('page_cta_2') ) : ?>
+                   <?php
+                   if ( get_sub_field('cta_2_file') ) {
+                     $cta2_link = get_sub_field('cta_2_file');
+                     $cta2_target = "_blank";
+                   }
+                   else {
+                     $cta2_link = get_sub_field('cta_2_url');
+                     $cta2_target = "_self";
+                   }
+                    ?>
+                   <a href="<?php echo $cta2_link; ?>" target="<?php echo $cta2_target; ?>" class="btn-fill-hover grey cta-4 allupper last"><?php the_sub_field('page_cta_2'); ?></a>
+                 <?php endif; ?>
                </div>
-               <a href="<?php the_sub_field('scegli_pagina'); ?>" class="btn-fill red cta-4 allupper"><?php the_sub_field('page_cta'); ?></a>
-               <?php if( get_sub_field('page_cta_2') ) : ?>
-                 <?php
-                 if ( get_sub_field('cta_2_file') ) {
-                   $cta2_link = get_sub_field('cta_2_file');
-                   $cta2_target = "_blank";
-                 }
-                 else {
-                   $cta2_link = get_sub_field('cta_2_url');
-                   $cta2_target = "_self";
-                 }
-                  ?>
-                 <a href="<?php echo $cta2_link; ?>" target="<?php echo $cta2_target; ?>" class="btn-fill-hover grey cta-4 allupper last"><?php the_sub_field('page_cta_2'); ?></a>
-               <?php endif; ?>
              </div>
            </div>
            <div class="split">
@@ -103,29 +104,49 @@
            <div class="split-full">
              <div class="padder_l content-styled">
                <h4><a href="<?php the_sub_field('scegli_pagina'); ?>"><?php the_sub_field('page_title'); ?></a></h4>
-               <div class="no-mobile no-tablet">
+               <div class="only-desktop">
                  <?php the_sub_field('page_abstract'); ?>
+                 <a href="<?php the_sub_field('scegli_pagina'); ?>" class="btn-fill red cta-4 allupper"><?php the_sub_field('page_cta'); ?></a>
+                 <?php if( get_sub_field('page_cta_2') ) : ?>
+                   <?php
+                   if ( get_sub_field('cta_2_file') ) {
+                     $cta2_link = get_sub_field('cta_2_file');
+                     $cta2_target = "_blank";
+                   }
+                   else {
+                     $cta2_link = get_sub_field('cta_2_url');
+                     $cta2_target = "_self";
+                   }
+                    ?>
+                   <a href="<?php echo $cta2_link; ?>" target="<?php echo $cta2_target; ?>" class="btn-fill-hover grey cta-4 allupper last"><?php the_sub_field('page_cta_2'); ?></a>
+                 <?php endif; ?>
                </div>
-               <a href="<?php the_sub_field('scegli_pagina'); ?>" class="btn-fill red cta-4 allupper"><?php the_sub_field('page_cta'); ?></a>
-               <?php if( get_sub_field('page_cta_2') ) : ?>
-                 <?php
-                 if ( get_sub_field('cta_2_file') ) {
-                   $cta2_link = get_sub_field('cta_2_file');
-                   $cta2_target = "_blank";
-                 }
-                 else {
-                   $cta2_link = get_sub_field('cta_2_url');
-                   $cta2_target = "_self";
-                 }
-                  ?>
-                 <a href="<?php echo $cta2_link; ?>" target="<?php echo $cta2_target; ?>" class="btn-fill-hover grey cta-4 allupper last"><?php the_sub_field('page_cta_2'); ?></a>
-               <?php endif; ?>
              </div>
            </div>
          <?php endif; ?>
 
        </div>
      <?php endif; ?>
+     <div class="only-mobile">
+       <div class="split-full">
+         <?php the_sub_field('page_abstract'); ?>
+         <a href="<?php the_sub_field('scegli_pagina'); ?>" class="btn-fill red cta-4 allupper"><?php the_sub_field('page_cta'); ?></a>
+         <?php if( get_sub_field('page_cta_2') ) : ?>
+           <?php
+           if ( get_sub_field('cta_2_file') ) {
+             $cta2_link = get_sub_field('cta_2_file');
+             $cta2_target = "_blank";
+           }
+           else {
+             $cta2_link = get_sub_field('cta_2_url');
+             $cta2_target = "_self";
+           }
+            ?>
+           <a href="<?php echo $cta2_link; ?>" target="<?php echo $cta2_target; ?>" class="btn-fill-hover grey cta-4 allupper last"><?php the_sub_field('page_cta_2'); ?></a>
+         <?php endif; ?>
+       </div>
+     </div>
+     <div class="mobile-pages-separator"></div>
 <?php endwhile; ?>
   </div>
 <?php endif; ?>
