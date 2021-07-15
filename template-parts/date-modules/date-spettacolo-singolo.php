@@ -124,7 +124,6 @@
         <?php endif ?>
     <?php endif ?>
   </div>
-
   <?php endwhile; endif; ?>
   <?php
   if ( $count_date == 0 ) {
