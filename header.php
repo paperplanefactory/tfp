@@ -36,10 +36,9 @@ $today = date('d/m/Y');
 $today_as_acf = date('Ymd');
 $todaystamp = strtotime(str_replace("/", "-", $today));
 ?>
-<!--
-<html xmlns:esro=http://toptix.com>
+
+<html xmlns:esro=https://toptix.com>
 <script src="https://tickets.teatrofrancoparenti.it/iframe/esrojsapi.js" type="text/javascript"></script>
--->
 <link rel="apple-touch-icon" sizes="57x57" href="<?php bloginfo('stylesheet_directory'); ?>/images/favicon/apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="<?php bloginfo('stylesheet_directory'); ?>/images/favicon/apple-icon-60x60.png">
 <link rel="apple-touch-icon" sizes="72x72" href="<?php bloginfo('stylesheet_directory'); ?>/images/favicon/apple-icon-72x72.png">

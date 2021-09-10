@@ -7,8 +7,8 @@ global $identify;
 global $identify_old;
 global $post_value;
 
-$p_id =  $value[ID];
-$compare = $value[show_date];
+$p_id =  $value['ID'];
+$compare = $value['show_date'];
 $cycle = get_field('type_show', $p_id);
 $area_attivita_id = $value['area_attivita_id'];
 $area_attivita_name = $value['area_attivita_name'];
@@ -19,8 +19,8 @@ if ( $parent_id != 0 ) {
   $my_title = get_the_title( $parent_id );
 }
 else {
-  $my_permalink = $value[guid];
-  $my_title = $value[post_title];
+  $my_permalink = $value['guid'];
+  $my_title = $value['post_title'];
 }
 
 
@@ -39,7 +39,7 @@ if ( $img_id != '' ) {
 else {
   $thumb_url[0] = '/web/themes/tfp/images/placeholders/' . $area_attivita_id . '-thumb.png';
 }
-$orario = substr($value[show_time], 0, -3);
+$orario = substr($value['show_time'], 0, -3);
 ?>
 <script type="text/javascript">
 $(document).ready(function() {
@@ -51,7 +51,7 @@ $(document).ready(function() {
 <div class="calendar-grid-module">
   <div class="top-cal">
     <div class="cta-2">
-      <?php if ( $orario != '' ) : ?><span class="txt-4-color">h <?php echo substr($value[show_time], 0, -3); ?></span><br /><?php endif; ?><a href="/cartellone/<?php echo $area_attivita_slug; ?>" class="li-<?php echo $area_attivita_id; ?>-id"><?php echo $area_attivita_name; ?></a>
+      <?php if ( $orario != '' ) : ?><span class="txt-4-color">h <?php echo substr($value['show_time'], 0, -3); ?></span><br /><?php endif; ?><a href="/cartellone/<?php echo $area_attivita_slug; ?>" class="li-<?php echo $area_attivita_id; ?>-id"><?php echo $area_attivita_name; ?></a>
     </div>
   </div>
   <?php if ( $isHome != 'homed' ) : ?>

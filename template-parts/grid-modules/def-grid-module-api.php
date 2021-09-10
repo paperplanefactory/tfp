@@ -11,8 +11,11 @@ $fields = get_fields($p_id);
 $cycle = get_field('type_show', $p_id);
 $data_custom = get_field('data_custom', $p_id);
 $my_permalink = get_permalink($p_id);
+// attivare o disattivare chiamate a ESRO
+$disattivare_chiamate_esro_pagina_cartellone = get_field( 'disattivare_chiamate_esro_pagina_cartellone', 'option' );
 
-set_transient( 'transient_fields', $fields, MINUTE_IN_SECONDS / 60 );
+
+set_transient( 'transient_fields', $fields, 1 * HOUR_IN_SECONDS );
 $transient_fields = get_transient( 'transient_fields' );
 if ( empty( $transient_dates ) ) {
   $subtitle = $fields['subtitle'];
@@ -53,26 +56,50 @@ if( $cta_biglietti === 'acquista biglietti' ) {
   $url_cta_biglietti = get_field( 'url_cta_biglietti', $p_id  );
 }
 
-$showsdafsdf = get_post_meta($p_id, '_esrowp_showid', true );
+if ( $disattivare_chiamate_esro_pagina_cartellone == 1 ) {
+  if(($posts = get_transient("esro_show_id".$p_id)) === false)   {
+    $posts = get_post_meta($p_id, '_esrowp_showid', true );
+    set_transient("esro_show_id".$p_id, $posts, 1 * HOUR_IN_SECONDS);
+  }
+  $show_id_from_wp = $posts;
+  //$transient_esro_show_id = get_post_meta($p_id, '_esrowp_showid', true );
+
+  //$show_id_from_wp = get_post_meta($p_id, '_esrowp_showid', true );
+  if ( !empty( $show_id_from_wp) ) {
+    if(($events_esro = get_transient("esro_show_events".$p_id)) === false)   {
+      $events_esro = ESROWP_Helper::getEventsInfos($show_id_from_wp);
+      set_transient("esro_show_events".$p_id, $events_esro, 1 * HOUR_IN_SECONDS);
+    }
+    $events = $events_esro;
+
+    if(($events_prices_esro = get_transient("esro_show_events_prices".$p_id)) === false)   {
+      $events_prices_esro = ESROWP_Util::getPricesRange($events);
+      set_transient("esro_show_events_prices".$p_id, $events_prices_esro, 1 * HOUR_IN_SECONDS);
+    }
+    $prices = $events_prices_esro;
+
+    if(($min_price = get_transient("esro_show_events_min_price".$p_id)) === false)   {
+      $min_price = mb_substr($prices[0], 0, -3);
+      set_transient("esro_show_events_min_price".$p_id, $min_price, 1 * HOUR_IN_SECONDS);
+    }
+    $min_price = $min_price;
 
 
+    //$events = ESROWP_Helper::getEventsInfos($show_id_from_wp);
+    //$prices = ESROWP_Util::getPricesRange($events);
+    if ( isset( $prices ) ) {
+      if ( $min_price == 0 ) {
+        $prices_for_btn = 'prenota';
+      }
+      else {
+        //$prices_for_btn = 'acquista <span class="allnone">da</span> '.$min_price.' €*';
+        $prices_for_btn = 'acquista';
+      }
 
-if ( !empty($showsdafsdf) ) {
-  $events = ESROWP_Helper::getEventsInfos($showsdafsdf);
-  $prices = ESROWP_Util::getPricesRange($events);
-  if ( isset( $prices ) ) {
-    $min_price = mb_substr($prices[0], 0, -3);
-    if ( $min_price == 0 ) {
-      $prices_for_btn = 'prenota';
     }
     else {
-      //$prices_for_btn = 'acquista <span class="allnone">da</span> '.$min_price.' €*';
-      $prices_for_btn = 'acquista';
+      $prices_for_btn = 'prenota';
     }
-
-  }
-  else {
-    $prices_for_btn = 'prenota';
   }
 }
  ?>
@@ -153,253 +180,249 @@ if ( !empty($showsdafsdf) ) {
       <?php echo $abstract; ?>
     </div>
   <?php endif; ?>
+  <?php if ( $disattivare_chiamate_esro_pagina_cartellone == 1 ) : ?>
+    <?php if ($show_button_date >= $today) : ?>
+      <?php if ( ( $cta_biglietti === 'gestito da ESRO' && isset( $events ) ) || ( $cta_biglietti === 'Overlay link interni' ) ) : ?>
+        <a href="#" class="listing-tickets-buy-b allupper hide-when-past tickets-overlaty-opener-<?php echo $p_id; ?>"><?php echo $prices_for_btn; ?></a>
+        <script type="text/javascript">
+        $('.tickets-overlaty-opener-<?php echo $p_id; ?>').click(function(e) {
+          $('#tickets-overlay-<?php echo $p_id; ?>').fadeIn(150, "linear");
+          $('.overlay-effect').delay(300).removeClass('overlay-effect-initial');
+          $('html').css('overflowY', 'hidden');
+          $('body').addClass('occupy-scrollbar');
+          e.preventDefault();
+        });
 
-  <?php if ($show_button_date >= $today) : ?>
-    <?php if ( ( $cta_biglietti === 'gestito da ESRO' && isset( $events ) ) || ( $cta_biglietti === 'Overlay link interni' ) ) : ?>
-      <a href="#" class="listing-tickets-buy-b allupper hide-when-past tickets-overlaty-opener-<?php echo $p_id; ?>"><?php echo $prices_for_btn; ?></a>
-      <script type="text/javascript">
-      $('.tickets-overlaty-opener-<?php echo $p_id; ?>').click(function(e) {
-        $('#tickets-overlay-<?php echo $p_id; ?>').fadeIn(150, "linear");
-        $('.overlay-effect').delay(300).removeClass('overlay-effect-initial');
-        $('html').css('overflowY', 'hidden');
-        $('body').addClass('occupy-scrollbar');
-        e.preventDefault();
-      });
-
-      $('.tickets-overlaty-closer-<?php echo $p_id; ?>').click(function(e) {
-        $('#tickets-overlay-<?php echo $p_id; ?>').delay(300).fadeOut(150, "linear");
-        $('.overlay-effect').addClass('overlay-effect-initial');
-        $('.scroll-opportunity').scrollTop(0);
-        $('html').css('overflowY', 'scroll');
-        $('body').removeClass('occupy-scrollbar');
-        e.preventDefault();
-      });
-      </script>
-    <?php elseif( $cta_biglietti === 'acquista biglietti' ) : ?>
-      <a href="<?php echo $url_cta_biglietti; ?>" target="_blank" class="listing-tickets-buy-b allupper hide-when-past">Acquista</a>
-    <?php endif; ?>
-  <?php endif; ?>
-
-  <?php if ($show_button_date >= $today) : ?>
-    <?php if ( ( $cta_biglietti === 'gestito da ESRO' && isset( $events ) ) || ( $cta_biglietti === 'Overlay link interni' ) ) : ?>
-      <div id="tickets-overlay-<?php echo $p_id; ?>" class="overlay-for-tickets opened bg-2-color">
-      	<div class="tickets-overlay-close">
-      		<a href="#" class="btn-fill-hover grey cta-4 allupper tickets-overlaty-closer-<?php echo $p_id; ?>">
-      			Indietro
-      		</a>
-      	</div>
-
-      	<div class="scroll-opportunity scroll-opportunity-tickets">
-      		<div class="scroll-opportunity-back">
-      			<?php if( get_field('avviso_spettacolo', $p_id) ) : ?>
-      				<div class="wrapper bg-7-color">
-      					<div class="wrapper-padded">
-      						<div class="wrapper-padded-more-content">
-      							<div class="overlay-message-padding cta-2 txt-5-color">
-      								<?php the_field('avviso_spettacolo', $p_id); ?>
-      							</div>
-      						</div>
-      					</div>
-      				</div>
-      			<?php endif; ?>
-
-      			<div class="wrapper">
-      				<div class="wrapper-padded">
-      					<div class="wrapper-padded-more-spettacolo">
-      						<div class="spettacolo-grid-new">
-      							<div class="spettacolo-grid-new-left">
-      								<div class="contents">
-      									<div class="overlay-effect overlay-effect-initial">
-      										<div class="wrapper">
-      											<div class="wrapper-padded">
-      												<div class="wrapper-padded-more-content">
-      													<div class="overlay-lisiting-padding">
-      														<div class="flex-hold flex-hold-2">
-      															<div class="flex-hold-child">
-      																<div class="post-image">
-      																	<img src="<?php echo $thumb_url[0]; ?>" title="<?php the_title(); ?>" alt="<?php echo get_post_meta($thumb_id, '_wp_attachment_image_alt', true); ?>" />
-      																</div>
-      															</div>
-      															<div class="flex-hold-child">
-      																<div class="overlay-title-padding">
-      																	<h2><?php echo $value['post_title']; ?></h2>
-      																	<h5><?php include( locate_template ( 'template-parts/date-modules/riepilogo-date-top.php' ) ); ?></h5>
-      																</div>
-      															</div>
-      															<div class="tariffe-info">
-      																<?php if ( $cta_biglietti === 'gestito da ESRO' && isset( $events ) ) : ?>
-      																	<div class="cta-2 txt-5-color">
-      																		*tariffa intera prima di riduzioni
-      																	</div>
-      																<?php endif; ?>
-      															</div>
-      														</div>
-
-      														<div class="overlay-events-list">
-      															<?php if ( $cta_biglietti === 'iscriviti' ) : ?>
-      																<?php
-      																if ( get_field('form_registrazione', $p_id) ) {
-      																	echo do_shortcode( get_field('form_registrazione') );
-      																}
-      																?>
-      															<?php elseif ( $cta_biglietti === 'Overlay link interni' ) : ?>
-      																<?php
-                                      $args = array(
-      																	'post_parent' => $p_id,
-      																  'post_type' => array( 'spettacolo', 'spettacolo_archivio' ),
-      																  'numberposts' => 1
-
-      																);
-      																$children = get_children( $args );
-      																if ( !empty($children) ) : $count_periods = 0;?>
-
-      																	<?php foreach($children as $post) : setup_postdata($post); $child_id = $post->ID; ?>
-
-                                          <?php if( have_rows('program_periods', $child_id) ) : while ( have_rows('program_periods', $child_id) ) : the_row();
-          																if( have_rows('dates', $child_id) ) : while ( have_rows('dates', $child_id) ) : the_row();
-          																$dateString = get_sub_field('date');
-          													      $orario = get_sub_field('time');
-          													      $orario_fine = get_sub_field('time_end');
-          													      $timestamp = strtotime(str_replace("/", "-", $dateString));
-          													      $a_date_string = date_i18n("l j F",$timestamp);
-          																 ?>
-          																	<div class="flex-hold overlay-event-details">
-          																		<div class="detail">
-                                                <?php if ( !empty($children) ) : ?>
-                                                  <h4><?php the_title(); ?></h4>
-                                                <?php else : ?>
-                                                  <h4><?php the_sub_field('title'); ?></h4>
-                                                <?php endif; ?>
-          																			<h5><?php echo $a_date_string; ?></h5>
-          																		</div>
-          																		<div class="detail txt-5-color">
-          																			<?php if ( $orario != '' ) : ?>
-          																				<p>h <?php echo $orario; ?></p>
-          																			<?php endif; ?>
-          																		</div>
-          																		<div class="detail">
-          																			<?php if ( get_sub_field( 'link_biglietteria_custom_overlay' ) ) : ?>
-          																				<a href="<?php the_sub_field( 'link_biglietteria_custom_overlay' ); ?>" class="btn-fill red cta-4 allupper" target="_blank" onClick="_gaq.push(['_trackEvent', 'tickets_overlay_button', 'click', '<?php the_title(); ?>', '0']);">
-          																					<?php if ( get_sub_field( 'prezzo_listing_overlay' ) ) : ?>
-          																						<?php the_sub_field( 'prezzo_listing_overlay' ); ?>
-          																					<?php else : ?>
-          																						Acquista
-          																					<?php endif; ?>
-          																				</a>
-          																			<?php endif; ?>
-          																		</div>
-          																	</div>
-          																<?php endwhile; endif; endwhile; endif; ?>
-                                        <?php endforeach; ?>
-      																<?php else : ?>
-                                        <h1>asdf</h1>
-      																<?php if( have_rows('program_periods', $p_id) ) : while ( have_rows('program_periods', $p_id) ) : the_row();
-      																if( have_rows('dates', $p_id) ) : while ( have_rows('dates', $p_id) ) : the_row();
-      																$dateString = get_sub_field('date');
-      													      $orario = get_sub_field('time');
-      													      $orario_fine = get_sub_field('time_end');
-      													      $timestamp = strtotime(str_replace("/", "-", $dateString));
-      													      $a_date_string = date_i18n("l j F",$timestamp);
-      																 ?>
-      																	<div class="flex-hold overlay-event-details">
-      																		<div class="detail">
-      																				<h4><?php the_title(); ?></h4>
-      																				<h4><?php the_sub_field('title'); ?></h4>
-      																			<h5><?php echo $a_date_string; ?></h5>
-      																		</div>
-      																		<div class="detail txt-5-color">
-      																			<?php if ( $orario != '' ) : ?>
-      																				<p>h <?php echo $orario; ?></p>
-      																			<?php endif; ?>
-      																		</div>
-      																		<div class="detail">
-      																			<?php if ( get_sub_field( 'link_biglietteria_custom_overlay' ) ) : ?>
-      																				<a href="<?php the_sub_field( 'link_biglietteria_custom_overlay' ); ?>" class="btn-fill red cta-4 allupper" target="_blank" onClick="_gaq.push(['_trackEvent', 'tickets_overlay_button', 'click', '<?php the_title(); ?>', '0']);">
-      																					<?php if ( get_sub_field( 'prezzo_listing_overlay' ) ) : ?>
-      																						<?php the_sub_field( 'prezzo_listing_overlay' ); ?>
-      																					<?php else : ?>
-      																						Acquista
-      																					<?php endif; ?>
-      																				</a>
-      																			<?php endif; ?>
-      																		</div>
-      																	</div>
-      																<?php endwhile; endif; endwhile; endif; ?>
-                                      <?php endif; ?>
-      															<?php elseif ( $cta_biglietti === 'gestito da ESRO' && isset( $events ) ) : ?>
-      																<?php foreach ($events as $eventId => $event) :
-      																	$comparsion = strtotime($event["ActualEventDate"]);
-                                        $today_sro = strtotime(date('Y-m-dH:i'));
-      																	$fendere = $event["ActualEventDate"];
-      																	$timestamp = strtotime(str_replace("/", "-", $fendere));
-      																	$a_date_string = date_i18n("l j F Y",$timestamp);
-      																	$hour_string = date_i18n("H:i",$timestamp);
-      																	if ( $comparsion > $today_sro ) :
-      																	?>
-      																	<div class="flex-hold overlay-event-details">
-      																		<div class="detail">
-      																			<h5><?php echo $a_date_string ?></h5>
-      																		</div>
-      																		<div class="detail txt-5-color">
-      																			<p>h <?php echo $hour_string; ?></p>
-      																		</div>
-      																		<div class="detail">
-      																			<a href="<?php echo $event["DirectLink"] ?>" class="btn-fill red cta-4 allupper" target="_blank" onClick="_gaq.push(['_trackEvent', 'tickets_overlay_button', 'click', '<?php the_title(); ?>', '0']);">
-      																				<?php
-      																				$pricesSingleEnvet = array( $event ); // finto array con un solo evento
-      																		    $pricesSingleEnvet = ESROWP_Util::getPricesRange( $pricesSingleEnvet );
-      																				$pricesSingleEnvet = mb_substr($pricesSingleEnvet[0], 0, -3);
-      																				if ( isset( $pricesSingleEnvet ) ) {
-      																					if ( $pricesSingleEnvet == 0 ) {
-      																				    echo 'prenota';
-      																				  }
-      																					else {
-      																						echo '<span class="allnone">da</span> '.$pricesSingleEnvet.' €*';
-      																					}
-
-
-      																				}
-      																				else {
-      																					echo 'prenota';
-      																				}
-      																				 ?>
-      																			</a>
-      																		</div>
-      																	</div>
-      																<?php endif; endforeach; ?>
-      															<?php endif; ?>
-
-
-      														</div>
-      													</div>
-      												</div>
-      											</div>
-      										</div>
-      									</div>
-      								</div>
-
-      							</div>
-      							<div class="spettacolo-grid-new-right sticked">
-      								<div class="overlay-lisiting-padding">
-      									<a href="#" class="btn-fill-hover grey cta-4 allupper tickets-overlaty-closer-<?php echo $p_id; ?>">
-      										Indietro
-      									</a>
-      								</div>
-      							</div>
-      						</div>
-      					</div>
-      				</div>
-      		 	</div>
-      		</div>
-      	</div>
-      </div>
+        $('.tickets-overlaty-closer-<?php echo $p_id; ?>').click(function(e) {
+          $('#tickets-overlay-<?php echo $p_id; ?>').delay(300).fadeOut(150, "linear");
+          $('.overlay-effect').addClass('overlay-effect-initial');
+          $('.scroll-opportunity').scrollTop(0);
+          $('html').css('overflowY', 'scroll');
+          $('body').removeClass('occupy-scrollbar');
+          e.preventDefault();
+        });
+        </script>
+      <?php elseif( $cta_biglietti === 'acquista biglietti' ) : ?>
+        <a href="<?php echo $url_cta_biglietti; ?>" target="_blank" class="listing-tickets-buy-b allupper hide-when-past">Acquista</a>
+      <?php endif; ?>
     <?php endif; ?>
   <?php endif; ?>
 
 
+  <?php if ( $disattivare_chiamate_esro_pagina_cartellone == 1 ) : ?>
+    <?php if ($show_button_date >= $today) : ?>
+      <?php if ( ( $cta_biglietti === 'gestito da ESRO' && isset( $events ) ) || ( $cta_biglietti === 'Overlay link interni' ) ) : ?>
+        <div id="tickets-overlay-<?php echo $p_id; ?>" class="overlay-for-tickets opened bg-2-color">
+        	<div class="tickets-overlay-close">
+        		<a href="#" class="btn-fill-hover grey cta-4 allupper tickets-overlaty-closer-<?php echo $p_id; ?>">
+        			Indietro
+        		</a>
+        	</div>
+
+        	<div class="scroll-opportunity scroll-opportunity-tickets">
+        		<div class="scroll-opportunity-back">
+        			<?php if( get_field('avviso_spettacolo', $p_id) ) : ?>
+        				<div class="wrapper bg-7-color">
+        					<div class="wrapper-padded">
+        						<div class="wrapper-padded-more-content">
+        							<div class="overlay-message-padding cta-2 txt-5-color">
+        								<?php the_field('avviso_spettacolo', $p_id); ?>
+        							</div>
+        						</div>
+        					</div>
+        				</div>
+        			<?php endif; ?>
+
+        			<div class="wrapper">
+        				<div class="wrapper-padded">
+        					<div class="wrapper-padded-more-spettacolo">
+        						<div class="spettacolo-grid-new">
+        							<div class="spettacolo-grid-new-left">
+        								<div class="contents">
+        									<div class="overlay-effect overlay-effect-initial">
+        										<div class="wrapper">
+        											<div class="wrapper-padded">
+        												<div class="wrapper-padded-more-content">
+        													<div class="overlay-lisiting-padding">
+        														<div class="flex-hold flex-hold-2">
+        															<div class="flex-hold-child">
+        																<div class="post-image">
+        																	<img src="<?php echo $thumb_url[0]; ?>" title="<?php the_title(); ?>" alt="<?php echo get_post_meta($thumb_id, '_wp_attachment_image_alt', true); ?>" />
+        																</div>
+        															</div>
+        															<div class="flex-hold-child">
+        																<div class="overlay-title-padding">
+        																	<h2><?php echo $value['post_title']; ?></h2>
+        																	<h5><?php include( locate_template ( 'template-parts/date-modules/riepilogo-date-top.php' ) ); ?></h5>
+        																</div>
+        															</div>
+        															<div class="tariffe-info">
+        																<?php if ( $cta_biglietti === 'gestito da ESRO' && isset( $events ) ) : ?>
+        																	<div class="cta-2 txt-5-color">
+        																		*tariffa intera prima di riduzioni
+        																	</div>
+        																<?php endif; ?>
+        															</div>
+        														</div>
+
+        														<div class="overlay-events-list">
+        															<?php if ( $cta_biglietti === 'iscriviti' ) : ?>
+        																<?php
+        																if ( get_field('form_registrazione', $p_id) ) {
+        																	echo do_shortcode( get_field('form_registrazione') );
+        																}
+        																?>
+        															<?php elseif ( $cta_biglietti === 'Overlay link interni' ) : ?>
+        																<?php
+                                        $args = array(
+        																	'post_parent' => $p_id,
+        																  'post_type' => array( 'spettacolo', 'spettacolo_archivio' ),
+        																  'numberposts' => 1
+
+        																);
+        																$children = get_children( $args );
+        																if ( !empty($children) ) : $count_periods = 0;?>
+
+        																	<?php foreach($children as $post) : setup_postdata($post); $child_id = $post->ID; ?>
+
+                                            <?php if( have_rows('program_periods', $child_id) ) : while ( have_rows('program_periods', $child_id) ) : the_row();
+            																if( have_rows('dates', $child_id) ) : while ( have_rows('dates', $child_id) ) : the_row();
+            																$dateString = get_sub_field('date');
+            													      $orario = get_sub_field('time');
+            													      $orario_fine = get_sub_field('time_end');
+            													      $timestamp = strtotime(str_replace("/", "-", $dateString));
+            													      $a_date_string = date_i18n("l j F",$timestamp);
+            																 ?>
+            																	<div class="flex-hold overlay-event-details">
+            																		<div class="detail">
+                                                  <?php if ( !empty($children) ) : ?>
+                                                    <h4><?php the_title(); ?></h4>
+                                                  <?php else : ?>
+                                                    <h4><?php the_sub_field('title'); ?></h4>
+                                                  <?php endif; ?>
+            																			<h5><?php echo $a_date_string; ?></h5>
+            																		</div>
+            																		<div class="detail txt-5-color">
+            																			<?php if ( $orario != '' ) : ?>
+            																				<p>h <?php echo $orario; ?></p>
+            																			<?php endif; ?>
+            																		</div>
+            																		<div class="detail">
+            																			<?php if ( get_sub_field( 'link_biglietteria_custom_overlay' ) ) : ?>
+            																				<a href="<?php the_sub_field( 'link_biglietteria_custom_overlay' ); ?>" class="btn-fill red cta-4 allupper" target="_blank" onClick="_gaq.push(['_trackEvent', 'tickets_overlay_button', 'click', '<?php the_title(); ?>', '0']);">
+            																					<?php if ( get_sub_field( 'prezzo_listing_overlay' ) ) : ?>
+            																						<?php the_sub_field( 'prezzo_listing_overlay' ); ?>
+            																					<?php else : ?>
+            																						Acquista
+            																					<?php endif; ?>
+            																				</a>
+            																			<?php endif; ?>
+            																		</div>
+            																	</div>
+            																<?php endwhile; endif; endwhile; endif; ?>
+                                          <?php endforeach; ?>
+        																<?php else : ?>
+        																<?php if( have_rows('program_periods', $p_id) ) : while ( have_rows('program_periods', $p_id) ) : the_row();
+        																if( have_rows('dates', $p_id) ) : while ( have_rows('dates', $p_id) ) : the_row();
+        																$dateString = get_sub_field('date');
+        													      $orario = get_sub_field('time');
+        													      $orario_fine = get_sub_field('time_end');
+        													      $timestamp = strtotime(str_replace("/", "-", $dateString));
+        													      $a_date_string = date_i18n("l j F",$timestamp);
+        																 ?>
+        																	<div class="flex-hold overlay-event-details">
+        																		<div class="detail">
+        																				<h4><?php the_title(); ?></h4>
+        																				<h4><?php the_sub_field('title'); ?></h4>
+        																			<h5><?php echo $a_date_string; ?></h5>
+        																		</div>
+        																		<div class="detail txt-5-color">
+        																			<?php if ( $orario != '' ) : ?>
+        																				<p>h <?php echo $orario; ?></p>
+        																			<?php endif; ?>
+        																		</div>
+        																		<div class="detail">
+        																			<?php if ( get_sub_field( 'link_biglietteria_custom_overlay' ) ) : ?>
+        																				<a href="<?php the_sub_field( 'link_biglietteria_custom_overlay' ); ?>" class="btn-fill red cta-4 allupper" target="_blank" onClick="_gaq.push(['_trackEvent', 'tickets_overlay_button', 'click', '<?php the_title(); ?>', '0']);">
+        																					<?php if ( get_sub_field( 'prezzo_listing_overlay' ) ) : ?>
+        																						<?php the_sub_field( 'prezzo_listing_overlay' ); ?>
+        																					<?php else : ?>
+        																						Acquista
+        																					<?php endif; ?>
+        																				</a>
+        																			<?php endif; ?>
+        																		</div>
+        																	</div>
+        																<?php endwhile; endif; endwhile; endif; ?>
+                                        <?php endif; ?>
+        															<?php elseif ( $cta_biglietti === 'gestito da ESRO' && isset( $events ) ) : ?>
+        																<?php foreach ($events as $eventId => $event) :
+        																	$comparsion = strtotime($event["ActualEventDate"]);
+                                          $today_sro = strtotime(date('Y-m-dH:i'));
+        																	$fendere = $event["ActualEventDate"];
+        																	$timestamp = strtotime(str_replace("/", "-", $fendere));
+        																	$a_date_string = date_i18n("l j F Y",$timestamp);
+        																	$hour_string = date_i18n("H:i",$timestamp);
+        																	if ( $comparsion > $today_sro ) :
+        																	?>
+        																	<div class="flex-hold overlay-event-details">
+        																		<div class="detail">
+        																			<h5><?php echo $a_date_string ?></h5>
+        																		</div>
+        																		<div class="detail txt-5-color">
+        																			<p>h <?php echo $hour_string; ?></p>
+        																		</div>
+        																		<div class="detail">
+        																			<a href="<?php echo $event["DirectLink"] ?>" class="btn-fill red cta-4 allupper" target="_blank" onClick="_gaq.push(['_trackEvent', 'tickets_overlay_button', 'click', '<?php the_title(); ?>', '0']);">
+        																				<?php
+        																				$pricesSingleEnvet = array( $event ); // finto array con un solo evento
+        																		    $pricesSingleEnvet = ESROWP_Util::getPricesRange( $pricesSingleEnvet );
+        																				$pricesSingleEnvet = mb_substr($pricesSingleEnvet[0], 0, -3);
+        																				if ( isset( $pricesSingleEnvet ) ) {
+        																					if ( $pricesSingleEnvet == 0 ) {
+        																				    echo 'prenota';
+        																				  }
+        																					else {
+        																						echo '<span class="allnone">da</span> '.$pricesSingleEnvet.' €*';
+        																					}
 
 
+        																				}
+        																				else {
+        																					echo 'prenota';
+        																				}
+        																				 ?>
+        																			</a>
+        																		</div>
+        																	</div>
+        																<?php endif; endforeach; ?>
+        															<?php endif; ?>
 
 
+        														</div>
+        													</div>
+        												</div>
+        											</div>
+        										</div>
+        									</div>
+        								</div>
 
+        							</div>
+        							<div class="spettacolo-grid-new-right sticked">
+        								<div class="overlay-lisiting-padding">
+        									<a href="#" class="btn-fill-hover grey cta-4 allupper tickets-overlaty-closer-<?php echo $p_id; ?>">
+        										Indietro
+        									</a>
+        								</div>
+        							</div>
+        						</div>
+        					</div>
+        				</div>
+        		 	</div>
+        		</div>
+        	</div>
+        </div>
+      <?php endif; ?>
+    <?php endif; ?>
+  <?php endif; ?>
 </div>

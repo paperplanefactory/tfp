@@ -1,5 +1,5 @@
 <?php
-$start_date_extract = $value[show_date];
+$start_date_extract = $value['show_date'];
 $start_date = strtotime(str_replace("/", "-", $start_date_extract));
 
  ?>

@@ -185,7 +185,7 @@ if (typeof $esro !== 'undefined') {
     }
     $esro.customerLogout('onCustomerLogout');
   }
-
+  checkBasket();
 
   function onCustomerLogout() {
     //console.log('log-out');

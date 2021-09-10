@@ -7,11 +7,12 @@
 
 	<div class="scroll-opportunity scroll-opportunity-tickets">
 		<div class="scroll-opportunity-back">
-			<?php if( get_field('avviso_spettacolo') ) : ?>
+			<?php if( get_field('avviso_spettacolo') || get_field('avviso_spettacolo_overlay_globale', 'option' ) ) : ?>
 				<div class="wrapper bg-7-color">
 					<div class="wrapper-padded">
 						<div class="wrapper-padded-more-content">
 							<div class="overlay-message-padding cta-2 txt-5-color">
+								<?php the_field('avviso_spettacolo_overlay_globale', 'option'); ?>
 								<?php the_field('avviso_spettacolo'); ?>
 							</div>
 						</div>
@@ -130,13 +131,20 @@
 																				<?php
 																				$pricesSingleEnvet = array( $event ); // finto array con un solo evento
 																		    $pricesSingleEnvet = ESROWP_Util::getPricesRange( $pricesSingleEnvet );
+
 																				$pricesSingleEnvet = mb_substr($pricesSingleEnvet[0], 0, -3);
 																				if ( isset( $pricesSingleEnvet ) ) {
 																					if ( $pricesSingleEnvet == 0 ) {
 																				    echo 'prenota';
 																				  }
 																					else {
-																						echo '<span class="allnone">da</span> '.$pricesSingleEnvet.' €*';
+																						if ( $pricesSingleEnvet > 998 ) {
+																							echo '<span class="allnone">ACQUISTA';
+																						}
+																						else {
+																							echo '<span class="allnone">da</span> '.$pricesSingleEnvet.' €*';
+																						}
+
 																					}
 
 

@@ -12,7 +12,7 @@ if (get_query_var('tipo-di-spettacolo')):
         $tipo_di_spettacolo = get_query_var('tipo-di-spettacolo');
     endif;
 endif;
-$arrsize_tipo_di_spettacolo = sizeof($tipo_di_spettacolo);
+
 
 $stagione = urldecode(get_query_var('stagione'));
 $stagione_name = get_term_by('slug', $stagione, 'stagione');

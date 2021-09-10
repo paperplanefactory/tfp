@@ -253,6 +253,25 @@
             "prepend": "",
             "append": "",
             "maxlength": ""
+        },
+        {
+            "key": "field_60f15d7423428",
+            "label": "Attivare le chiamate a ESRO nella pagina Cartellone?",
+            "name": "disattivare_chiamate_esro_pagina_cartellone",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
         }
     ],
     "location": [
@@ -272,5 +291,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1625221704
+    "modified": 1626431579
 }
