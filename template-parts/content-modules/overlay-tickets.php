@@ -80,33 +80,36 @@
 													      $orario_fine = get_sub_field('time_end');
 													      $timestamp = strtotime(str_replace("/", "-", $dateString));
 													      $a_date_string = date_i18n("l j F",$timestamp);
+																if ( $todaystamp <= $timestamp ) :
 																 ?>
-																	<div class="flex-hold overlay-event-details">
-																		<div class="detail">
-																			<?php if ( !empty($children) ) : ?>
-																				<h4><?php the_title(); ?></h4>
-																			<?php else : ?>
-																				<h4><?php the_sub_field('title'); ?></h4>
-																			<?php endif; ?>
-																			<h5><?php echo $a_date_string; ?></h5>
-																		</div>
-																		<div class="detail txt-5-color">
-																			<?php if ( $orario != '' ) : ?>
-																				<p>h <?php echo $orario; ?></p>
-																			<?php endif; ?>
-																		</div>
-																		<div class="detail">
-																			<?php if ( get_sub_field( 'link_biglietteria_custom_overlay' ) ) : ?>
-																				<a href="<?php the_sub_field( 'link_biglietteria_custom_overlay' ); ?>" class="btn-fill red cta-4 allupper" target="_blank" onClick="_gaq.push(['_trackEvent', 'tickets_overlay_button', 'click', '<?php the_title(); ?>', '0']);">
-																					<?php if ( get_sub_field( 'prezzo_listing_overlay' ) ) : ?>
-																						<?php the_sub_field( 'prezzo_listing_overlay' ); ?>
-																					<?php else : ?>
-																						Acquista
-																					<?php endif; ?>
-																				</a>
-																			<?php endif; ?>
-																		</div>
-																	</div>
+																 <div class="flex-hold overlay-event-details">
+																	 <div class="detail">
+																		 <?php if ( !empty($children) ) : ?>
+																			 <h4><?php the_title(); ?></h4>
+																		 <?php else : ?>
+																			 <h4><?php the_sub_field('title'); ?></h4>
+																		 <?php endif; ?>
+																		 <h5><?php echo $a_date_string; ?></h5>
+																	 </div>
+																	 <div class="detail txt-5-color">
+																		 <?php if ( $orario != '' ) : ?>
+																			 <p>h <?php echo $orario; ?></p>
+																		 <?php endif; ?>
+																	 </div>
+																	 <div class="detail">
+																		 <?php if ( get_sub_field( 'link_biglietteria_custom_overlay' ) ) : ?>
+																			 <a href="<?php the_sub_field( 'link_biglietteria_custom_overlay' ); ?>" class="btn-fill red cta-4 allupper" target="_blank" onClick="_gaq.push(['_trackEvent', 'tickets_overlay_button', 'click', '<?php the_title(); ?>', '0']);">
+																				 <?php if ( get_sub_field( 'prezzo_listing_overlay' ) ) : ?>
+																					 <?php the_sub_field( 'prezzo_listing_overlay' ); ?>
+																				 <?php else : ?>
+																					 Acquista
+																				 <?php endif; ?>
+																			 </a>
+																		 <?php endif; ?>
+																	 </div>
+																 </div>
+															 <?php endif; ?>
+
 																<?php endwhile; endif; endwhile; endif; ?>
 															<?php elseif ( $cta_biglietti === 'gestito da ESRO' && isset( $events ) ) : ?>
 
@@ -131,7 +134,6 @@
 																				<?php
 																				$pricesSingleEnvet = array( $event ); // finto array con un solo evento
 																		    $pricesSingleEnvet = ESROWP_Util::getPricesRange( $pricesSingleEnvet );
-
 																				$pricesSingleEnvet = mb_substr($pricesSingleEnvet[0], 0, -3);
 																				if ( isset( $pricesSingleEnvet ) ) {
 																					if ( $pricesSingleEnvet == 0 ) {
@@ -158,8 +160,6 @@
 																	</div>
 																<?php endif; ?> <?php endforeach; ?>
 															<?php endif; ?>
-
-
 														</div>
 													</div>
 												</div>

@@ -143,7 +143,7 @@ if ( $usare_immagine === 'si' ) :
                 <?php while ( have_rows('aggiungi_pagine_sidebar') ) : the_row();
                 $link = get_sub_field('scegli_pagina_sidebar'); ?>
                   <li>
-                    <a class="button" href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>"><?php echo $link['title']; ?></a>
+                    <a class="button" href="<?php echo esc_url($link['url']); ?>" target="<?php echo esc_attr($link['target']); ?>"><?php echo esc_html($link['title']); ?></a>
                   </li>
                 <?php endwhile; ?>
               </ul>

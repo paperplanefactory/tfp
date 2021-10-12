@@ -16,6 +16,7 @@
     <div class="modulo-banner-home">
     <?php
     foreach($my_banner_home as $post) : setup_postdata($post);
+
     if ( $isMobile == 1 ) {
       $immagine_banner = get_field('immagine_banner_mobile_home');
       $immagine_banner_URL = $immagine_banner['sizes']['banner_300_free'];
@@ -24,12 +25,22 @@
       $immagine_banner = get_field('immagine_banner_desktop_tablet_home');
       $immagine_banner_URL = $immagine_banner['sizes']['banner_300_free'];
     }
+    $banner_home_mostrare_su_mobile = get_field( 'banner_home_mostrare_su_mobile' );
+    if ( $banner_home_mostrare_su_mobile === 'no' ) {
+      $only_mobile_class = 'only-desktop';
+    }
+    else {
+      $only_mobile_class = 'all';
+    }
     ?>
-    <div class="banner-img">
-      <a href="<?php the_field('url_di_destinazione'); ?>" target="_blank">
-        <img src="<?php echo $immagine_banner['url']; ?>" />
-      </a>
+    <div class="banner-home-mobile-ww <?php echo $only_mobile_class; ?>">
+      <div class="banner-img">
+        <a href="<?php the_field('url_di_destinazione'); ?>" target="_blank">
+          <img src="<?php echo $immagine_banner['url']; ?>" />
+        </a>
+      </div>
     </div>
+
     <?php endforeach; wp_reset_query(); ?>
 </div>
 <?php endif; ?>
@@ -60,12 +71,22 @@
       $immagine_banner = get_field('immagine_banner_desktop_tablet_home');
       $immagine_banner_URL = $immagine_banner['sizes']['banner_300_free'];
     }
+    $banner_home_mostrare_su_mobile = get_field( 'banner_home_mostrare_su_mobile' );
+    if ( $banner_home_mostrare_su_mobile === 'no' ) {
+      $only_mobile_class = 'only-desktop';
+    }
+    else {
+      $only_mobile_class = 'all';
+    }
     ?>
-    <div class="banner-img">
-      <a href="<?php the_field('url_di_destinazione'); ?>" target="_blank">
-        <img src="<?php echo $immagine_banner['url']; ?>" />
-      </a>
+    <div class="banner-home-mobile-ww <?php echo $only_mobile_class; ?>">
+      <div class="banner-img">
+        <a href="<?php the_field('url_di_destinazione'); ?>" target="_blank">
+          <img src="<?php echo $immagine_banner['url']; ?>" />
+        </a>
+      </div>
     </div>
+
     <?php endforeach; wp_reset_query(); ?>
 </div>
 <?php endif; ?>
@@ -96,11 +117,20 @@
       $immagine_banner = get_field('immagine_banner_desktop_tablet_home');
       $immagine_banner_URL = $immagine_banner['sizes']['banner_300_free'];
     }
+    $banner_home_mostrare_su_mobile = get_field( 'banner_home_mostrare_su_mobile' );
+    if ( $banner_home_mostrare_su_mobile === 'no' ) {
+      $only_mobile_class = 'only-desktop';
+    }
+    else {
+      $only_mobile_class = 'all';
+    }
     ?>
-    <div class="banner-img">
-      <a href="<?php the_field('url_di_destinazione'); ?>" target="_blank">
-        <img src="<?php echo $immagine_banner['url']; ?>" />
-      </a>
+    <div class="banner-home-mobile-ww <?php echo $only_mobile_class; ?>">
+      <div class="banner-img">
+        <a href="<?php the_field('url_di_destinazione'); ?>" target="_blank">
+          <img src="<?php echo $immagine_banner['url']; ?>" />
+        </a>
+      </div>
     </div>
     <?php endforeach; wp_reset_query(); ?>
 </div>
@@ -132,11 +162,20 @@
       $immagine_banner = get_field('immagine_banner_desktop_tablet_home');
       $immagine_banner_URL = $immagine_banner['sizes']['banner_300_free'];
     }
+    $banner_home_mostrare_su_mobile = get_field( 'banner_home_mostrare_su_mobile' );
+    if ( $banner_home_mostrare_su_mobile === 'no' ) {
+      $only_mobile_class = 'only-desktop';
+    }
+    else {
+      $only_mobile_class = 'all';
+    }
     ?>
-    <div class="banner-img">
-      <a href="<?php the_field('url_di_destinazione'); ?>" target="_blank">
-        <img src="<?php echo $immagine_banner['url']; ?>" />
-      </a>
+    <div class="banner-home-mobile-ww <?php echo $only_mobile_class; ?>">
+      <div class="banner-img">
+        <a href="<?php the_field('url_di_destinazione'); ?>" target="_blank">
+          <img src="<?php echo $immagine_banner['url']; ?>" />
+        </a>
+      </div>
     </div>
     <?php endforeach; wp_reset_query(); ?>
 </div>

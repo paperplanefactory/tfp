@@ -34,7 +34,7 @@ if ( isset( $prices ) ) {
 
 }
 else {
-  $prices_for_btn = 'prenota';
+  $prices_for_btn = 'acquista';
 }
 
 $cta_biglietti = get_field( 'cta_biglietti' );
@@ -214,7 +214,10 @@ $(document).ready(function() {
                   <a href="#" class="btn-fill red cta-4 allupper last dates-on-left tickets-overlaty-opener hide-when-past" onClick="_gaq.push(['_trackEvent', 'tickets_top_button', 'click', '<?php the_title(); ?>', '0']);"><?php the_field('cta_biglietti'); ?></a>
                 <?php elseif ( ( $cta_biglietti === 'gestito da ESRO' ) && !empty($events) ) : ?>
                   <a href="#" class="btn-fill red cta-4 allupper last dates-on-left tickets-overlaty-opener hide-when-past" onClick="_gaq.push(['_trackEvent', 'tickets_top_button', 'click', '<?php the_title(); ?>', '0']);"><?php echo $prices_for_btn; ?></a>
+                <?php elseif ( ( $cta_biglietti === 'Overlay link interni' ) ) : ?>
+                  <a href="#" class="btn-fill red cta-4 allupper last hide-when-past tickets-overlaty-opener" onClick="_gaq.push(['_trackEvent', 'tickets_column_button', 'click', '<?php the_title(); ?>', '0']);"><?php echo $prices_for_btn; ?></a>
                 <?php endif; ?>
+
               </div>
             </div>
           </div>

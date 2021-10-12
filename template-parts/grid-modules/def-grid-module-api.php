@@ -14,7 +14,6 @@ $my_permalink = get_permalink($p_id);
 // attivare o disattivare chiamate a ESRO
 $disattivare_chiamate_esro_pagina_cartellone = get_field( 'disattivare_chiamate_esro_pagina_cartellone', 'option' );
 
-
 set_transient( 'transient_fields', $fields, 1 * HOUR_IN_SECONDS );
 $transient_fields = get_transient( 'transient_fields' );
 if ( empty( $transient_dates ) ) {
@@ -180,6 +179,8 @@ if ( $disattivare_chiamate_esro_pagina_cartellone == 1 ) {
       <?php echo $abstract; ?>
     </div>
   <?php endif; ?>
+  <br />
+  <a href=""<?php echo $my_permalink; ?>" class="btn-fill-hover grey cta-4 allupper last">Scopri di più</a>
   <?php if ( $disattivare_chiamate_esro_pagina_cartellone == 1 ) : ?>
     <?php if ($show_button_date >= $today) : ?>
       <?php if ( ( $cta_biglietti === 'gestito da ESRO' && isset( $events ) ) || ( $cta_biglietti === 'Overlay link interni' ) ) : ?>

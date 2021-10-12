@@ -53,6 +53,7 @@ $todaystamp = strtotime(str_replace("/", "-", $today));
 <link rel="icon" type="image/png" sizes="96x96" href="<?php bloginfo('stylesheet_directory'); ?>/images/favicon/favicon-96x96.png">
 <link rel="icon" type="image/png" sizes="16x16" href="<?php bloginfo('stylesheet_directory'); ?>/images/favicon/favicon-16x16.png">
 <meta name="msapplication-TileImage" content="<?php bloginfo('stylesheet_directory'); ?>/images/favicon/ms-icon-144x144.png">
+<meta name="facebook-domain-verification" content="gifmrpe5trcb9ufi6e3y6n9z5w3g6g" />
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],

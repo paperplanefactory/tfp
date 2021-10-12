@@ -169,34 +169,46 @@ if ($('.mosaic-slider-js')[0]) {
 
 
 if (typeof $esro !== 'undefined') {
+  //register the services
+  $esro.attachEventHandler("basketChanged", basketHandler);
+  $esro.attachEventHandler("sessionStatusChanged", handleSession);
 
-  window.onload = function() {
-    $esro.getCurrentTransaction('checkBasket');
-  }
-  console.log($esro.getSessionState());
 
-  function checkBasket(response) {
-    console.log(response.Result.basket);
-    if (response.Result.basket != null && response.Result.basket.Tickets.length > 0) {
-      //console.log('cacca');
-      $('.basket-selector').addClass('basket-active');
+
+
+  var currentBasket = null;
+
+  function basketHandler(basket) {
+    currentBasket = basket;
+    if (basket != null) {
+      var items_in_basket = basket.Tickets.length.toString();
+      if (items_in_basket > 0) {
+        //console.log('something in basket');
+        $('.basket-selector').addClass('basket-active');
+      } else {
+        //console.log('basket is empty');
+        $('.basket-selector').removeClass('basket-active');
+      }
+
+
     } else {
       $('.basket-selector').removeClass('basket-active');
     }
-    $esro.customerLogout('onCustomerLogout');
   }
-  checkBasket();
-
-  function onCustomerLogout() {
-    //console.log('log-out');
-
-  }
-
+  //basketHandler();
   $(window).focus(function() {
-    $esro.getCurrentTransaction('checkBasket');
+    basketHandler();
+    console.log('Focus');
   });
 
   $(window).blur(function() {
-    $esro.getCurrentTransaction('checkBasket');
+    basketHandler();
+    console.log('Blur');
   });
+
+  function handleSession(session) {
+    // Do something on session change
+  }
+  $esro.refreshSessionState();
+  $esro.getSessionState();
 }
