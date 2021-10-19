@@ -746,6 +746,11 @@
       position: relative;
       width: 100%;
       padding: 0;
+      background-color: $color-bianco;
+
+      &.overlay-contents {
+        min-height: 60vh;
+      }
 
       .padder {
         padding: 0 24px;

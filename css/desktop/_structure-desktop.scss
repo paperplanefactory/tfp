@@ -85,6 +85,10 @@ $logo-width: 100px; // wrappers
   display: none;
   width: 100%;
   height: 100%;
+  background-image: url("images/spinner.gif");
+  background-size: 63px 63px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
 }
 
 .tickets-overlay-close {

@@ -1,0 +1,1438 @@
+{
+    "key": "group_593ec7770ead7",
+    "title": "Moduli composizione spettacolo \/ pagina",
+    "fields": [
+        {
+            "key": "field_593ec777213bb",
+            "label": "Moduli",
+            "name": "moduli",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "block",
+            "button_label": "Aggiungi nuovo modulo",
+            "sub_fields": [
+                {
+                    "key": "field_593ec7772affe",
+                    "label": "Scegli che modulo aggiungere",
+                    "name": "scegli_modulo",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "choose-module",
+                        "id": ""
+                    },
+                    "choices": {
+                        "mod-titolo": "Titolo sezione",
+                        "mod-testo": "Testo",
+                        "mod-incontro": "Incontro\/i correlato\/i",
+                        "mod-frase-evidenza": "Frase in evidenza",
+                        "mod-frase-evidenza-piccola": "Frase in evidenza piccola",
+                        "mod-slideshow": "Slideshow",
+                        "mod-sponsor-grande": "Loghi grandi (3 per riga)",
+                        "mod-sponsor": "Loghi (4 per riga)",
+                        "mod-recensioni": "Link",
+                        "mod-download": "Download",
+                        "mod-expand": "Espansione",
+                        "mod-cicli": "Modulo per elencare i cicli",
+                        "mod-fullimage": "Immagine o video fullscreen",
+                        "mod-testo-cornice": "Testo in cornice",
+                        "mod-subpages": "Composizione sotto pagine"
+                    },
+                    "default_value": [],
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "return_format": "value",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_593f978cfee98",
+                    "label": "Titolo",
+                    "name": "titolo",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_593ec7772affe",
+                                "operator": "==",
+                                "value": "mod-titolo"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_593ec7772b3e6",
+                    "label": "Modulo testo",
+                    "name": "modulo_testo",
+                    "type": "wysiwyg",
+                    "instructions": "Utilizzare \"Titolo 6\" per creare un link con una freccia alla fine.",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_593ec7772affe",
+                                "operator": "==",
+                                "value": "mod-testo"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0
+                },
+                {
+                    "key": "field_593ec7772b7ce",
+                    "label": "Titoletto fuori dalla cornice",
+                    "name": "titoletto_fuori_cornice",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_593ec7772affe",
+                                "operator": "==",
+                                "value": "mod-incontro"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_593ec7772bbb6",
+                    "label": "Tipo di evento principale per bordo box",
+                    "name": "area_attivita_principale",
+                    "type": "taxonomy",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_593ec7772affe",
+                                "operator": "==",
+                                "value": "mod-incontro"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "taxonomy": "area_attivita",
+                    "field_type": "select",
+                    "allow_null": 0,
+                    "add_term": 0,
+                    "save_terms": 0,
+                    "load_terms": 0,
+                    "return_format": "id",
+                    "multiple": 0
+                },
+                {
+                    "key": "field_593ec7772bf9e",
+                    "label": "Compilazione modulo Incontro\/i correlato\/i",
+                    "name": "modulo_incontri_correlati",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_593ec7772affe",
+                                "operator": "==",
+                                "value": "mod-incontro"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "collapsed": "",
+                    "min": 0,
+                    "max": 3,
+                    "layout": "block",
+                    "button_label": "Aggiungi incontro",
+                    "sub_fields": [
+                        {
+                            "key": "field_593ec77762e93",
+                            "label": "Titolo incontro",
+                            "name": "titolo_incontro",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_593ec7776327b",
+                            "label": "Immagine incontro",
+                            "name": "immagine_incontro",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33.333333",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "preview_size": "thumbnail",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        },
+                        {
+                            "key": "field_593ec77763663",
+                            "label": "Categoria incontro",
+                            "name": "categoria_incontro",
+                            "type": "taxonomy",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33.333333",
+                                "class": "",
+                                "id": ""
+                            },
+                            "taxonomy": "area_attivita",
+                            "field_type": "select",
+                            "allow_null": 1,
+                            "add_term": 0,
+                            "save_terms": 0,
+                            "load_terms": 0,
+                            "return_format": "id",
+                            "multiple": 0
+                        },
+                        {
+                            "key": "field_593ec77763a4b",
+                            "label": "Data incontro",
+                            "name": "data_incontro",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33.333333",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_593ec77763e33",
+                            "label": "CTA incontro",
+                            "name": "cta_incontro",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33.333333",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_593ec7776421b",
+                            "label": "Link incontro",
+                            "name": "link_incontro",
+                            "type": "radio",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33.333333",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "incontro-interno": "Interno",
+                                "incontro-esterno": "Esterno"
+                            },
+                            "allow_null": 0,
+                            "other_choice": 0,
+                            "save_other_choice": 0,
+                            "default_value": "",
+                            "layout": "vertical",
+                            "return_format": "value"
+                        },
+                        {
+                            "key": "field_593ec77764603",
+                            "label": "URL link incontro interno",
+                            "name": "url_link_incontro_interno",
+                            "type": "page_link",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_593ec7776421b",
+                                        "operator": "==",
+                                        "value": "incontro-interno"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "33.333333",
+                                "class": "",
+                                "id": ""
+                            },
+                            "post_type": [
+                                "post",
+                                "spettacolo",
+                                "page",
+                                "spettacolo_archivio"
+                            ],
+                            "taxonomy": "",
+                            "allow_null": 0,
+                            "allow_archives": 1,
+                            "multiple": 0
+                        },
+                        {
+                            "key": "field_593ec777649eb",
+                            "label": "URL link incontro esterno",
+                            "name": "url_link_incontro_esterno",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_593ec7776421b",
+                                        "operator": "==",
+                                        "value": "incontro-esterno"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "33.333333",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        }
+                    ]
+                },
+                {
+                    "key": "field_593ec7772c386",
+                    "label": "Frase in evidenza",
+                    "name": "frase_evidenza",
+                    "type": "textarea",
+                    "instructions": "Per inserire una parola in corsivo usare i tag HTML facendo riferimento a <a href=\"https:\/\/www.w3schools.com\/html\/html_formatting.asp\" target=\"_blank\">queste indicazioni<\/a>.",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_593ec7772affe",
+                                "operator": "==",
+                                "value": "mod-frase-evidenza"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": "",
+                    "new_lines": ""
+                },
+                {
+                    "key": "field_593ec7772c76e",
+                    "label": "Firma della frase in evidenza",
+                    "name": "firma_frase_evidenza",
+                    "type": "text",
+                    "instructions": "Es. Osvaldo Guerrieri – La Stampa",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_593ec7772affe",
+                                "operator": "==",
+                                "value": "mod-frase-evidenza"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_593ec7772cb56",
+                    "label": "Frase in evidenza piccola",
+                    "name": "frase_evidenza_piccola",
+                    "type": "textarea",
+                    "instructions": "Per inserire una parola in corsivo usare i tag HTML facendo riferimento a <a href=\"https:\/\/www.w3schools.com\/html\/html_formatting.asp\" target=\"_blank\">queste indicazioni<\/a>.",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_593ec7772affe",
+                                "operator": "==",
+                                "value": "mod-frase-evidenza-piccola"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": "",
+                    "new_lines": ""
+                },
+                {
+                    "key": "field_593ec7772cf3e",
+                    "label": "Firma della frase in evidenza piccola",
+                    "name": "firma_frase_evidenza_piccola",
+                    "type": "text",
+                    "instructions": "Es. Osvaldo Guerrieri – La Stampa",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_593ec7772affe",
+                                "operator": "==",
+                                "value": "mod-frase-evidenza-piccola"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_593ec7772d326",
+                    "label": "Compilazione slideshow",
+                    "name": "slideshow",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_593ec7772affe",
+                                "operator": "==",
+                                "value": "mod-slideshow"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "collapsed": "",
+                    "min": 0,
+                    "max": 0,
+                    "layout": "block",
+                    "button_label": "Aggiungi una foto",
+                    "sub_fields": [
+                        {
+                            "key": "field_593ec7781c9bc",
+                            "label": "Scegli la foto",
+                            "name": "scegli_foto",
+                            "type": "image",
+                            "instructions": "La didascalia viene recuperata in automatico dal campo \"Didascalia\" nelle informazioni dell'immagine se il campo è stato compilato.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "preview_size": "thumbnail",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        }
+                    ]
+                },
+                {
+                    "key": "field_593ec7772d70e",
+                    "label": "Compilazione loghi",
+                    "name": "sponsor",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_593ec7772affe",
+                                "operator": "==",
+                                "value": "mod-sponsor"
+                            }
+                        ],
+                        [
+                            {
+                                "field": "field_593ec7772affe",
+                                "operator": "==",
+                                "value": "mod-sponsor-grande"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "collapsed": "",
+                    "min": 0,
+                    "max": 0,
+                    "layout": "block",
+                    "button_label": "Aggiungi logo",
+                    "sub_fields": [
+                        {
+                            "key": "field_593ec77841f6c",
+                            "label": "Logo",
+                            "name": "logo_sponsor",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50%",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "preview_size": "thumbnail",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        },
+                        {
+                            "key": "field_593ec77842354",
+                            "label": "URL sito",
+                            "name": "url_sito_sponsor",
+                            "type": "text",
+                            "instructions": "Inserire l'URL di destinazione completa di \"http:\/\/\"",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_59ad31c44a45a",
+                            "label": "Titolo logo",
+                            "name": "titolo_logo",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        }
+                    ]
+                },
+                {
+                    "key": "field_593ec7772daf6",
+                    "label": "Titoletto del modulo",
+                    "name": "titoletto_modulo",
+                    "type": "text",
+                    "instructions": "es.: \"Recensioni\" oppure \"Notizie e Link\"",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_593ec7772affe",
+                                "operator": "==",
+                                "value": "mod-recensioni"
+                            }
+                        ],
+                        [
+                            {
+                                "field": "field_593ec7772affe",
+                                "operator": "==",
+                                "value": "mod-sponsor"
+                            }
+                        ],
+                        [
+                            {
+                                "field": "field_593ec7772affe",
+                                "operator": "==",
+                                "value": "mod-sponsor-grande"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_593ec7772dede",
+                    "label": "Vuoi comporre tu i link o vuoi che venga fatto in automatico?",
+                    "name": "comporre_link",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_593ec7772affe",
+                                "operator": "==",
+                                "value": "mod-recensioni"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "mano": "Voglio comporre",
+                        "in-auto": "Voglio che venga fatto in automatico (verranno inseriti fino a 4 link)"
+                    },
+                    "default_value": [],
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "return_format": "value",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_593ec7772e2c6",
+                    "label": "Scegli la tag di collegamento",
+                    "name": "recensioni_pagina_archivio",
+                    "type": "taxonomy",
+                    "instructions": "Se hai scelto che la la composizione venga fatta in automatico devi necessariamente scegliere una tag di collegamento.\r\nSe hai scelto di comporre a mano questa tag è opzionale: servirà solo per creare un link di rimando all'archivio dei contenuti.",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_593ec7772affe",
+                                "operator": "==",
+                                "value": "mod-recensioni"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "taxonomy": "post_tag",
+                    "field_type": "select",
+                    "allow_null": 1,
+                    "add_term": 1,
+                    "save_terms": 0,
+                    "load_terms": 0,
+                    "return_format": "id",
+                    "multiple": 0
+                },
+                {
+                    "key": "field_593ec7772e6ae",
+                    "label": "Compilazione link",
+                    "name": "recensioni",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_593ec7772affe",
+                                "operator": "==",
+                                "value": "mod-recensioni"
+                            },
+                            {
+                                "field": "field_593ec7772dede",
+                                "operator": "==",
+                                "value": "mano"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "collapsed": "",
+                    "min": 0,
+                    "max": 0,
+                    "layout": "block",
+                    "button_label": "Aggiungi recensione\/link",
+                    "sub_fields": [
+                        {
+                            "key": "field_593ec7788b35d",
+                            "label": "Che recensione\/link vuoi inserire?",
+                            "name": "recensione_inserire",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "rec-recupera": "Aggiungi un contenuto già presente nel sito",
+                                "rec-new": "Aggiungi un contenuto esterno al sito"
+                            },
+                            "default_value": [],
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 0,
+                            "ajax": 0,
+                            "return_format": "value",
+                            "placeholder": ""
+                        },
+                        {
+                            "key": "field_593ec7788b745",
+                            "label": "Scegli tra i contenuti",
+                            "name": "scegli_tra_contenuti",
+                            "type": "post_object",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_593ec7788b35d",
+                                        "operator": "==",
+                                        "value": "rec-recupera"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "post_type": [
+                                "post"
+                            ],
+                            "taxonomy": [],
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "return_format": "id",
+                            "ui": 1
+                        },
+                        {
+                            "key": "field_593ec7788bb2e",
+                            "label": "Titolo interno link",
+                            "name": "tipo_link",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_593ec7788b35d",
+                                        "operator": "==",
+                                        "value": "rec-new"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_593ec7788bf16",
+                            "label": "Contenuto link",
+                            "name": "titolo_link",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_593ec7788b35d",
+                                        "operator": "==",
+                                        "value": "rec-new"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_593ec7788c2fe",
+                            "label": "URL del link",
+                            "name": "url_link",
+                            "type": "text",
+                            "instructions": "Inserire l'URL di destinazione completa di \"http:\/\/\"",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_593ec7788b35d",
+                                        "operator": "==",
+                                        "value": "rec-new"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        }
+                    ]
+                },
+                {
+                    "key": "field_593ec7772ea97",
+                    "label": "Compilazione download",
+                    "name": "download",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_593ec7772affe",
+                                "operator": "==",
+                                "value": "mod-download"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "collapsed": "",
+                    "min": 0,
+                    "max": 0,
+                    "layout": "block",
+                    "button_label": "Aggiungi download",
+                    "sub_fields": [
+                        {
+                            "key": "field_593ec778d08ce",
+                            "label": "Scegli il file",
+                            "name": "url_download",
+                            "type": "file",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "url",
+                            "library": "all",
+                            "min_size": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        },
+                        {
+                            "key": "field_593ec778d0cb6",
+                            "label": "Titolo del download",
+                            "name": "titolo_download",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        }
+                    ]
+                },
+                {
+                    "key": "field_593f9980ef989",
+                    "label": "Testo opzionale prima del titolo da cliccare per espandere il testo",
+                    "name": "testo_opzionale_prima_del_titolo",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_593ec7772affe",
+                                "operator": "==",
+                                "value": "mod-expand"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0
+                },
+                {
+                    "key": "field_593f98586c698",
+                    "label": "Titolo da cliccare per espandere il testo",
+                    "name": "espansione_titolo",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_593ec7772affe",
+                                "operator": "==",
+                                "value": "mod-expand"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_593f98716c699",
+                    "label": "Contenuto nascosto da espandere al click",
+                    "name": "espansione_contenuto",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_593ec7772affe",
+                                "operator": "==",
+                                "value": "mod-expand"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0
+                },
+                {
+                    "key": "field_595b4a7f9a506",
+                    "label": "Inserire i cicli in questo blocco?",
+                    "name": "inserire_cicli",
+                    "type": "radio",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_593ec7772affe",
+                                "operator": "==",
+                                "value": "mod-cicli"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "si": "Sì"
+                    },
+                    "allow_null": 0,
+                    "other_choice": 0,
+                    "save_other_choice": 0,
+                    "default_value": "",
+                    "layout": "vertical",
+                    "return_format": "value"
+                },
+                {
+                    "key": "field_5982feb1fa729",
+                    "label": "Testo in cornice",
+                    "name": "testo_cornice_txt",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_593ec7772affe",
+                                "operator": "==",
+                                "value": "mod-testo-cornice"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0
+                },
+                {
+                    "key": "field_595a79264fca8",
+                    "label": "Sotto pagine",
+                    "name": "sotto_pagine",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_593ec7772affe",
+                                "operator": "==",
+                                "value": "mod-subpages"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "collapsed": "",
+                    "min": 0,
+                    "max": 0,
+                    "layout": "block",
+                    "button_label": "Aggiungi sotto pagina",
+                    "sub_fields": [
+                        {
+                            "key": "field_595a7a524fca9",
+                            "label": "Scegli la pagina",
+                            "name": "scegli_pagina",
+                            "type": "url",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": ""
+                        },
+                        {
+                            "key": "field_595b66e22662c",
+                            "label": "Titolo",
+                            "name": "page_title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_595b67022662d",
+                            "label": "CTA",
+                            "name": "page_cta",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_595b67632662f",
+                            "label": "CTA secondaria",
+                            "name": "page_cta_2",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5f719fe3e48f4",
+                            "label": "Link CTA secondaria",
+                            "name": "page_cta_2_link",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_595b67632662f",
+                                        "operator": "!=empty"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "page-cta-2-file": "File",
+                                "page-cta-2-url": "URL"
+                            },
+                            "default_value": false,
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 0,
+                            "return_format": "value",
+                            "ajax": 0,
+                            "placeholder": ""
+                        },
+                        {
+                            "key": "field_6164543548277",
+                            "label": "Aspetto CTA secondaria",
+                            "name": "page_cta_2_appearence",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_595b67632662f",
+                                        "operator": "!=empty"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "normal-cta": "Secondaria (grigia)",
+                                "primary-cta": "Primaria (rossa)"
+                            },
+                            "default_value": false,
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 0,
+                            "return_format": "value",
+                            "ajax": 0,
+                            "placeholder": ""
+                        },
+                        {
+                            "key": "field_595b6dec1b80f",
+                            "label": "File associato alla CTA secondaria",
+                            "name": "cta_2_file",
+                            "type": "file",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5f719fe3e48f4",
+                                        "operator": "==",
+                                        "value": "page-cta-2-file"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "url",
+                            "library": "all",
+                            "min_size": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        },
+                        {
+                            "key": "field_5f719fc4e48f3",
+                            "label": "URL associato alla CTA secondaria",
+                            "name": "cta_2_url",
+                            "type": "url",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5f719fe3e48f4",
+                                        "operator": "==",
+                                        "value": "page-cta-2-url"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": ""
+                        },
+                        {
+                            "key": "field_595b676f26630",
+                            "label": "Abstract",
+                            "name": "page_abstract",
+                            "type": "textarea",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "maxlength": 150,
+                            "rows": "",
+                            "new_lines": "wpautop"
+                        },
+                        {
+                            "key": "field_595b67192662e",
+                            "label": "Immagine",
+                            "name": "page_image",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "preview_size": "thumbnail",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "spettacolo"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "spettacolo_archivio"
+            }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-moduli.php"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "lp"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content"
+    ],
+    "active": true,
+    "description": "",
+    "modified": 1633965364
+}

@@ -32,7 +32,7 @@
             "name": "program_periods",
             "type": "repeater",
             "instructions": "",
-            "required": 1,
+            "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -40,7 +40,7 @@
                 "id": ""
             },
             "collapsed": "",
-            "min": 1,
+            "min": 0,
             "max": 0,
             "layout": "block",
             "button_label": "Aggiungi Periodo",
@@ -377,5 +377,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1621261580
+    "modified": 1634033943
 }

@@ -40,7 +40,7 @@
 																<div class="overlay-title-padding">
 																	<h2><?php the_title(); ?></h2>
 																	<h5><?php include( locate_template ( 'template-parts/date-modules/riepilogo-date-top.php' ) ); ?></h5>
-																	
+
 																</div>
 															</div>
 															<div class="tariffe-info">
@@ -80,7 +80,7 @@
 																		</div>
 																		<div class="detail">
 																			<?php if ( get_sub_field( 'link_biglietteria_custom_overlay' ) ) : ?>
-																				<a href="<?php the_sub_field( 'link_biglietteria_custom_overlay' ); ?>" class="btn-fill red cta-4 allupper" target="_blank" onClick="_gaq.push(['_trackEvent', 'tickets_overlay_button', 'click', '<?php the_title(); ?>', '0']);">
+																				<a href="<?php the_sub_field( 'link_biglietteria_custom_overlay' ); ?>" class="btn-fill red cta-4 allupper" target="_self" onClick="_gaq.push(['_trackEvent', 'tickets_overlay_button', 'click', '<?php the_title(); ?>', '0']);">
 																					<?php if ( get_sub_field( 'prezzo_listing_overlay' ) ) : ?>
 																						<?php the_sub_field( 'prezzo_listing_overlay' ); ?> €
 																					<?php else : ?>
@@ -110,7 +110,7 @@
 																			<p>h <?php echo $hour_string; ?></p>
 																		</div>
 																		<div class="detail">
-																			<a href="<?php echo $event["DirectLink"] ?>" class="btn-fill red cta-4 allupper" target="_blank" onClick="_gaq.push(['_trackEvent', 'tickets_overlay_button', 'click', '<?php the_title(); ?>', '0']);">
+																			<a href="<?php echo $event["DirectLink"] ?>" class="btn-fill red cta-4 allupper" target="_self" onClick="_gaq.push(['_trackEvent', 'tickets_overlay_button', 'click', '<?php the_title(); ?>', '0']);">
 																				<?php
 																				$pricesSingleEnvet = array( $event ); // finto array con un solo evento
 																		    $pricesSingleEnvet = ESROWP_Util::getPricesRange( $pricesSingleEnvet );
@@ -148,7 +148,7 @@
 							<div class="spettacolo-grid-new-right sticked">
 								<div class="overlay-lisiting-padding">
 									<a href="#" class="btn-fill-hover grey cta-4 allupper tickets-overlaty-closer">
-										Indietro
+										X Chiudi
 									</a>
 								</div>
 							</div>

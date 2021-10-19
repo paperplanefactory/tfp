@@ -217,6 +217,25 @@
             "new_lines": "br"
         },
         {
+            "key": "field_61014ab59cfe3",
+            "label": "Avviso modal",
+            "name": "avviso_spettacolo_overlay_globale",
+            "type": "textarea",
+            "instructions": "Questo avviso comparirà nelle modal di tutti gli spettacoli.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": "br"
+        },
+        {
             "key": "field_60dee9968bf01",
             "label": "CTA Cartellone Home (solo mobile)",
             "name": "cta_cartellone_home_solo_mobile",
@@ -291,5 +310,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1626431579
+    "modified": 1627474655
 }

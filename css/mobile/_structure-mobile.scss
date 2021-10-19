@@ -113,6 +113,10 @@ $logo-width: 100px; // wrappers
   width: 100%;
   height: calc(100% - 57px);
   padding-top: 57px;
+  background-image: url("images/spinner.gif");
+  background-size: 63px 63px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
 }
 
 .overlay-effect {
@@ -147,7 +151,7 @@ $logo-width: 100px; // wrappers
 }
 
 .overlay-lisiting-padding {
-  padding: 20px 0;
+  padding: 20px 0 15vh;
 }
 
 .overlay-title-padding {
@@ -340,8 +344,4 @@ $logo-width: 100px; // wrappers
   h2 {
     margin-bottom: 0;
   }
-}
-
-.banner-home-mobile-ww {
-  width: 100%;
 }

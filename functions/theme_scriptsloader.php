@@ -124,6 +124,9 @@ function all_scripts(){
   wp_register_script( 'scripts-archivio-spettacoli', get_stylesheet_directory_uri() . '/js/scripts-archivio-spettacoli.min.js', '', $theme_version, true);
   wp_enqueue_script( 'scripts-archivio-spettacoli' );
 
+  wp_register_script( 'scripts-cartellone-modal', get_stylesheet_directory_uri() . '/js/cartellone-modal.js', '', $theme_version, true);
+  wp_enqueue_script( 'scripts-cartellone-modal' );
+
 
 
 	}

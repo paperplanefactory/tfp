@@ -560,23 +560,6 @@ a.search-icon {
   background-size: 24px 24px;
 }
 
-a.basket-icon {
-  position: relative;
-  display: none;
-  width: 32px;
-  height: 32px;
-  padding: 0 !important;
-  margin: 0 0 0 8px;
-  background-image: url("images/carrello.png");
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-size: 14px 13px;
-}
-
-.basket-active {
-  display: inline-block !important;
-}
-
 #header-overlay-navi-structure {
   a.basket-icon {
     top: 12px;

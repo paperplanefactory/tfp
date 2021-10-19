@@ -540,6 +540,22 @@ a.basket-icon {
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: 14px 13px;
+
+  .tickets-counter {
+    position: absolute;
+    top: -11px;
+    right: -11px;
+    width: 22px;
+    height: 22px;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    background-color: $color-nero;
+    color: $color-bianco;
+    font-size: 10px;
+    line-height: 22px;
+    text-align: center;
+  }
 }
 
 .basket-active {

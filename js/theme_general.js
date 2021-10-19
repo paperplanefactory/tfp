@@ -185,6 +185,7 @@ if (typeof $esro !== 'undefined') {
       if (items_in_basket > 0) {
         //console.log('something in basket');
         $('.basket-selector').addClass('basket-active');
+        $('.tickets-counter').html(items_in_basket);
       } else {
         //console.log('basket is empty');
         $('.basket-selector').removeClass('basket-active');
@@ -195,16 +196,6 @@ if (typeof $esro !== 'undefined') {
       $('.basket-selector').removeClass('basket-active');
     }
   }
-  //basketHandler();
-  $(window).focus(function() {
-    basketHandler();
-    console.log('Focus');
-  });
-
-  $(window).blur(function() {
-    basketHandler();
-    console.log('Blur');
-  });
 
   function handleSession(session) {
     // Do something on session change

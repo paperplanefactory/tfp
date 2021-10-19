@@ -1,47 +1,44 @@
-@import '../vars';
-// structure tablet
+@import '../vars'; // structure tablet
 $header-height: 100px;
-$logo-width: 100px;
-
-// wrappers
+$logo-width: 100px; // wrappers
 
 .only-mobile {
   display: none;
 }
 
 .wrapper {
-  position:relative;
-  width:100%;
-	margin:0 auto;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .wrapper-padded {
-  position:relative;
+  position: relative;
   width: calc(100% - 26px);
-  margin:0 auto;
-  padding: 0 13px 0 13px;
+  margin: 0 auto;
+  padding: 0 13px;
 }
 
-.wrapper-padded-more, .wrapper-padded-more-spettacolo {
-  position:relative;
-  width:100%;
-	max-width: 1366px;
-	margin:0 auto;
+.wrapper-padded-more,
+.wrapper-padded-more-spettacolo {
+  position: relative;
+  width: 100%;
+  max-width: 1366px;
+  margin: 0 auto;
 }
 
 .wrapper-padded-more-content {
-  position:relative;
-  width:100%;
-	max-width: 640px;
-	margin:0 auto;
+  position: relative;
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
 }
-
 // flex boxes
 
 .flex-hold {
-	position: relative;
-	width: 100%;
-	height: 100%;
+  position: relative;
+  width: 100%;
+  height: 100%;
   @include flex-wrap;
 }
 
@@ -58,30 +55,29 @@ $logo-width: 100px;
   display: block;
   width: 100%;
   height: 100%;
-
 }
 
 .flex-hold-2 {
   .flex-hold-child {
     -webkit-box-flex: 1;
-        -ms-flex: 0 0 50%;
-            flex: 0 0 50%;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
   }
 }
 
 .flex-hold-2-bis {
   .flex-hold-child-l {
     -webkit-box-flex: 1;
-        -ms-flex: 0 0 40%;
-            flex: 0 0 40%;
+    -ms-flex: 0 0 40%;
+    flex: 0 0 40%;
   }
+
   .flex-hold-child-r {
     -webkit-box-flex: 1;
-        -ms-flex: 0 0 60%;
-            flex: 0 0 60%;
+    -ms-flex: 0 0 60%;
+    flex: 0 0 60%;
   }
 }
-
 // overlay tickets
 
 .list-dates-holder {
@@ -101,6 +97,10 @@ $logo-width: 100px;
   display: none;
   width: 100%;
   height: 100%;
+  background-image: url("images/spinner.gif");
+  background-size: 63px 63px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
 }
 
 .tickets-overlay-close {
@@ -145,11 +145,11 @@ $logo-width: 100px;
 }
 
 .overlay-message-padding {
-  padding: 20px 0 10px 0;
+  padding: 20px 0 10px;
 }
 
 .overlay-lisiting-padding {
-  padding: 60px 0;
+  padding: 60px 0 15vh;
 }
 
 .overlay-title-padding {
@@ -157,7 +157,7 @@ $logo-width: 100px;
 }
 
 .overlay-events-list {
-  margin: 10px 0 0 0;
+  margin: 10px 0 0;
   padding: 0;
   border-top: $color-grigio-linee-grafica solid 1px;
 }
@@ -166,26 +166,31 @@ $logo-width: 100px;
   padding: 15px 0;
   border-bottom: $color-grigio-linee-grafica solid 1px;
   @include flex-verticalize;
+
   .detail:nth-child(1) {
     position: relative;
     -webkit-box-flex: 1;
     width: 45%;
+
     h5 {
       margin: 0;
       padding: 0;
     }
   }
+
   .detail:nth-child(2) {
     position: relative;
     -webkit-box-flex: 1;
     width: calc(20% - 30px);
-    padding: 0 15px 0 15px;
+    padding: 0 15px;
     text-align: center;
+
     p {
       margin: 0;
       padding: 0;
     }
   }
+
   .detail:nth-child(3) {
     position: relative;
     -webkit-box-flex: 1;

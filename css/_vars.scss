@@ -1,14 +1,12 @@
 $break-desktop: 1025px;
 $break-tablet-end: 1024px;
 $break-tablet-start: 768px;
-$break-mobile: 767px;
-// fonts vars
+$break-mobile: 767px; // fonts vars
 $font-main: "franklin-gothic-urw",sans-serif;
 $font-weight-heavy: 900;
 $font-weight-demi: 700;
 $font-weight-medium: 500;
-$font-weight-book: 400;
-// colors vars
+$font-weight-book: 400; // colors vars
 $color-rosso-tfp: #D10019;
 $color-rosso-tfp-dark: #A80000;
 $color-rosso-tfp-aplpha: #E36675;
@@ -29,7 +27,6 @@ $color-eventi: #006C7A;
 $color-abbonamenti: #99073F;
 $color-danza: #99073F;
 $color-poesia: #2812AF;
-
 // form vars
 $form-label: "franklin-gothic-urw",sans-serif;
 $form-label-weight: 400;
@@ -50,8 +47,7 @@ $form-submit-hover-background-color: #FFF;
 $form-error-color: #FFF;
 $form-error-background-color: #B800F4;
 $form-ok-color: #FFF;
-$form-ok-background-color: #B800F4;
-// paddings
+$form-ok-background-color: #B800F4; // paddings
 $pad-top-1: 2%;
 $pad-right-1: 2%;
 $pad-bottom-1: 2%;
@@ -63,8 +59,7 @@ $pad-left-2: 4%;
 $pad-top-3: 8%;
 $pad-right-3: 8%;
 $pad-bottom-3: 8%;
-$pad-left-3: 8%;
-// margins
+$pad-left-3: 8%; // margins
 $margin-top-1: 10px;
 $margin-right-1: 10px;
 $margin-bottom-1: 10px;

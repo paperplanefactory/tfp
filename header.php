@@ -53,7 +53,6 @@ $todaystamp = strtotime(str_replace("/", "-", $today));
 <link rel="icon" type="image/png" sizes="96x96" href="<?php bloginfo('stylesheet_directory'); ?>/images/favicon/favicon-96x96.png">
 <link rel="icon" type="image/png" sizes="16x16" href="<?php bloginfo('stylesheet_directory'); ?>/images/favicon/favicon-16x16.png">
 <meta name="msapplication-TileImage" content="<?php bloginfo('stylesheet_directory'); ?>/images/favicon/ms-icon-144x144.png">
-<meta name="facebook-domain-verification" content="gifmrpe5trcb9ufi6e3y6n9z5w3g6g" />
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -98,7 +97,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               <a href="<?php the_field("url_calendario", "option"); ?>" class="btn-fill-hover red cta-4 allupper"><?php the_field("cta_calendario", "option"); ?></a>
             -->
               <a href="<?php the_field("link_biglietti_online", "option"); ?>" target="_self" class="btn-fill red cta-4 allupper last ticketed" onClick="_gaq.push(['_trackEvent', 'tickets_header_button', 'click', '<?php the_title(); ?>', '0']);"><?php the_field("cta_biglietti_online", "option"); ?></a>
-              <a href="<?php the_field("carrello_sro", "option"); ?>" target="_blank" class="basket-selector basket-icon btn-fill red last" onClick="_gaq.push(['_trackEvent', 'direct_tickets_header_button', 'click', '<?php the_title(); ?>', '0']);"></a>
+              <a href="<?php the_field("carrello_sro", "option"); ?>" target="_self" class="basket-selector basket-icon btn-fill red last" onClick="_gaq.push(['_trackEvent', 'direct_tickets_header_button', 'click', '<?php the_title(); ?>', '0']);"><span class="tickets-counter"></span></a>
             </div>
             <div class="menu-main">
               <?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
@@ -133,6 +132,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             -->
               <a href="<?php the_field("link_biglietti_online", "option"); ?>" target="_self" class="icon-button tickets"  onClick="_gaq.push(['_trackEvent', 'tickets_header_button_mobile', 'click', '<?php the_title(); ?>', '0']);"></a>
               <a href="tel:<?php the_field("numero_telefono_diretto", "option"); ?>" class="icon-button phone"></a>
+              <a href="<?php the_field("carrello_sro", "option"); ?>" target="_self" class="icon-button basket-selector basket-icon" onClick="_gaq.push(['_trackEvent', 'direct_tickets_header_button', 'click', '<?php the_title(); ?>', '0']);"><span class="tickets-counter"></span></a>
             </div>
             <div class="sub-navi">
               <a href="javascript:void(0);" class="search-icon search-activator" title="Apri / chiudi pannello di ricerca"></a>
@@ -140,7 +140,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               <a href="<?php the_field("url_calendario", "option"); ?>" class="btn-fill-hover red cta-4 allupper"><?php the_field("cta_calendario", "option"); ?></a>
               -->
               <a href="<?php the_field("link_biglietti_online", "option"); ?>" target="_self" class="btn-fill red cta-4 allupper last ticketed" onClick="_gaq.push(['_trackEvent', 'tickets_header_button', 'click', '<?php the_title(); ?>', '0']);"><?php the_field("cta_biglietti_online", "option"); ?></a>
-              <a href="<?php the_field("carrello_sro", "option"); ?>" target="_blank" class="basket-selector basket-icon btn-fill red last" onClick="_gaq.push(['_trackEvent', 'direct_tickets_header_button', 'click', '<?php the_title(); ?>', '0']);"></a>
+              <a href="<?php the_field("carrello_sro", "option"); ?>" target="_self" class="basket-selector basket-icon btn-fill red last" onClick="_gaq.push(['_trackEvent', 'direct_tickets_header_button', 'click', '<?php the_title(); ?>', '0']);"><span class="tickets-counter"></span></a>
             </div>
           </div>
         </div>
