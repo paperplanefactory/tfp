@@ -30,6 +30,13 @@
                  <a href="<?php the_sub_field('scegli_pagina'); ?>" class="btn-fill red cta-4 allupper"><?php the_sub_field('page_cta'); ?></a>
                  <?php if( get_sub_field('page_cta_2') ) : ?>
                    <?php
+                   $page_cta_2_appearence = get_sub_field( 'page_cta_2_appearence' );
+                   if ( $page_cta_2_appearence === 'primary-cta' ) {
+                     $cta_style = 'btn-fill red cta-4 allupper';
+                   }
+                   else {
+                     $cta_style = 'btn-fill-hover grey cta-4 allupper last';
+                   }
                    if ( get_sub_field('cta_2_file') ) {
                      $cta2_link = get_sub_field('cta_2_file');
                      $cta2_target = "_blank";
@@ -39,7 +46,7 @@
                      $cta2_target = "_self";
                    }
                     ?>
-                   <a href="<?php echo $cta2_link; ?>" target="<?php echo $cta2_target; ?>" class="btn-fill-hover grey cta-4 allupper last"><?php the_sub_field('page_cta_2'); ?></a>
+                   <a href="<?php echo $cta2_link; ?>" target="<?php echo $cta2_target; ?>" class="<?php echo $cta_style; ?>"><?php the_sub_field('page_cta_2'); ?></a>
                  <?php endif; ?>
                </div>
 
@@ -53,6 +60,13 @@
                  <a href="<?php the_sub_field('scegli_pagina'); ?>" class="btn-fill red cta-4 allupper"><?php the_sub_field('page_cta'); ?></a>
                  <?php if( get_sub_field('page_cta_2') ) : ?>
                    <?php
+                   $page_cta_2_appearence = get_sub_field( 'page_cta_2_appearence' );
+                   if ( $page_cta_2_appearence === 'primary-cta' ) {
+                     $cta_style = 'btn-fill red cta-4 allupper';
+                   }
+                   else {
+                     $cta_style = 'btn-fill-hover grey cta-4 allupper last';
+                   }
                    if ( get_sub_field('cta_2_file') ) {
                      $cta2_link = get_sub_field('cta_2_file');
                      $cta2_target = "_blank";
@@ -62,7 +76,7 @@
                      $cta2_target = "_self";
                    }
                     ?>
-                   <a href="<?php echo $cta2_link; ?>" target="<?php echo $cta2_target; ?>" class="btn-fill-hover grey cta-4 allupper last"><?php the_sub_field('page_cta_2'); ?></a>
+                   <a href="<?php echo $cta2_link; ?>" target="<?php echo $cta2_target; ?>" class="<?php echo $cta_style; ?>"><?php the_sub_field('page_cta_2'); ?></a>
                  <?php endif; ?>
                </div>
              </div>
@@ -81,6 +95,13 @@
                  <a href="<?php the_sub_field('scegli_pagina'); ?>" class="btn-fill red cta-4 allupper"><?php the_sub_field('page_cta'); ?></a>
                  <?php if( get_sub_field('page_cta_2') ) : ?>
                    <?php
+                   $page_cta_2_appearence = get_sub_field( 'page_cta_2_appearence' );
+                   if ( $page_cta_2_appearence === 'primary-cta' ) {
+                     $cta_style = 'btn-fill red cta-4 allupper';
+                   }
+                   else {
+                     $cta_style = 'btn-fill-hover grey cta-4 allupper last';
+                   }
                    if ( get_sub_field('cta_2_file') ) {
                      $cta2_link = get_sub_field('cta_2_file');
                      $cta2_target = "_blank";
@@ -90,7 +111,7 @@
                      $cta2_target = "_self";
                    }
                     ?>
-                   <a href="<?php echo $cta2_link; ?>" target="<?php echo $cta2_target; ?>" class="btn-fill-hover grey cta-4 allupper last"><?php the_sub_field('page_cta_2'); ?></a>
+                   <a href="<?php echo $cta2_link; ?>" target="<?php echo $cta2_target; ?>" class="<?php echo $cta_style; ?>"><?php the_sub_field('page_cta_2'); ?></a>
                  <?php endif; ?>
                </div>
              </div>
@@ -109,6 +130,13 @@
                  <a href="<?php the_sub_field('scegli_pagina'); ?>" class="btn-fill red cta-4 allupper"><?php the_sub_field('page_cta'); ?></a>
                  <?php if( get_sub_field('page_cta_2') ) : ?>
                    <?php
+                   $page_cta_2_appearence = get_sub_field( 'page_cta_2_appearence' );
+                   if ( $page_cta_2_appearence === 'primary-cta' ) {
+                     $cta_style = 'btn-fill red cta-4 allupper';
+                   }
+                   else {
+                     $cta_style = 'btn-fill-hover grey cta-4 allupper last';
+                   }
                    if ( get_sub_field('cta_2_file') ) {
                      $cta2_link = get_sub_field('cta_2_file');
                      $cta2_target = "_blank";
@@ -118,7 +146,7 @@
                      $cta2_target = "_self";
                    }
                     ?>
-                   <a href="<?php echo $cta2_link; ?>" target="<?php echo $cta2_target; ?>" class="btn-fill-hover grey cta-4 allupper last"><?php the_sub_field('page_cta_2'); ?></a>
+                   <a href="<?php echo $cta2_link; ?>" target="<?php echo $cta2_target; ?>" class="<?php echo $cta_style; ?>"><?php the_sub_field('page_cta_2'); ?></a>
                  <?php endif; ?>
                </div>
              </div>
@@ -133,6 +161,13 @@
          <a href="<?php the_sub_field('scegli_pagina'); ?>" class="btn-fill red cta-4 allupper"><?php the_sub_field('page_cta'); ?></a>
          <?php if( get_sub_field('page_cta_2') ) : ?>
            <?php
+           $page_cta_2_appearence = get_sub_field( 'page_cta_2_appearence' );
+           if ( $page_cta_2_appearence === 'primary-cta' ) {
+             $cta_style = 'btn-fill red cta-4 allupper';
+           }
+           else {
+             $cta_style = 'btn-fill-hover grey cta-4 allupper last';
+           }
            if ( get_sub_field('cta_2_file') ) {
              $cta2_link = get_sub_field('cta_2_file');
              $cta2_target = "_blank";
@@ -142,7 +177,7 @@
              $cta2_target = "_self";
            }
             ?>
-           <a href="<?php echo $cta2_link; ?>" target="<?php echo $cta2_target; ?>" class="btn-fill-hover grey cta-4 allupper last"><?php the_sub_field('page_cta_2'); ?></a>
+           <a href="<?php echo $cta2_link; ?>" target="<?php echo $cta2_target; ?>" class="<?php echo $cta_style; ?>"><?php the_sub_field('page_cta_2'); ?></a>
          <?php endif; ?>
        </div>
      </div>

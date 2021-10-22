@@ -181,7 +181,21 @@ if (typeof $esro !== 'undefined') {
   function basketHandler(basket) {
     currentBasket = basket;
     if (basket != null) {
-      var items_in_basket = basket.Tickets.length.toString();
+      var deliveries_in_basket = parseInt(basket.Deliveries.length);
+      var donations_in_basket = parseInt(basket.Donations.length);
+      var giftVouchers_in_basket = parseInt(basket.GiftVouchers.length);
+      var memberships_in_basket = parseInt(basket.Memberships.length);
+      var merchandise_in_basket = parseInt(basket.Merchandise.length);
+      var subscriptions_in_basket = parseInt(basket.Subscriptions.length);
+      var tickets_in_basket = parseInt(basket.Tickets.length);
+      var items_in_basket = deliveries_in_basket +
+        donations_in_basket +
+        giftVouchers_in_basket +
+        memberships_in_basket +
+        merchandise_in_basket +
+        subscriptions_in_basket +
+        tickets_in_basket;
+      console.log(items_in_basket);
       if (items_in_basket > 0) {
         //console.log('something in basket');
         $('.basket-selector').addClass('basket-active');
