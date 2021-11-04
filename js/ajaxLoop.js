@@ -1,6 +1,6 @@
 // ajaxLoop.js
 jQuery(function($) {
-  var loopHandlerUrl = "http://teatroparenti.local/web/themes/tfp/loops/loop-handler.php";
+  var loopHandlerUrl = "https://teatroparenti.local/web/themes/tfp/loops/loop-handler.php";
   var page = 1;
   var loading = true;
   var $window = $(window);

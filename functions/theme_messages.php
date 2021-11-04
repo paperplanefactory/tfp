@@ -15,7 +15,7 @@ add_filter('the_generator', 'wpbeginner_remove_version');
 
 // admin footer
 function remove_footer_admin () {
-echo 'Fueled by <a href="http://www.wordpress.org" target="_blank">WordPress</a> | Designed by <a href="http://www.paperplanefactory.com" target="_blank">PaperPlane Factory</a></p>';
+echo 'Fueled by <a href="https://www.wordpress.org" target="_blank">WordPress</a> | Designed by <a href="https://www.paperplanefactory.com" target="_blank">PaperPlane Factory</a></p>';
 }
 add_filter('admin_footer_text', 'remove_footer_admin');
 

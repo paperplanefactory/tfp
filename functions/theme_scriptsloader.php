@@ -54,19 +54,22 @@ function all_scripts(){
 	global $isDesktop;
   // smart jquery inclusion
   if (!is_admin()) {
-  	wp_deregister_script('jquery');
-  	wp_register_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js', '', '3.2.1', true);
+  	//wp_deregister_script('jquery');
+  	//wp_register_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js', '', '3.2.1', true);
+  	//wp_enqueue_script('jquery');
+		wp_deregister_script('jquery');
+  	wp_register_script('jquery', get_template_directory_uri() . '/js/jquery-3.5.1.min.js', '', '3.5.1', false);
   	wp_enqueue_script('jquery');
   }
 	// Comportamenti ricorrenti
 	wp_register_script( 'theme-general', get_stylesheet_directory_uri() . '/js/theme_general.js', '', $theme_version, true);
 	wp_enqueue_script( 'theme-general' );
   // Lazy load
-  wp_register_script( 'custom-lazyload', 'https://cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js', array('jquery'), '1.9.1');
+  wp_register_script( 'custom-lazyload', get_stylesheet_directory_uri() . '/js/jquery.lazyload.min.js', array('jquery'), '1.9.1');
   wp_enqueue_script( 'custom-lazyload' );
 	// Infinite Scroll
   // documentazione: https://infinite-scroll.com/
-  wp_register_script( 'custom-infinitescroll', 'https://cdnjs.cloudflare.com/ajax/libs/jquery-infinitescroll/3.0.3/infinite-scroll.pkgd.min.js#deferload', '', '3.0.3', false);
+  wp_register_script( 'custom-infinitescroll', get_stylesheet_directory_uri() . '/js/infinite-scroll.pkgd.min.js#deferload', '', '3.0.3', false);
   wp_enqueue_script( 'custom-infinitescroll' );
 	// Share Addtoany
 	wp_register_script( 'custom-addtoany', '//static.addtoany.com/menu/page.js', '', 'hisown', true);
@@ -124,7 +127,7 @@ function all_scripts(){
   wp_register_script( 'scripts-archivio-spettacoli', get_stylesheet_directory_uri() . '/js/scripts-archivio-spettacoli.min.js', '', $theme_version, true);
   wp_enqueue_script( 'scripts-archivio-spettacoli' );
 
-  wp_register_script( 'scripts-cartellone-modal', get_stylesheet_directory_uri() . '/js/cartellone-modal.js', '', $theme_version, true);
+  wp_register_script( 'scripts-cartellone-modal', get_stylesheet_directory_uri() . '/js/cartellone-modal.min.js', '', $theme_version, true);
   wp_enqueue_script( 'scripts-cartellone-modal' );
 
 

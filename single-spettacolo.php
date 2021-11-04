@@ -228,8 +228,6 @@ $(document).ready(function() {
             <?php echo apply_filters( 'the_post_thumbnail_caption', get_the_post_thumbnail_caption( $post ) ); ?>
           </div>
           <div class="spettacolo-grid-date-avvisi-mobile">
-
-
             <?php if( has_term( 'distribuzione', 'tipo_spettacolo' ) ) : ?>
               <?php if( get_field('titolo') ) : ?>
                 <h2><?php the_field('titolo'); ?><h2>
@@ -263,9 +261,9 @@ $(document).ready(function() {
                 <?php endif; ?>
                 <?php if( get_field('sala_durata_titolo') ) : ?>
                   <div class="cta-1">
-                    <a href="javascript:void(0);" class="expandable plus"><?php the_field('sala_durata_titolo'); ?></a>
+                    <a href="javascript:void(0);" class="expandable minus"><?php the_field('sala_durata_titolo'); ?></a>
                   </div>
-                  <div class="expandable-content expandable-hidden">
+                  <div class="expandable-content">
                     <?php the_field('sala_durata_contenuto'); ?>
                   </div>
                 <?php endif; ?>

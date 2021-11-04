@@ -91,7 +91,7 @@
             </div>
 
             <div class="h5-box links-area txt-1-color">
-              <a href="http://fondazionepierlombardo.com/" target="_blank">Fondazione Pier Lombardo</a><br />
+              <a href="https://fondazionepierlombardo.com/" target="_blank">Fondazione Pier Lombardo</a><br />
               <a href="/associazione-pier-lombardo/" class="wh blocky">Associazione Pier Lombardo</a>
             </div>
           </div>

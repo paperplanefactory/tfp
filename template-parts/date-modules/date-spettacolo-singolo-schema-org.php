@@ -15,7 +15,7 @@
   ?>
     <script type="application/ld+json">
     {
-      "@context": "http://schema.org",
+      "@context": "https://schema.org",
       "@type": "Event",
       "name": "<?php the_title(); ?>",
       "startDate": "<?php echo $schema_date; ?>T<?php the_sub_field('time'); ?>",

@@ -106,7 +106,7 @@
           Teatro di Rilevante Interesse Culturale fondato nel 1972
         </div>
         <div class="flex-hold-child flex-hold-child-r h5-box links-area maybe-right txt-1-color">
-          <a href="http://fondazionepierlombardo.com/" target="_blank">Fondazione Pier Lombardo</a>&nbsp;&nbsp;<a href="/associazione-pier-lombardo/" class="wh blocky">Associazione Pier Lombardo</a>
+          <a href="https://fondazionepierlombardo.com/" target="_blank">Fondazione Pier Lombardo</a>&nbsp;&nbsp;<a href="/associazione-pier-lombardo/" class="wh blocky">Associazione Pier Lombardo</a>
         </div>
         </div>
         </div>
