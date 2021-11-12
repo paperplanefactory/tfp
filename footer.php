@@ -16,7 +16,7 @@ global $isDesktop;
       <div class="wrapper-padded">
         <div class="flex-hold flex-hold-2-bis cta-1">
           <div class="flex-hold-child flex-hold-child-l">
-            Teatro di Rilevante Interesse Culturale fondato nel 1972
+            Teatro di Rilevante Interesse Culturale fondato e diretto dal 1972 da Andrée Ruth Shammah
           </div>
           <div class="flex-hold-child flex-hold-child-r alignright">
             <h5 class="txt-2-color"><a href="https://fondazionepierlombardo.com/" target="_blank" class="wh blocky">Fondazione Pier Lombardo</a> &nbsp; &nbsp; &nbsp;<a href="/associazione-pier-lombardo/" class="wh blocky">Associazione Pier Lombardo</a></h5>

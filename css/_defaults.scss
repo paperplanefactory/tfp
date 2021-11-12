@@ -460,21 +460,37 @@ a.download:visited {
 }
 // cookies!!
 
-.bannerStyle {
-	position: fixed !important;
-	z-index: 9999 !important;
-	display: block !important;
+#cookie-notice {
+	position: fixed;
+	z-index: 9999;
+	display: block;
 	width: 100%;
-	bottom: 0 !important;
-	left: 0 !important;
+	bottom: 0;
+	left: 0;
 	font-family: $font-main !important;
-	font-weight: $font-weight-book;
-	font-size: 12px;
-	line-height: 22px !important;
-	border-top: $color-rosso-tfp solid 4px !important;
-	background-color: $color-bianco !important;
-	color: $color-grigio-medio !important;
-	overflow: hidden;
+	font-weight: $font-weight-book !important;
+	font-size: 12px !important;
+	line-height: 14px !important;
+	border-top: $color-rosso-tfp solid 1px !important;
+	background-color: $color-rosso-tfp !important;
+	color: $color-bianco !important;
+
+	.cookie-notice-container {
+		position: relative;
+		width: calc(100% - 40px);
+		margin: 0 auto;
+		padding: 20px !important;
+		text-align: center;
+	}
+
+	a {
+		margin: 0 5px;
+		padding: 3px 6px;
+		background-color: $color-bianco;
+		color: $color-rosso-tfp !important;
+		text-transform: uppercase;
+		font-weight: $font-weight-demi !important;
+	}
 }
 
 .contentStyle {

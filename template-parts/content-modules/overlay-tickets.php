@@ -39,7 +39,7 @@
 															</div>
 															<div class="flex-hold-child">
 																<div class="overlay-title-padding">
-																	<h2>--<?php the_title(); ?></h2>
+																	<h2><?php the_title(); ?></h2>
 																	<h5><?php include( locate_template ( 'template-parts/date-modules/riepilogo-date-top.php' ) ); ?></h5>
 																</div>
 															</div>

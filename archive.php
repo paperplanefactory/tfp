@@ -27,32 +27,33 @@ get_header();
   <div class="wrapper-padded">
     <?php if ( have_posts() ) : ?>
       <script>
-$(document).ready(function() {
-  $('.grid-infinite').infiniteScroll({
-  // options
-  path: '.nav-next a',
-  append: '.infinite-module',
-  status: '#infscr-loading',
-  history: false,
-});
+      $(document).ready(function() {
+      $('.grid-infinite').infiniteScroll({
+      // options
+      path: '.nav-next a',
+      append: '.infinite-module',
+      status: '#infscr-loading',
+      history: false,
+      });
 
-$('.grid-infinite').on( 'append.infiniteScroll', function( event, response, path, items ) {
-  (function() {
-    new LazyLoad({
-      elements_selector: ".lazy",
-      class_loading: "lazy-loading",
-      class_loaded: "lazy-loaded"
-    });
-  }());
-});
-window.setInterval(function(){
-   if ( $('.infinite-scroll-last').is(":visible") ) {
-     $('#infscr-loading').fadeOut(300);
-   }
- }, 5000);
-});
+      $('.grid-infinite').on( 'append.infiniteScroll', function( event, response, path, items ) {
+      (function($){
+      $("img.lazymage, img.lazy, div.lazy, li.lazy").lazyload({
+      effect : "fadeIn",
+      load : function() {
+      $(".lazy-placehoder").fadeOut(150);
+      }
+      });
+      })(jQuery);
+      });
+      window.setInterval(function(){
+      if ( $('.infinite-scroll-last').is(":visible") ) {
+      $('#infscr-loading').fadeOut(300);
+      }
+      }, 5000);
+      });
 
-</script>
+      </script>
 			<div class="def-grid grid-infinite">
 				<?php while ( have_posts() ) : the_post(); ?>
 					<?php include( locate_template ( 'template-parts/grid-modules/def-grid-module-news.php' ) ); ?>
