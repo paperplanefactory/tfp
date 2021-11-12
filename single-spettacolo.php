@@ -209,13 +209,13 @@ $(document).ready(function() {
               </div>
               <div class="fiftyfifty-grid-module-right">
                 <?php if( ( $cta_biglietti === 'acquista biglietti' || $cta_biglietti === 'prenota' || $cta_biglietti === 'dona ora' ) && get_field('url_cta_biglietti') ) : ?>
-                  <a href="<?php the_field('url_cta_biglietti'); ?>" class="btn-fill red cta-4 allupper last dates-on-left hide-when-past" target="_blank" onClick="_gaq.push(['_trackEvent', 'tickets_top_button', 'click', '<?php the_title(); ?>', '0']);"><?php the_field('cta_biglietti'); ?></a>
+                  <a href="<?php the_field('url_cta_biglietti'); ?>" class="btn-fill red cta-4 allupper last dates-on-left hide-when-past" target="_blank" onClick="_gaq.push(['_trackEvent', 'tickets_top_button_acquista_prenota', 'click', '<?php the_title(); ?>', '0']);"><?php the_field('cta_biglietti'); ?></a>
                 <?php elseif ( ( $cta_biglietti === 'iscriviti' ) && get_field('form_registrazione') ) : ?>
-                  <a href="#" class="btn-fill red cta-4 allupper last dates-on-left tickets-overlaty-opener hide-when-past" onClick="_gaq.push(['_trackEvent', 'tickets_top_button', 'click', '<?php the_title(); ?>', '0']);"><?php the_field('cta_biglietti'); ?></a>
+                  <a href="#" class="btn-fill red cta-4 allupper last dates-on-left tickets-overlaty-opener hide-when-past" onClick="_gaq.push(['_trackEvent', 'tickets_top_button_form_registrazione', 'click', '<?php the_title(); ?>', '0']);"><?php the_field('cta_biglietti'); ?></a>
                 <?php elseif ( ( $cta_biglietti === 'gestito da ESRO' ) && !empty($events) ) : ?>
-                  <a href="#" class="btn-fill red cta-4 allupper last dates-on-left tickets-overlaty-opener hide-when-past" onClick="_gaq.push(['_trackEvent', 'tickets_top_button', 'click', '<?php the_title(); ?>', '0']);"><?php echo $prices_for_btn; ?></a>
+                  <a href="#" class="btn-fill red cta-4 allupper last dates-on-left tickets-overlaty-opener hide-when-past" onClick="_gaq.push(['_trackEvent', 'tickets_top_button_biglietteria_esro', 'click', '<?php the_title(); ?>', '0']);"><?php echo $prices_for_btn; ?></a>
                 <?php elseif ( ( $cta_biglietti === 'Overlay link interni' ) ) : ?>
-                  <a href="#" class="btn-fill red cta-4 allupper last hide-when-past tickets-overlaty-opener" onClick="_gaq.push(['_trackEvent', 'tickets_column_button', 'click', '<?php the_title(); ?>', '0']);"><?php echo $prices_for_btn; ?></a>
+                  <a href="#" class="btn-fill red cta-4 allupper last hide-when-past tickets-overlaty-opener" onClick="_gaq.push(['_trackEvent', 'tickets_top_button_overlay_link_interni', 'click', '<?php the_title(); ?>', '0']);"><?php echo $prices_for_btn; ?></a>
                 <?php endif; ?>
 
               </div>
@@ -433,13 +433,13 @@ $(document).ready(function() {
             <?php include( locate_template ( 'template-parts/date-modules/date-spettacolo-singolo-schema-org.php' ) ); ?>
             <h4><?php include( locate_template ( 'template-parts/date-modules/riepilogo-date.php' ) ); ?></h4>
             <?php if( ( $cta_biglietti === 'acquista biglietti' || $cta_biglietti === 'prenota' || $cta_biglietti === 'dona ora' ) && get_field('url_cta_biglietti') ) : ?>
-              <a href="<?php the_field('url_cta_biglietti'); ?>" class="btn-fill red cta-4 allupper last hide-when-past" target="_blank" onClick="_gaq.push(['_trackEvent', 'tickets_column_button', 'click', '<?php the_title(); ?>', '0']);"><?php the_field('cta_biglietti'); ?></a>
+              <a href="<?php the_field('url_cta_biglietti'); ?>" class="btn-fill red cta-4 allupper last hide-when-past" target="_blank" onClick="_gaq.push(['_trackEvent', 'tickets_column_button_acquista_prenota', 'click', '<?php the_title(); ?>', '0']);"><?php the_field('cta_biglietti'); ?></a>
             <?php elseif ( ( $cta_biglietti === 'iscriviti' ) && get_field('form_registrazione') ) : ?>
-              <a href="#" class="btn-fill red cta-4 allupper last hide-when-past tickets-overlaty-opener" onClick="_gaq.push(['_trackEvent', 'tickets_column_button', 'click', '<?php the_title(); ?>', '0']);"><?php the_field('cta_biglietti'); ?></a>
+              <a href="#" class="btn-fill red cta-4 allupper last hide-when-past tickets-overlaty-opener" onClick="_gaq.push(['_trackEvent', 'tickets_column_button_form_registrazione', 'click', '<?php the_title(); ?>', '0']);"><?php the_field('cta_biglietti'); ?></a>
             <?php elseif ( ( $cta_biglietti === 'gestito da ESRO' ) && !empty($events) ) : ?>
-              <a href="#" class="btn-fill red cta-4 allupper last hide-when-past tickets-overlaty-opener" onClick="_gaq.push(['_trackEvent', 'tickets_column_button', 'click', '<?php the_title(); ?>', '0']);"><?php echo $prices_for_btn; ?></a>
+              <a href="#" class="btn-fill red cta-4 allupper last hide-when-past tickets-overlaty-opener" onClick="_gaq.push(['_trackEvent', 'tickets_column_button_biglietteria_esro', 'click', '<?php the_title(); ?>', '0']);"><?php echo $prices_for_btn; ?></a>
             <?php elseif ( ( $cta_biglietti === 'Overlay link interni' ) ) : ?>
-              <a href="#" class="btn-fill red cta-4 allupper last hide-when-past tickets-overlaty-opener" onClick="_gaq.push(['_trackEvent', 'tickets_column_button', 'click', '<?php the_title(); ?>', '0']);"><?php echo $prices_for_btn; ?></a>
+              <a href="#" class="btn-fill red cta-4 allupper last hide-when-past tickets-overlaty-opener" onClick="_gaq.push(['_trackEvent', 'tickets_column_button_overlay_link_interni', 'click', '<?php the_title(); ?>', '0']);"><?php echo $prices_for_btn; ?></a>
             <?php endif; ?>
             <div class="clearer"></div>
             <?php if( get_field('avviso_spettacolo') ) : ?>
