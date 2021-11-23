@@ -1449,6 +1449,10 @@
   width: 100%;
   @include flex-wrap;
 
+  .banner-home-mobile-ww {
+    margin: 0 auto;
+  }
+
   .banner-img {
     position: relative;
     -webkit-box-flex: 1;
