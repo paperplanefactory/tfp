@@ -34,6 +34,7 @@ if ( $thumb_id != 534 ) : ?>
   <div class="wrapper">
     <div class="wrapper-padded">
       <div class="wrapper-padded-more-spettacolo">
+        <div class="landing-logo-noimage"><a href="<?php echo home_url(); ?>" rel="bookmark" title="Teatro Franco Parenti - Homepage" class="absl"></a></div>
         <div class="landing-title-no-image">
           <h1><?php the_title(); ?></h1>
           <?php if( get_field('subtitle') ) : ?>

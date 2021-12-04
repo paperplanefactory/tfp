@@ -37,16 +37,21 @@
                    else {
                      $cta_style = 'btn-fill-hover grey cta-4 allupper last';
                    }
-                   if ( get_sub_field('cta_2_file') ) {
-                     $cta2_link = get_sub_field('cta_2_file');
-                     $cta2_target = "_blank";
-                   }
-                   else {
-                     $cta2_link = get_sub_field('cta_2_url');
-                     $cta2_target = "_self";
+                   if ( get_sub_field('page_cta_2') ) {
+                     $page_cta_2_link = get_sub_field('page_cta_2_link');
+                     if ( $page_cta_2_link === 'page-cta-2-file' ) {
+                       $cta2_link = get_sub_field('cta_2_file');
+                       $cta2_target = "_blank";
+                     }
+                     else {
+                       $cta2_link = get_sub_field('cta_2_url');
+                       $cta2_target = "_self";
+                     }
                    }
                     ?>
-                   <a href="<?php echo $cta2_link; ?>" target="<?php echo $cta2_target; ?>" class="<?php echo $cta_style; ?>"><?php the_sub_field('page_cta_2'); ?></a>
+                    <?php if ( get_sub_field('page_cta_2') ) : ?>
+                      <a href="<?php echo $cta2_link; ?>" target="<?php echo $cta2_target; ?>" class="<?php echo $cta_style; ?>"><?php the_sub_field('page_cta_2'); ?></a>
+                    <?php endif; ?>
                  <?php endif; ?>
                </div>
 
@@ -67,16 +72,22 @@
                    else {
                      $cta_style = 'btn-fill-hover grey cta-4 allupper last';
                    }
-                   if ( get_sub_field('cta_2_file') ) {
-                     $cta2_link = get_sub_field('cta_2_file');
-                     $cta2_target = "_blank";
+                   if ( get_sub_field('page_cta_2') ) {
+                     $page_cta_2_link = get_sub_field('page_cta_2_link');
+                     if ( $page_cta_2_link === 'page-cta-2-file' ) {
+                       $cta2_link = get_sub_field('cta_2_file');
+                       $cta2_target = "_blank";
+                     }
+                     else {
+                       $cta2_link = get_sub_field('cta_2_url');
+                       $cta2_target = "_self";
+                     }
                    }
-                   else {
-                     $cta2_link = get_sub_field('cta_2_url');
-                     $cta2_target = "_self";
-                   }
+
                     ?>
-                   <a href="<?php echo $cta2_link; ?>" target="<?php echo $cta2_target; ?>" class="<?php echo $cta_style; ?>"><?php the_sub_field('page_cta_2'); ?></a>
+                    <?php if ( get_sub_field('page_cta_2') ) : ?>
+                      <a href="<?php echo $cta2_link; ?>" target="<?php echo $cta2_target; ?>" class="<?php echo $cta_style; ?>"><?php the_sub_field('page_cta_2'); ?></a>
+                    <?php endif; ?>
                  <?php endif; ?>
                </div>
              </div>
@@ -102,16 +113,21 @@
                    else {
                      $cta_style = 'btn-fill-hover grey cta-4 allupper last';
                    }
-                   if ( get_sub_field('cta_2_file') ) {
-                     $cta2_link = get_sub_field('cta_2_file');
-                     $cta2_target = "_blank";
-                   }
-                   else {
-                     $cta2_link = get_sub_field('cta_2_url');
-                     $cta2_target = "_self";
+                   if ( get_sub_field('page_cta_2') ) {
+                     $page_cta_2_link = get_sub_field('page_cta_2_link');
+                     if ( $page_cta_2_link === 'page-cta-2-file' ) {
+                       $cta2_link = get_sub_field('cta_2_file');
+                       $cta2_target = "_blank";
+                     }
+                     else {
+                       $cta2_link = get_sub_field('cta_2_url');
+                       $cta2_target = "_self";
+                     }
                    }
                     ?>
-                   <a href="<?php echo $cta2_link; ?>" target="<?php echo $cta2_target; ?>" class="<?php echo $cta_style; ?>"><?php the_sub_field('page_cta_2'); ?></a>
+                    <?php if ( get_sub_field('page_cta_2') ) : ?>
+                      <a href="<?php echo $cta2_link; ?>" target="<?php echo $cta2_target; ?>" class="<?php echo $cta_style; ?>"><?php the_sub_field('page_cta_2'); ?></a>
+                    <?php endif; ?>
                  <?php endif; ?>
                </div>
              </div>
@@ -137,16 +153,21 @@
                    else {
                      $cta_style = 'btn-fill-hover grey cta-4 allupper last';
                    }
-                   if ( get_sub_field('cta_2_file') ) {
-                     $cta2_link = get_sub_field('cta_2_file');
-                     $cta2_target = "_blank";
-                   }
-                   else {
-                     $cta2_link = get_sub_field('cta_2_url');
-                     $cta2_target = "_self";
+                   if ( get_sub_field('page_cta_2') ) {
+                     $page_cta_2_link = get_sub_field('page_cta_2_link');
+                     if ( $page_cta_2_link === 'page-cta-2-file' ) {
+                       $cta2_link = get_sub_field('cta_2_file');
+                       $cta2_target = "_blank";
+                     }
+                     else {
+                       $cta2_link = get_sub_field('cta_2_url');
+                       $cta2_target = "_self";
+                     }
                    }
                     ?>
-                   <a href="<?php echo $cta2_link; ?>" target="<?php echo $cta2_target; ?>" class="<?php echo $cta_style; ?>"><?php the_sub_field('page_cta_2'); ?></a>
+                    <?php if ( get_sub_field('page_cta_2') ) : ?>
+                      <a href="<?php echo $cta2_link; ?>" target="<?php echo $cta2_target; ?>" class="<?php echo $cta_style; ?>"><?php the_sub_field('page_cta_2'); ?></a>
+                    <?php endif; ?>
                  <?php endif; ?>
                </div>
              </div>
@@ -168,16 +189,21 @@
            else {
              $cta_style = 'btn-fill-hover grey cta-4 allupper last';
            }
-           if ( get_sub_field('cta_2_file') ) {
-             $cta2_link = get_sub_field('cta_2_file');
-             $cta2_target = "_blank";
-           }
-           else {
-             $cta2_link = get_sub_field('cta_2_url');
-             $cta2_target = "_self";
+           if ( get_sub_field('page_cta_2') ) {
+             $page_cta_2_link = get_sub_field('page_cta_2_link');
+             if ( $page_cta_2_link === 'page-cta-2-file' ) {
+               $cta2_link = get_sub_field('cta_2_file');
+               $cta2_target = "_blank";
+             }
+             else {
+               $cta2_link = get_sub_field('cta_2_url');
+               $cta2_target = "_self";
+             }
            }
             ?>
-           <a href="<?php echo $cta2_link; ?>" target="<?php echo $cta2_target; ?>" class="<?php echo $cta_style; ?>"><?php the_sub_field('page_cta_2'); ?></a>
+            <?php if ( get_sub_field('page_cta_2') ) : ?>
+              <a href="<?php echo $cta2_link; ?>" target="<?php echo $cta2_target; ?>" class="<?php echo $cta_style; ?>"><?php the_sub_field('page_cta_2'); ?></a>
+            <?php endif; ?>
          <?php endif; ?>
        </div>
      </div>

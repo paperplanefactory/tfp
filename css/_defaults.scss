@@ -486,7 +486,7 @@ a.download:visited {
 	a {
 		margin: 0 5px;
 		padding: 3px 6px;
-		background-color: $color-bianco;
+		background-color: $color-bianco !important;
 		color: $color-rosso-tfp !important;
 		text-transform: uppercase;
 		font-weight: $font-weight-demi !important;

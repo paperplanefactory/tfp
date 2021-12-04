@@ -42,6 +42,18 @@
   background-position: 0 0;
 }
 
+.landing-logo-noimage {
+  position: relative;
+  z-index: 2;
+  margin: 20px 0;
+  width: 200px;
+  height: 60px;
+  background-image: url("images/logo-teatro-franco-parenti.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 0 0;
+}
+
 .landing-title {
   position: absolute;
   bottom: 0;

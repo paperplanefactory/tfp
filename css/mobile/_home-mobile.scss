@@ -320,3 +320,18 @@ a.home-cartellone-cta:visited {
   color: $color-bianco !important;
   text-transform: uppercase !important;
 }
+
+a.home-calendario-cta:link,
+a.home-calendario-cta:visited {
+  display: block;
+  width: calc(100% - 30px);
+  padding: 15px;
+  font-size: $h5-size;
+  line-height: $h5-size;
+  font-weight: $font-weight-demi;
+  text-align: center;
+  background-color: $color-bianco;
+  color: $color-grigio-medio !important;
+  text-transform: uppercase !important;
+  border-bottom: solid 1px $color-grigio-linee-grafica;
+}

@@ -336,5 +336,13 @@ else {
       </ul>
     </div>
     <a href="<?php the_field( 'url_cartellone', 'options' ); ?>" class="home-cartellone-cta"><?php the_field( 'cta_cartellone_home_solo_mobile', 'options' ); ?></a>
+    <?php
+    $today_to_calendar = date('Ymd');
+    $aweek_to_calendar = strtotime($today_to_calendar);
+    $aweek_to_calendar = strtotime("+7 day", $aweek_to_calendar);
+    ?>
+    <a href="calendario-spettacoli/<?php echo $today_to_calendar; ?><?php echo date('Ymd', $aweek_to_calendar); ?>/giornata/-/" class="home-calendario-cta"><?php the_field( 'cta_calendario_home_solo_mobile', 'options' ); ?></a>
+
+
   </div>
 </div>

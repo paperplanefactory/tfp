@@ -57,11 +57,13 @@ get_header();
 $stagione_corrente = get_field("scegli_stagione_corrente", "option");
 $stagione = get_term_by('id', $stagione_corrente, 'stagione');
 $stagione_name = $stagione->name;
+include(locate_template('template-parts/menus-and-utilities/search-box-cartellone-mobile.php'));
+include(locate_template('template-parts/menus-and-utilities/search-box-cartellone.php'));
 if ($isMobile == 1) {
-  include(locate_template('template-parts/menus-and-utilities/search-box-cartellone-mobile.php'));
+
 }
 if ($isTablet == 1 || $isDesktop == 1) {
-  include(locate_template('template-parts/menus-and-utilities/search-box-cartellone.php'));
+
 }
 ?>
 <div id="tax-info"></div>

@@ -1,4 +1,4 @@
-<div class="wrapper pad-bottom-1 pad-top-1 border-bottom">
+<div class="wrapper pad-bottom-1 pad-top-1 border-bottom only-mobile">
   <div class="wrapper-padded">
     <div class="fiftyfifty-grid-taxes just-verticalize">
       <div class="fiftyfifty-grid-module-left">
