@@ -139,8 +139,8 @@ $(document).ready(function() {
 
   //controllo input search
   $('.search-check').submit(function() {
-    var name = $.trim($('.search-lenght-check').val());
-    var lenght = $('.search-lenght-check').val().length;
+    var fieldValue = $('.search-lenght-check').val();
+    var lenght = fieldValue.length;
     // Check if empty of not
     if (lenght < 4) {
       $('.search-lenght-message').slideDown(300);

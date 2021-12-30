@@ -1,7 +1,7 @@
 <?php
 // imposto la versione del tema
 global $theme_version;
-$theme_version = 8.4;
+$theme_version = 8.5;
 // gestione caricamento css
 include_once "functions/theme_stylesloader.php";
 // gestione caricamento script
