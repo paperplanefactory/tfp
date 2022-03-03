@@ -67,8 +67,10 @@ $video = get_field('video', 'percorsi' . '_' . $term_activity , true);
 
 
             <div class="content-styled pad-bottom-2">
-              <div class="loghi">
-                <?php if( have_rows('banner_logos', 'percorsi' . '_' . $term_activity , false) ) : while ( have_rows('banner_logos', 'percorsi' . '_' . $term_activity , false) ) : the_row();
+
+                <?php if( have_rows('banner_logos', 'percorsi' . '_' . $term_activity , false) ) : ?>
+                  <div class="loghi-percorso-cartellone">
+                  <?php while ( have_rows('banner_logos', 'percorsi' . '_' . $term_activity , false) ) : the_row();
                 $logo_sponsor = get_sub_field('logo_sponsor');
                   if ( $isMobile == 1 ) {
                     $logo_sponsor_URL = $logo_sponsor['sizes']['content_picture'];
@@ -81,24 +83,31 @@ $video = get_field('video', 'percorsi' . '_' . $term_activity , true);
                   }
                 ?>
                 <?php if( get_sub_field('url_sito_sponsor') ) : ?>
-                  <div class="logo-grande">
+                  <div class="logo-percorso-cartellone">
                     <a href="<?php the_sub_field('url_sito_sponsor'); ?>" target="_blank">
                       <img class="lazy" data-original="<?php echo $logo_sponsor_URL; ?>" />
                     </a>
-                    <div class="cta-2 pad-top-1">
-                      <?php the_sub_field('titolo_logo'); ?>
-                    </div>
+                    <?php if (get_sub_field('titolo_logo')) : ?>
+                      <div class="cta-2 pad-top-1">
+                        <?php the_sub_field('titolo_logo'); ?>
+                      </div>
+                    <?php endif; ?>
+
                   </div>
                 <?php else : ?>
-                  <div class="logo-grande">
+                  <div class="logo-percorso-cartellone">
                     <img class="lazy" data-original="<?php echo $logo_sponsor_URL; ?>" />
-                    <div class="cta-2 pad-top-1">
-                      <?php the_sub_field('titolo_logo'); ?>
-                    </div>
+                    <?php if (get_sub_field('titolo_logo')) : ?>
+                      <div class="cta-2 pad-top-1">
+                        <?php the_sub_field('titolo_logo'); ?>
+                      </div>
+                    <?php endif; ?>
                   </div>
                 <?php endif; ?>
-                <?php endwhile; endif; ?>
+              <?php endwhile; ?>
               </div>
+              <?php endif; ?>
+
               <?php echo wpautop( $current_activity->description ); ?>
               <?php if ( $video != '' ) : ?>
                 <div class="video_frame">

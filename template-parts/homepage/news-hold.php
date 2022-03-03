@@ -86,6 +86,14 @@ if ( $mostrare_classifica === 'si' ) : ?>
           $args_news_home = array(
            'post_type' => 'post',
            'posts_per_page' => $show_news,
+           'tax_query' => array(
+             array(
+               'taxonomy' => 'evidenza',
+               'field' => 'slug',
+               'terms' => 'no',
+               'operator'  => 'NOT IN'
+             )
+            ),
            );
           $my_news_home = get_posts( $args_news_home );
           foreach($my_news_home as $post) : setup_postdata($post);

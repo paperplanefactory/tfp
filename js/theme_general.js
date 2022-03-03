@@ -138,15 +138,19 @@ $(document).ready(function() {
 
 
   //controllo input search
-  $('.search-check').submit(function() {
-    var fieldValue = $('.search-lenght-check').val();
-    var lenght = fieldValue.length;
-    // Check if empty of not
-    if (lenght < 4) {
-      $('.search-lenght-message').slideDown(300);
-      return false;
-    }
+  $('.search-check').each(function(i, el) {
+    $(this).submit(function() {
+      var fieldValue = $(this).find('.search-lenght-check').val();
+      var lenght = fieldValue.length;
+      // Check if empty of not
+      if (lenght < 4) {
+        $(this).next('.search-lenght-message').slideDown(300);
+        return false;
+      }
+    });
   });
+
+
 });
 
 

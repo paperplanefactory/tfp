@@ -20,9 +20,9 @@ add_image_size( 'mosaic_medium_vertical', 9999, 440);
 add_image_size( 'editorial_banner', 293, 400, true);
 add_image_size( 'logo_opt', 250, 9999);
 add_image_size( 'logo_opt_mob', 250, 9999);
-add_image_size( 'banner_300_50', 300, 50, true);
-add_image_size( 'banner_300_free', 300, 9999);
-add_image_size( 'banner_250_250', 250, 250, true);
+add_image_size( 'banner_300_50', 600, 100, true);
+add_image_size( 'banner_300_free', 600, 9999);
+add_image_size( 'banner_250_250', 500, 500, true);
 add_image_size( 'overlay_tab', 320, 9999);
 
 

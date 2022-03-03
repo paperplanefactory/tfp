@@ -171,6 +171,40 @@
 	line-height: 12px;
 }
 
+.invalid {
+	.wpcf7-response-output {
+		display: block !important;
+		z-index: 99 !important;
+		width: 96% !important;
+		background-color: $color-rosso-tfp !important;
+		color: $color-bianco !important;
+		border: none !important;
+		padding: 2% !important;
+		left: 0 !important;
+		font-family: $font-main;
+		font-weight: $font-weight-book;
+		font-size: 12px;
+		line-height: 12px;
+	}
+}
+
+.sent {
+	.wpcf7-response-output {
+		display: block !important;
+		z-index: 99 !important;
+		width: 96% !important;
+		background-color: $color-incontri-libri !important;
+		color: $color-bianco !important;
+		border: none !important;
+		padding: 2% !important;
+		left: 0 !important;
+		font-family: $font-main;
+		font-weight: $font-weight-book;
+		font-size: 12px;
+		line-height: 12px;
+	}
+}
+
 .wpcf7-list-item {
 	width: 100% !important;
 }

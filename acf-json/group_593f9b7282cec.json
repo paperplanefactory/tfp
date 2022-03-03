@@ -1,0 +1,379 @@
+{
+    "key": "group_593f9b7282cec",
+    "title": "Colonna destra - altri campi",
+    "fields": [
+        {
+            "key": "field_593fbfbecf6c9",
+            "label": "CTA biglietti",
+            "name": "cta_biglietti",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "nessuna": "nessuna",
+                "acquista biglietti": "acquista biglietti",
+                "prenota": "prenota",
+                "dona ora": "dona ora",
+                "iscriviti": "iscriviti",
+                "gestito da ESRO": "gestito da ESRO",
+                "Overlay link interni": "Overlay link interni",
+                "Lista attesa": "Lista attesa"
+            },
+            "default_value": false,
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_593fc018cf6ca",
+            "label": "URL CTA biglietti",
+            "name": "url_cta_biglietti",
+            "type": "url",
+            "instructions": "Inserire l'URL di destinazione completa di \"http:\/\/\"",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_593fbfbecf6c9",
+                        "operator": "==",
+                        "value": "acquista biglietti"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_593fbfbecf6c9",
+                        "operator": "==",
+                        "value": "prenota"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_593fbfbecf6c9",
+                        "operator": "==",
+                        "value": "dona ora"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_593fbfbecf6c9",
+                        "operator": "==",
+                        "value": "Lista attesa"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_5d7b568ae09ef",
+            "label": "Codice form",
+            "name": "form_registrazione",
+            "type": "text",
+            "instructions": "Inserire il codice del form.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_593fbfbecf6c9",
+                        "operator": "==",
+                        "value": "iscriviti"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5d7b56abe09f0",
+            "label": "Elenco date ESRO",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_593fbfbecf6c9",
+                        "operator": "==",
+                        "value": "gestito da ESRO"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Il collegamento allo spettacolo sulla piattaforma ESRO va impostato in fondo a questa pagina tramite il pannello \"Associa allo spettacolo di SRO\".",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_593f9b72959b8",
+            "label": "Sala e durata titolo",
+            "name": "sala_durata_titolo",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Sala e Durata",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_593f9b7295da0",
+            "label": "Sala e durata contenuto",
+            "name": "sala_durata_contenuto",
+            "type": "wysiwyg",
+            "instructions": "Es.<br \/>\r\nSala Grande, Sala AcomeA, Sala Tre, durata: 60 minuti",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
+            "key": "field_593f9b7296189",
+            "label": "Prezzi e Promozioni titolo",
+            "name": "prezzi_promozioni_titolo",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Prezzi e Promozioni",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_593f9b7296571",
+            "label": "Prezzi e Promozioni contenuto",
+            "name": "prezzi_promozioni_contenuto",
+            "type": "wysiwyg",
+            "instructions": "Prezzo (esempio)<br \/>\r\nintero: prime file 38€ \/ II III, IV settore 30€ + prev<br \/>\r\nover65\/under26: II, III, IV settore 18€ + prev",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
+            "key": "field_593fb0019e5c7",
+            "label": "Titolo espansione",
+            "name": "titolo_espansione",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_593fb01e9e5c8",
+            "label": "Contenuto espansione",
+            "name": "contenuto_espansione",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
+            "key": "field_5b2b8a9206c68",
+            "label": "Mostrare date spettacolo figlio",
+            "name": "mostrare_date_spettacolo_figlio",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "no": "No",
+                "si": "Sì"
+            },
+            "default_value": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
+        },
+        {
+            "key": "field_5b2b8aad06c69",
+            "label": "Titolo espansione date figlio",
+            "name": "titolo_date_figlio",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5b2b8a9206c68",
+                        "operator": "==",
+                        "value": "si"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "spettacolo"
+            },
+            {
+                "param": "post_taxonomy",
+                "operator": "==",
+                "value": "tipo_spettacolo:cartellone"
+            },
+            {
+                "param": "page_type",
+                "operator": "==",
+                "value": "top_level"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "spettacolo"
+            },
+            {
+                "param": "post_taxonomy",
+                "operator": "==",
+                "value": "tipo_spettacolo:eventi-esterni"
+            },
+            {
+                "param": "page_type",
+                "operator": "==",
+                "value": "top_level"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "spettacolo_archivio"
+            },
+            {
+                "param": "post_taxonomy",
+                "operator": "==",
+                "value": "tipo_spettacolo:cartellone"
+            },
+            {
+                "param": "page_type",
+                "operator": "==",
+                "value": "top_level"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "spettacolo_archivio"
+            },
+            {
+                "param": "post_taxonomy",
+                "operator": "==",
+                "value": "category:senza-categoria"
+            },
+            {
+                "param": "page_type",
+                "operator": "==",
+                "value": "top_level"
+            }
+        ]
+    ],
+    "menu_order": 2,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1646322508
+}

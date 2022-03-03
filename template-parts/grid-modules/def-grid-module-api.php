@@ -9,6 +9,7 @@ global $isDesktop;
 $p_id =  $value['ID'];
 $fields = get_fields($p_id);
 $cycle = get_field('type_show', $p_id);
+$data_custom_selector = get_field('data_custom_selector', $p_id);
 $data_custom = get_field('data_custom', $p_id);
 $my_permalink = get_permalink($p_id);
 // attivare o disattivare chiamate a ESRO
@@ -136,7 +137,7 @@ if ($disattivare_chiamate_esro_pagina_cartellone == 1) {
     ?>
 
 
-    <?php if ($data_custom != '') : ?>
+    <?php if ($data_custom_selector === 'si' && $data_custom != '') : ?>
       <?php echo $data_custom; ?>
     <?php else : ?>
       <?php

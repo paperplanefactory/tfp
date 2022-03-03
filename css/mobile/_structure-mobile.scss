@@ -345,3 +345,20 @@ $logo-width: 100px; // wrappers
     margin-bottom: 0;
   }
 }
+
+.loghi-percorso-cartellone {
+  display: -webkit-flex !important;
+  display: flex !important;
+  -webkit-flex-wrap: wrap !important;
+  flex-wrap: wrap !important;
+
+  .logo-percorso-cartellone {
+    //width: 300px;
+    margin: 0 40px 20px 0;
+
+    img {
+      width: auto;
+      height: 60px;
+    }
+  }
+}
