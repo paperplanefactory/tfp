@@ -63,7 +63,9 @@ elseif ( $cta_biglietti === 'overlay_link_interni' ) {
 elseif ( $cta_biglietti === 'Lista attesa' ) {
   $cta_biglietti_txt = "Lista d'attesa";
 }
-
+elseif ( $cta_biglietti === 'acquista' ) {
+  $cta_biglietti_txt = 'acquista';
+}
 
 //aggiungo una classe al documento per prevenire l'apertura dell'overlay da parametro se non ci sono spettacoli in lista
 if ( !empty($events) || $cta_biglietti === 'iscriviti' ) {
@@ -220,7 +222,9 @@ $(document).ready(function() {
                 <?php elseif ( ( $cta_biglietti === 'Overlay link interni' ) ) : ?>
                   <a href="#" class="btn-fill red cta-4 allupper last hide-when-past tickets-overlaty-opener" onClick="_gaq.push(['_trackEvent', 'tickets_top_button_overlay_link_interni', 'click', '<?php the_title(); ?>', '0']);"><?php echo $prices_for_btn; ?></a>
                 <?php elseif( $cta_biglietti === 'Lista attesa' && get_field('url_cta_biglietti') ) : ?>
-                    <a href="<?php the_field('url_cta_biglietti'); ?>" class="btn-fill red cta-4 allupper last dates-on-left hide-when-past" onClick="_gaq.push(['_trackEvent', 'tickets_top_button_lista_attesa', 'click', '<?php the_title(); ?>', '0']);"><?php the_field('cta_biglietti'); ?></a>
+                  <a href="<?php the_field('url_cta_biglietti'); ?>" class="btn-fill red cta-4 allupper last dates-on-left hide-when-past" onClick="_gaq.push(['_trackEvent', 'tickets_top_button_lista_attesa', 'click', '<?php the_title(); ?>', '0']);"><?php echo $cta_biglietti_txt; ?></a>
+                <?php elseif( $cta_biglietti === 'acquista' && get_field('url_cta_biglietti') ) : ?>
+                  <a href="<?php the_field('url_cta_biglietti'); ?>" class="btn-fill red cta-4 allupper last dates-on-left hide-when-past" onClick="_gaq.push(['_trackEvent', 'tickets_top_button_acquista', 'click', '<?php the_title(); ?>', '0']);"><?php echo $cta_biglietti_txt; ?></a>
                 <?php endif; ?>
 
               </div>
@@ -446,8 +450,10 @@ $(document).ready(function() {
             <?php elseif ( ( $cta_biglietti === 'Overlay link interni' ) ) : ?>
               <a href="#" class="btn-fill red cta-4 allupper last hide-when-past tickets-overlaty-opener" onClick="_gaq.push(['_trackEvent', 'tickets_column_button_overlay_link_interni', 'click', '<?php the_title(); ?>', '0']);"><?php echo $prices_for_btn; ?></a>
             <?php elseif( $cta_biglietti === 'Lista attesa' && get_field('url_cta_biglietti') ) : ?>
-                <a href="<?php the_field('url_cta_biglietti'); ?>" class="btn-fill red cta-4 allupper last hide-when-past" onClick="_gaq.push(['_trackEvent', 'tickets_top_button_lista_attesa', 'click', '<?php the_title(); ?>', '0']);"><?php the_field('cta_biglietti'); ?></a>
-            <?php endif; ?>
+                <a href="<?php the_field('url_cta_biglietti'); ?>" class="btn-fill red cta-4 allupper last hide-when-past" onClick="_gaq.push(['_trackEvent', 'tickets_top_button_lista_attesa', 'click', '<?php the_title(); ?>', '0']);"><?php echo $cta_biglietti_txt; ?></a>
+              <?php elseif( $cta_biglietti === 'acquista' && get_field('url_cta_biglietti') ) : ?>
+                <a href="<?php the_field('url_cta_biglietti'); ?>" class="btn-fill red cta-4 allupper last hide-when-past" onClick="_gaq.push(['_trackEvent', 'tickets_top_button_acquista', 'click', '<?php the_title(); ?>', '0']);"><?php echo $cta_biglietti_txt; ?></a>
+              <?php endif; ?>
             <div class="clearer"></div>
             <?php if( get_field('avviso_spettacolo') ) : ?>
               <div class="cta-2 padder-archivio bg-7-color">

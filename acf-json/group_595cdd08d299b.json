@@ -217,8 +217,65 @@
             "new_lines": "br"
         },
         {
-            "key": "field_61a9069537bd5",
-            "label": "cta_calendario_home_solo_mobile",
+            "key": "field_61014ab59cfe3",
+            "label": "Avviso modal",
+            "name": "avviso_spettacolo_overlay_globale",
+            "type": "textarea",
+            "instructions": "Questo avviso comparirà nelle modal di tutti gli spettacoli.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": "br"
+        },
+        {
+            "key": "field_60dee9968bf01",
+            "label": "CTA Cartellone Home (solo mobile)",
+            "name": "cta_cartellone_home_solo_mobile",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_60dee9f08bf02",
+            "label": "URL Cartellone",
+            "name": "url_cartellone",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_61a906190c9ae",
+            "label": "CTA Calndario Home (solo mobile)",
             "name": "cta_calendario_home_solo_mobile",
             "type": "text",
             "instructions": "",
@@ -234,6 +291,25 @@
             "prepend": "",
             "append": "",
             "maxlength": ""
+        },
+        {
+            "key": "field_60f15d7423428",
+            "label": "Attivare le chiamate a ESRO nella pagina Cartellone?",
+            "name": "disattivare_chiamate_esro_pagina_cartellone",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
         }
     ],
     "location": [
@@ -253,5 +329,6 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1638467229
+    "show_in_rest": 0,
+    "modified": 1642083791
 }

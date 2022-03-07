@@ -23,7 +23,8 @@
                 "iscriviti": "iscriviti",
                 "gestito da ESRO": "gestito da ESRO",
                 "Overlay link interni": "Overlay link interni",
-                "Lista attesa": "Lista attesa"
+                "Lista attesa": "Lista attesa",
+                "acquista": "acquista"
             },
             "default_value": false,
             "allow_null": 0,
@@ -67,6 +68,13 @@
                         "field": "field_593fbfbecf6c9",
                         "operator": "==",
                         "value": "Lista attesa"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_593fbfbecf6c9",
+                        "operator": "==",
+                        "value": "acquista"
                     }
                 ]
             ],
@@ -375,5 +383,6 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1646322508
+    "show_in_rest": 0,
+    "modified": 1646665678
 }
