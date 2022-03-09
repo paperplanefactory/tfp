@@ -50,7 +50,7 @@ if ($img_id != '') {
 }
 
 $cta_biglietti = get_field('cta_biglietti', $p_id);
-if ($cta_biglietti === 'acquista biglietti' || $cta_biglietti === 'prenota') {
+if ($cta_biglietti === 'acquista biglietti' || $cta_biglietti === 'prenota' || $cta_biglietti === 'acquista') {
   $url_cta_biglietti = get_field('url_cta_biglietti', $p_id);
 }
 
@@ -180,7 +180,7 @@ if ($disattivare_chiamate_esro_pagina_cartellone == 1) {
   <a href="<?php echo $my_permalink; ?>" class="btn-fill-hover grey cta-4 allupper last">Scopri di più</a>
   <?php if ($disattivare_chiamate_esro_pagina_cartellone == 1) : ?>
     <?php if ($show_button_date >= $today) : ?>
-      <?php if ($cta_biglietti === 'acquista biglietti') : ?>
+      <?php if ($cta_biglietti === 'acquista biglietti' || $cta_biglietti === 'acquista') : ?>
         <a href="<?php echo $url_cta_biglietti; ?>" target="_blank" class="btn-fill red cta-4 allupper last dates-on-left hide-when-past" onClick="_gaq.push(['_trackEvent', 'tickets_cartellone_listing_button_acquista', 'click', '<?php the_title(); ?>', '0']);">Acquista</a>
       <?php elseif ($cta_biglietti === 'prenota') : ?>
         <a href="<?php echo $url_cta_biglietti; ?>" class="btn-fill red cta-4 allupper last dates-on-left hide-when-past" data-post_id="<?php echo $p_id; ?>" onClick="_gaq.push(['_trackEvent', 'tickets_cartellone_listing_button_prenota', 'click', '<?php the_title(); ?>', '0']);">prenota</a>
