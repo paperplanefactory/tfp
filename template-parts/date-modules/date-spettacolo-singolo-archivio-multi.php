@@ -5,7 +5,7 @@ $args_arch_children = array(
  'post_type' => 'spettacolo_archivio',
  'numberposts' => -1,
  'meta_key' => 'program_periods_wp',
- 'orderby' => 'meta_value',
+ 'orderby' => 'meta_value_num',
  'order' => 'ASC',
  'tax_query' => array(
    array(
@@ -17,6 +17,7 @@ $args_arch_children = array(
  );
 $my_arch_children = get_posts( $args_arch_children );
 foreach($my_arch_children as $post) : setup_postdata($post);
+$key_1_value = get_post_meta( get_the_ID(), 'program_periods_wp', true );
 ?>
 <?php if ( has_term( 'cartellone', 'tipo_spettacolo' ) ) : ?>
   <div class="cta-1">
