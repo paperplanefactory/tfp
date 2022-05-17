@@ -54,6 +54,12 @@ if( function_exists('acf_add_options_page') ) {
 		'menu_title' 	=> 'Chiusura homepage e classifica',
 		'parent_slug' 	=> $parent['menu_slug'],
 	));
+	// Player mp3
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Player mp3',
+		'menu_title' 	=> 'Player mp3',
+		'parent_slug' 	=> $parent['menu_slug'],
+	));
 	// Testi grandi di sfondo
 	acf_add_options_sub_page(array(
 		'page_title' 	=> 'Testi grandi di sfondo',

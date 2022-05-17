@@ -565,6 +565,10 @@ $head-compact-navi: 32%;
   position: relative;
   z-index: 9994;
 
+  &.with-player {
+    padding-bottom: 100px;
+  }
+
   a:link,
   a:visited {}
 

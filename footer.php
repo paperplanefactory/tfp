@@ -8,10 +8,16 @@ wp_reset_query();
 global $isMobile;
 global $isTablet;
 global $isDesktop;
-
+$mostrare_player = get_field('mostrare_player', 'option');
+if( $mostrare_player == 1 ) {
+  $footer_class = 'with-player';
+}
+else {
+  $footer_class = '';
+}
 ?>
 <?php if( !is_singular( 'lp' ) ) : ?>
-  <div id="footer" class="z-index-trick">
+  <div id="footer" class="z-index-trick <?php echo $footer_class; ?>">
     <div class="wrapper bg-4-color txt-2-color pad-top-2 pad-bottom-2">
       <div class="wrapper-padded">
         <div class="flex-hold flex-hold-2-bis cta-1">
@@ -180,6 +186,25 @@ global $isDesktop;
           </div>
         </div>
       </div>
+  </div>
+<?php endif; ?>
+
+<?php
+if( $mostrare_player == 1 ) : ?>
+  <div class="tfp-audio-player">
+    <div class="player-grid">
+      <div class="title">
+        <p>
+          <strong><?php the_field('titolo_audio', 'option'); ?></strong>
+        </p>
+      </div>
+      <div class="player">
+        <audio controls>
+      <source src="<?php the_field('file_audio', 'option'); ?>" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+      </div>
+    </div>
   </div>
 <?php endif; ?>
 <?php wp_footer();

@@ -215,3 +215,29 @@ $logo-width: 100px; // wrappers
     }
   }
 }
+
+.tfp-audio-player {
+  padding: 10px 0;
+  border-top: $color-rosso-tfp solid 4px;
+
+  .player-grid {
+    display: -webkit-flex !important;
+    display: flex !important;
+    -webkit-flex-wrap: wrap !important;
+    flex-wrap: wrap !important;
+    -webkit-align-items: center;
+    align-items: center;
+
+    .title {
+      width: calc(50% - 20px);
+      padding: 0 10px;
+      text-align: right;
+    }
+
+    .player {
+      width: calc(50% - 20px);
+      padding: 0 10px;
+      text-align: left;
+    }
+  }
+}

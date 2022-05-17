@@ -607,3 +607,17 @@ a.ticketed:visited {
 	background-size: 20px 20px;
 	padding-right: 26px !important;
 }
+
+.tfp-audio-player {
+	position: fixed;
+	z-index: 9999;
+	bottom: 0;
+	left: 0;
+	display: block;
+	width: 100%;
+	background-color: $color-bianco;
+
+	p {
+		margin: 0;
+	}
+}
