@@ -130,7 +130,10 @@ function call_all_catgories() {
   // Print the name method from $term which is an OBJECT
   $activity_color = $term_activity->slug;
   $activity_name = $term_activity->name;
-  echo '<a href="' . $archive_prefix . $activity_color . '" class="' . $activity_color . '">' . $activity_name . '</a>';
+  if ( $activity_color != 'senza-categoria' ) {
+    echo '<a href="' . $archive_prefix . $activity_color . '" class="' . $activity_color . '">' . $activity_name . '</a>';
+  }
+
   unset($term_activity);
   } }
 }
@@ -190,7 +193,10 @@ function call_all_categoy_primary() {
       $categoria = get_term_by('id', $cat, 'category');
       $categoria_slug = $categoria->slug;
       $categoria_name = $categoria->name;
-      echo '<a href="' . $archive_prefix . $categoria_slug . '" class="' . $categoria_slug . '">' . $categoria_name . '</a>';
+      if ( $categoria_slug != 'senza-categoria' ) {
+        echo '<a href="' . $archive_prefix . $categoria_slug . '" class="' . $categoria_slug . '">' . $categoria_name . '</a>';
+      }
+
     }
 
     else {
@@ -202,7 +208,10 @@ function call_all_categoy_primary() {
         // Print the name method from $term which is an OBJECT
         $categoria_slug = $term_cat->slug;
         $categoria_name = $term_cat->name;
-        echo '<a href="' . $archive_prefix . $categoria_slug . '" class="' . $categoria_slug . '">' . $categoria_name . '</a>';
+        if ( $categoria_slug != 'senza-categoria' ) {
+          echo '<a href="' . $archive_prefix . $categoria_slug . '" class="' . $categoria_slug . '">' . $categoria_name . '</a>';
+        }
+
         unset($term_cat);
         }
       }
@@ -218,7 +227,10 @@ function call_all_categoy_primary() {
   // Print the name method from $term which is an OBJECT
   $categoria_slug = $term_cat->slug;
   $categoria_name = $term_cat->name;
-  echo '<a href="' . $archive_prefix . $categoria_slug . '" class="' . $categoria_slug . '">' . $categoria_name . '</a>';
+  if ( $categoria_slug != 'senza-categoria' ) {
+    echo '<a href="' . $archive_prefix . $categoria_slug . '" class="' . $categoria_slug . '">' . $categoria_name . '</a>';
+  }
+
   unset($term_cat);
   } }
   }

@@ -154,6 +154,11 @@ $(document).ready(function() {
 });
 
 
+$('.ham-activator').bind('click', function() {
+  hj('event', 'clicked_hamburger');
+  console.log('??sdfsdf!');
+});
+
 /////////////////////////////////////////////
 // slick slideshow
 /////////////////////////////////////////////

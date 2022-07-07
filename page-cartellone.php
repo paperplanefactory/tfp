@@ -34,9 +34,9 @@ get_header();
   <script type="text/javascript">
     term_name = '<?php echo $term_name; ?>';
     if (term_name.length > 15) {
-      term_name_trim = term_name.substring(0, 15) + "...";
+      //term_name_trim = term_name.substring(0, 15) + "...";
     } else {
-      term_name_trim = term_name;
+      //term_name_trim = term_name;
     }
     term_id = '<?php echo $term_id; ?>';
     term_slug = '<?php echo $filtro; ?>';
@@ -50,7 +50,6 @@ get_header();
     filtro = '';
   </script>
 <?php endif; ?>
-
 
 <?php
 //stabilisco la stagione corrente per filtrare gli spettacoli
