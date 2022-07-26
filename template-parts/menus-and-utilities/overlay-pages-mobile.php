@@ -24,6 +24,10 @@
             <div class="expandable-content-overlay">
               <?php wp_nav_menu( array( 'theme_location' => 'notizie-menu' ) ); ?>
             </div>
+            <h4 class="txt-1-color"><span class="expandable-overlay plus">Abbonamenti</span></h4>
+            <div class="expandable-content-overlay">
+              <?php wp_nav_menu( array( 'theme_location' => 'abbonamenti-menu' ) ); ?>
+            </div>
             <h4 class="txt-1-color"><span class="expandable-overlay plus">Info e Biglietteria</span></h4>
             <div class="expandable-content-overlay">
               <?php wp_nav_menu( array( 'theme_location' => 'infobliglietteria-menu' ) ); ?>

@@ -80,6 +80,7 @@ function register_theme_menus() {
       'formazione-menu' => __( 'Formazione Menu' ),
       'salespazi-menu' => __( 'Sale e spazi Menu' ),
       'sostieni-menu' => __( 'Sostieni Menu' ),
+			'abbonamenti-menu' => __( 'Abbonamenti Menu' ),
       'infobliglietteria-menu' => __( 'Info e bliglietteria Menu' ),
       'notizie-menu' => __( 'Notizie Menu' ),
       'areapress-menu' => __( 'Area press Menu' ),

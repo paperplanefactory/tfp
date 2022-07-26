@@ -50,6 +50,10 @@
 
         <div class="flex-hold-child">
           <div class="space">
+            <h6 class="txt-1-color"><span class="expandable-overlay plus">Abbonamenti</span></h6>
+            <div class="expandable-content-overlay">
+              <?php wp_nav_menu( array( 'theme_location' => 'abbonamenti-menu' ) ); ?>
+            </div>
             <h6 class="txt-1-color"><span class="expandable-overlay plus">Info e Biglietteria</span></h6>
             <div class="expandable-content-overlay">
               <?php wp_nav_menu( array( 'theme_location' => 'infobliglietteria-menu' ) ); ?>
