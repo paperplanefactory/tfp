@@ -95,6 +95,26 @@ $head-compact-navi: 30%;
       @include flex-top;
       margin-top: 20px;
 
+      &.cinquantesimo {
+        &:after {
+          content: "";
+          position: absolute;
+          top: -10px;
+          left: calc(50% + 140px);
+          width: 60px;
+          height: 60px;
+          background-image: url("images/tfp-50-3.svg");
+          background-repeat: no-repeat;
+          background-position: 0 0;
+          background-size: contain;
+          -webkit-animation: tfp-50-animation 4s linear infinite;
+          -moz-animation: tfp-50-animation 4s linear infinite;
+          -ms-animation: tfp-50-animation 4s linear infinite;
+          -o-animation: tfp-50-animation 4s linear infinite;
+          animation: tfp-50-animation 4s linear infinite;
+        }
+      }
+
       img {
         width: 100%;
         max-width: 345px;
@@ -683,4 +703,54 @@ $head-compact-navi: 30%;
     -ms-flex-align: center;
     align-items: center;
   }
+}
+/* Safari and Chrome */
+@-webkit-keyframes tfp-50-animation {
+  from {
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
+    transform-origin: center;
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
+    transform-origin: center;
+  }
+}
+@keyframes tfp-50-animation {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
+    transform-origin: center;
+  }
+
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
+    transform-origin: center;
+  }
+}
+
+.avvisi-50 {
+  display: none;
+  visibility: hidden;
+  pointer-events: none;
+  opacity: 0;
 }

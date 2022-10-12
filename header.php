@@ -72,6 +72,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <div id="preheader"></div>
     <div id="just-check-head-height">
       <div class="modal-set"></div>
+      <?php include( locate_template ( 'template-parts/menus-and-utilities/messaggio-50.php' ) ); ?>
       <?php include( locate_template ( 'template-parts/menus-and-utilities/avvisi-importanti.php' ) ); ?>
       <?php include( locate_template ( 'template-parts/menus-and-utilities/pop-up.php' ) ); ?>
       <div id="header-expanded" class="bg-2-color">
@@ -86,7 +87,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <span></span>
               </button>
             </div>
-            <div class="logo">
+            <div class="logo cinquantesimo">
               <a href="<?php echo home_url(); ?>" rel="bookmark" title="Teatro Franco Parenti - Homepage">
                 <img src="<?php bloginfo('stylesheet_directory'); ?>/images/logo-teatro-franco-parenti.svg" onerror="this.onerror=null; this.src='<?php bloginfo('stylesheet_directory'); ?>/images/logo-teatro-franco-parenti.png'" alt="Teatro Franco Parenti - Homepage" />
               </a>
@@ -118,7 +119,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <span></span>
               </button>
             </div>
-            <div class="logo">
+            <div class="logo cinquantesimo">
               <a href="<?php echo home_url(); ?>" rel="bookmark" title="Teatro Franco Parenti - Homepage">
                 <img src="<?php bloginfo('stylesheet_directory'); ?>/images/logo-teatro-franco-parenti.svg" onerror="this.onerror=null; this.src='<?php bloginfo('stylesheet_directory'); ?>/images/logo-teatro-franco-parenti.png'" alt="Teatro Franco Parenti - Homepage" />
               </a>

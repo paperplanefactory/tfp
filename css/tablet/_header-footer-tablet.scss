@@ -20,6 +20,7 @@ $head-compact-navi: 55%;
   display: none;
 }
 // avvisi importanti
+
 .avvisi-importanti {
   position: relative;
   width: 100%;
@@ -91,6 +92,27 @@ $head-compact-navi: 55%;
       width: $head-compact-logo;
       text-align: left;
       @include flex-verticalize;
+      position: relative;
+
+      &.cinquantesimo {
+        &:after {
+          content: "";
+          position: absolute;
+          top: -10px;
+          left: calc(50% + 70px);
+          width: 50px;
+          height: 50px;
+          background-image: url("images/tfp-50-3.svg");
+          background-repeat: no-repeat;
+          background-position: 0 0;
+          background-size: contain;
+          -webkit-animation: tfp-50-animation 4s linear infinite;
+          -moz-animation: tfp-50-animation 4s linear infinite;
+          -ms-animation: tfp-50-animation 4s linear infinite;
+          -o-animation: tfp-50-animation 4s linear infinite;
+          animation: tfp-50-animation 4s linear infinite;
+        }
+      }
 
       img {
         display: inline-block;
@@ -582,4 +604,53 @@ $head-compact-navi: 55%;
     -ms-flex-align: center;
     align-items: center;
   }
+}
+@-webkit-keyframes tfp-50-animation {
+  from {
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
+    transform-origin: center;
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
+    transform-origin: center;
+  }
+}
+@keyframes tfp-50-animation {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
+    transform-origin: center;
+  }
+
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
+    transform-origin: center;
+  }
+}
+
+.avvisi-50 {
+  display: none;
+  visibility: hidden;
+  pointer-events: none;
+  opacity: 0;
 }
